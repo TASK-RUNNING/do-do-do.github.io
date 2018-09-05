@@ -5,10 +5,10 @@
 # Site
 title: Melville'blog
 subtitle:
-description: 
+description: 追求卓越，成功就会在不经意间追上你
 keywords:
 author: Melville
-language:
+language: zh-Hans
 timezone:
 
 # URL
@@ -76,24 +76,24 @@ pagination_dir: page
 theme: next
 
 # 点击所有文章时配置项
-jsonContent:
-    meta: false
-    pages: false
-    posts:
-      title: true
-      date: true
-      path: true
-      text: false
-      raw: false
-      content: false
-      slug: false
-      updated: false
-      comments: false
-      link: false
-      permalink: false
-      excerpt: false
-      categories: false
-      tags: true
+#jsonContent:
+#    meta: false
+#    pages: false
+#    posts:
+#      title: true
+#      date: true
+#      path: true
+#      text: false
+#      raw: false
+#      content: false
+#      slug: false
+#      updated: false
+#      comments: false
+#      link: false
+#      permalink: false
+#      excerpt: false
+#      categories: false
+#      tags: true
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
