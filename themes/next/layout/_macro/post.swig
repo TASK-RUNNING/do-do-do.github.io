@@ -329,6 +329,12 @@
       {% else %}
         {{ post.content }}
       {% endif  %}
+	  
+	  <div>
+	    {% if not is_index %}
+		  {% include 'passage-end-tag.swig' %}
+	    {% endif %}
+	  </div>
     </div>
     {#####################}
     {### END POST BODY ###}
