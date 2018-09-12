@@ -94,7 +94,7 @@
 <meta property="og:image" content="http://petq8khru.bkt.clouddn.com/blog/180910/3GJDfkIC37.png?imageslim">
 <meta property="og:image" content="http://petq8khru.bkt.clouddn.com/blog/180910/84HfBh2a3d.jpg?imageslim">
 <meta property="og:image" content="http://petq8khru.bkt.clouddn.com/blog/180910/84HfBh2a3d.jpg?imageslim">
-<meta property="og:updated_time" content="2018-09-11T05:29:02.400Z">
+<meta property="og:updated_time" content="2018-09-12T02:50:24.055Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习使用Markdown">
 <meta name="twitter:description" content="1 关于MarkdownMarkdown是一种轻量级标记语言，它的目的是希望大家使用“易于阅读、易于撰写的纯文字格式，并选择性的转换成有效的HTML(或XHTML)”。  优点  易读 易读是指Markdown文件（即 .md 文件）容易阅读，与HTML相比，它没有各种繁杂的尖括号&amp;lt;&amp;gt;和缩进。整体简洁美观。   易写 使用Markdown可以让你专注于文字，不用像office软件一样需">
@@ -399,7 +399,7 @@
 <li><p>缺点</p>
 <ul>
 <li>标准不统一<blockquote>
-<p>目前Markdown语法众多、编辑器层出不穷，每个编辑器支持的语法也不通，这就导致在一个编辑器上写的md文件，放到其它编辑器上，出现排版混乱，甚至是不支持某些语法的现象。这就是人们所说的 “<strong>方言现象</strong>”，这也是目前Markdown最突出的问题。</p>
+<p>目前Markdown语法众多、编辑器层出不穷，每个编辑器支持的语法也不同，这就导致在一个编辑器上写的md文件，放到其它编辑器上，出现排版混乱，甚至是不支持某些语法的现象。这就是人们所说的 “<strong>方言现象</strong>”，这也是目前Markdown最突出的问题。</p>
 </blockquote>
 </li>
 <li>图片支持不够<blockquote>
@@ -498,14 +498,14 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[链接名字](链接地址, &quot;链接title&quot;)</span><br></pre></td></tr></table></figure>
 <p>其中链接title可以不填。<br>例如：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[百度一下](https://www.baidu.com/)</span><br></pre></td></tr></table></figure>
-<p>注意：不能直接写成<a href="http://www.baidu.com，需要加" target="_blank" rel="noopener">www.baidu.com，需要加</a> <code>https://或http://</code></p>
+<p>注意：不能直接写成 <code>www.baidu.com</code> ，需要加 <code>https://或http://</code></p>
 <p>效果如下：<br><a href="https://www.baidu.com/" target="_blank" rel="noopener">百度一下</a></p>
 <h2 id="2-7-插入图片"><a href="#2-7-插入图片" class="headerlink" title="2.7 插入图片"></a>2.7 插入图片</h2><p>插入图片的格式如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![图片描述](图片地址)</span><br></pre></td></tr></table></figure>
 <p>其中图片title可以不填。<br>例如：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![tree](http://hru.com/blog/180910/84.jpg?imageim)</span><br></pre></td></tr></table></figure>
 <p>效果如下：<br><img src="http://petq8khru.bkt.clouddn.com/blog/180910/84HfBh2a3d.jpg?imageslim" alt="tree"></p>
-<p>一般情况下，我们插入的图片大小都不一样，如果像上面的图片一样过大，就会铺满整个屏幕，显示效果就会大打折扣。可惜Markdown没有能处理图片大小和左右对齐的语法（Markdown只注重文字，不注重精细的排版）。天无绝人之路，好在Markdown支持内嵌HTML语句，可以使用HTML来实现图片大小和对齐的控制。语法如下：</p>
+<p>一般情况下，我们插入的图片大小都不一样，如果像上面的图片一样过大，就会铺满整个屏幕，显示效果就会大打折扣。可惜Markdown没有能处理图片大小的语法（Markdown只注重文字，不注重精细的排版）。天无绝人之路，好在Markdown支持内嵌HTML语句，可以使用HTML来实现图片大小的控制。语法如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;http://hru.com/blog/180910/84.jpg?imageim&quot; width=30% height=30%&gt;</span><br><span class="line"></span><br><span class="line">width：宽度比例  height：高度比例。width和height也可以填写具体数值</span><br></pre></td></tr></table></figure>
 <p>效果如下：<br><img src="http://petq8khru.bkt.clouddn.com/blog/180910/84HfBh2a3d.jpg?imageslim" width="30%" height="30%"></p>
 <p>如果有使用<a href="https://portal.qiniu.com/" target="_blank" rel="noopener">七牛</a>作为图床的同学，可以查看<a href="https://developer.qiniu.com/dora/manual/1270/the-advanced-treatment-of-images-imagemogr2" target="_blank" rel="noopener">七牛API文档</a>，他们提供了更多形式的图片处理接口，这里不做过多介绍。</p>
@@ -539,7 +539,7 @@
 </table>
 <h2 id="2-9-代码"><a href="#2-9-代码" class="headerlink" title="2.9 代码"></a>2.9 代码</h2><p>Markdown可以内嵌代码，还支持代码高亮，不同开发语言有不同的高亮形式。</p>
 <p>语法如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">单行代码使用两个 ` 将代码包围起来：`代码`。</span><br><span class="line">多行代码使用两个 ``` 加代码语言标识：</span><br><span class="line">(``` 语言标识)</span><br><span class="line">代码块</span><br><span class="line">(```)</span><br><span class="line"></span><br><span class="line">上面的括号不用写，这里为了方便展示多加了，请忽略</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">单行代码使用两个 ` 将代码包围起来：</span><br><span class="line"></span><br><span class="line">&gt; `代码`</span><br><span class="line"></span><br><span class="line">多行代码使用两个 ``` 加代码语言标识：</span><br><span class="line"></span><br><span class="line">&gt; (``` 语言标识)</span><br><span class="line">&gt; 代码块</span><br><span class="line">&gt; (```)</span><br><span class="line"></span><br><span class="line">上面的括号和&gt;不用写，这里为了方便展示多加了，请忽略</span><br></pre></td></tr></table></figure>
 <p>语言标识是对各种语言的分类，如：python，c，bash，java，php，sql……</p>
 <p>效果如下：</p>
 <p>单行代码： <code>unsigned int a;</code></p>
@@ -562,11 +562,23 @@
 </ul>
 </li>
 </ul>
-<h1 id="三、支持Markdown语法的软件或网站"><a href="#三、支持Markdown语法的软件或网站" class="headerlink" title="三、支持Markdown语法的软件或网站"></a>三、支持Markdown语法的软件或网站</h1><p>编辑软件：</p>
+<h1 id="3、支持Markdown语法的软件或网站"><a href="#3、支持Markdown语法的软件或网站" class="headerlink" title="3、支持Markdown语法的软件或网站"></a>3、支持Markdown语法的软件或网站</h1><p>编辑软件：</p>
 <ol>
-<li>atom ——21世纪黑客文本编辑器，各种插件可用，也是我目前在用的编辑软件。</li>
-<li>Visual Studio Code</li>
+<li>atom —— 21世纪黑客文本编辑器，里面有各种插件，程序猿专用软件，也是我目前在用的编辑软件。</li>
+<li>Visual Studio Code —— 一心想要统治地球的软件，对Markdown语法要求严格，经常会出现红波浪线和绿波浪线。</li>
+<li>MarkdownPad —— 一款全功能的编辑器，被很多人称赞为windows 平台最好用的markdown编辑器。</li>
+<li>Sublime Text 2 —— 界面简约大方，定位专业。</li>
+<li>Smark</li>
+<li>MdCharm</li>
 </ol>
+<p>网站（在线编辑器）：</p>
+<ol>
+<li>简书 —— 一个很好的博客平台，简约美观，写文章时可以直接拖入图片生成链接。</li>
+<li>dillinger —— 支持md, html, pdf 文件导出。支持dropbox, onedrive，google drive, github.</li>
+<li>Cmd Markdown</li>
+<li>小书匠编辑器</li>
+</ol>
+<p>如果上面没有适合你的编辑器，请自行上网查找其它的编辑器。</p>
 <hr>
 
       
@@ -800,7 +812,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-关于Markdown"><span class="nav-number">1.</span> <span class="nav-text">1 关于Markdown</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-基本语法"><span class="nav-number">2.</span> <span class="nav-text">2 基本语法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-标题"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-列表"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 列表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-无序列表"><span class="nav-number">2.2.1.</span> <span class="nav-text">1. 无序列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-有序列表"><span class="nav-number">2.2.2.</span> <span class="nav-text">2. 有序列表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-字体"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 字体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-引用"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 引用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-分割线"><span class="nav-number">2.5.</span> <span class="nav-text">2.5 分割线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-6-超链接"><span class="nav-number">2.6.</span> <span class="nav-text">2.6 超链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-7-插入图片"><span class="nav-number">2.7.</span> <span class="nav-text">2.7 插入图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-8-表格"><span class="nav-number">2.8.</span> <span class="nav-text">2.8 表格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-9-代码"><span class="nav-number">2.9.</span> <span class="nav-text">2.9 代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-10-待办事宜-Todo-列表"><span class="nav-number">2.10.</span> <span class="nav-text">2.10 待办事宜 Todo 列表</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、支持Markdown语法的软件或网站"><span class="nav-number">3.</span> <span class="nav-text">三、支持Markdown语法的软件或网站</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-关于Markdown"><span class="nav-number">1.</span> <span class="nav-text">1 关于Markdown</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-基本语法"><span class="nav-number">2.</span> <span class="nav-text">2 基本语法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-标题"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-列表"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 列表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-无序列表"><span class="nav-number">2.2.1.</span> <span class="nav-text">1. 无序列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-有序列表"><span class="nav-number">2.2.2.</span> <span class="nav-text">2. 有序列表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-字体"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 字体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-引用"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 引用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-分割线"><span class="nav-number">2.5.</span> <span class="nav-text">2.5 分割线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-6-超链接"><span class="nav-number">2.6.</span> <span class="nav-text">2.6 超链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-7-插入图片"><span class="nav-number">2.7.</span> <span class="nav-text">2.7 插入图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-8-表格"><span class="nav-number">2.8.</span> <span class="nav-text">2.8 表格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-9-代码"><span class="nav-number">2.9.</span> <span class="nav-text">2.9 代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-10-待办事宜-Todo-列表"><span class="nav-number">2.10.</span> <span class="nav-text">2.10 待办事宜 Todo 列表</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3、支持Markdown语法的软件或网站"><span class="nav-number">3.</span> <span class="nav-text">3、支持Markdown语法的软件或网站</span></a></li></ol></div>
             
 
           </div>
