@@ -5,7 +5,7 @@
 # Site
 title: Melville'blog
 subtitle:
-description: 邪乎到家，必有鬼
+description: 开源大发
 keywords:
 author: Melville
 language: zh-Hans
@@ -15,7 +15,7 @@ timezone:
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://yoursite.com
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :title.html
 permalink_defaults:
 
 # Directory
