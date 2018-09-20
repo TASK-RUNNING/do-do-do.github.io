@@ -380,7 +380,8 @@
       
         
           
-            
+            <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>char[0]或char[1]的用法是GNU C的扩展，<font face="#FF0000">在ISO/IEC 9899-1999里面，这么写是非法的</font>&gt;</p>
+
           
         
       
@@ -545,8 +546,7 @@
 
       
         
-          
-            <h1 id="1-问题现象"><a href="#1-问题现象" class="headerlink" title="1. 问题现象"></a>1. 问题现象</h1><p>在进行64位驱动兼容32位应用程序的修改中，发现了如下几个问题：</p>
+          <h1 id="1-问题现象"><a href="#1-问题现象" class="headerlink" title="1. 问题现象"></a>1. 问题现象</h1><p>在进行64位驱动兼容32位应用程序的修改中，发现了如下几个问题：</p>
 <blockquote>
 <ol>
 <li>32位应用程序调用ioctl时，返回ENOTTY（inappropriate ioctl for device）错误。经过调试发现根本没调用到内核的ioctl函数。</li>
@@ -554,30 +554,14 @@
 <li>从用户空间拷贝数据的时候（copy_from_user()）失败。拷贝的数据结构里面含有指针。</li>
 </ol>
 </blockquote>
-<h1 id="2-问题分析"><a href="#2-问题分析" class="headerlink" title="2. 问题分析"></a>2. 问题分析</h1><h2 id="2-1-第一个问题"><a href="#2-1-第一个问题" class="headerlink" title="2.1 第一个问题"></a>2.1 第一个问题</h2><p>在 <code>Linux kernel 2.6.36</code> 中已经完全删除了 <code>struct file_operations</code> 结构中的 <code>ioctl</code> 函数指针，取而代之的是 <code>unlocked_ioctl</code>。之后的内核版本中，<code>struct file_operations</code> 含有下面两个函数指针：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">file_operations</span> &#123;</span></span><br><span class="line">        ... ...</span><br><span class="line">    <span class="keyword">long</span> (*unlocked_ioctl) (struct file *, <span class="keyword">unsigned</span> <span class="keyword">int</span>, <span class="keyword">unsigned</span> <span class="keyword">long</span>);</span><br><span class="line">    <span class="keyword">long</span> (*compat_ioctl) (struct file *, <span class="keyword">unsigned</span> <span class="keyword">int</span>, <span class="keyword">unsigned</span> <span class="keyword">long</span>);</span><br><span class="line">        ... ...</span><br><span class="line">&#125;；</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>如果是64位用户程序运行在64位的内核上，调用的是unlocked_ioctl;</p>
-<p>如果是32位用户程序运行在32位的内核上，调用的也是unlocked_ioctl;</p>
-</li>
-<li><p>支持64位的驱动必须要实现compat_ioctl，如果没有实现，那么32位的用户程序在64位的内核上执行ioctl时会返回错误 ENOTTY。</p>
-</li>
-</ul>
-<p>要解决第一个问题，就需要在驱动层实现 <code>compat_ioctl</code>.</p>
-<h2 id="2-2-第二个问题"><a href="#2-2-第二个问题" class="headerlink" title="2.2 第二个问题"></a>2.2 第二个问题</h2><p>命令号中的参数部分含有指针，32位用户程序的指针是4字节，64位驱动的指针是8字节，导致最终计算出的命令号不一致。可采用如下方法解决：</p>
-<ul>
-<li>尽量避免使用指针类型</li>
-<li>提供64位和32位大小一致的结构</li>
-<li>先将传入的指针转成64位，使其能进入ioctl函数，在函数内部再对指针进行处理。</li>
-</ul>
-<h2 id="2-3-第三个问题"><a href="#2-3-第三个问题" class="headerlink" title="2.3 第三个问题"></a>2.3 第三个问题</h2><p>由于传入内核的数据结构里面含有指针类型，所以在拷贝的时候，用户态结构和内核态结构的大小就不一样，导致拷贝失败。解决方法如下：</p>
-<ul>
-<li>使用compat_ptr()宏转换64位的unsigned long数据类型到32位的地址。</li>
-<li>对ioctl函数的参数也要使用compat_ptr()进行转换。</li>
-<li>避免使用指针，可用 <code>char[0]</code> 或 <code>char[1]</code> 代替。关于<code>char[0]</code> 和 <code>char[1]</code>的用法，参照这篇文章。</li>
-</ul>
-
-          
+<h1 id="2-问题分析"><a href="#2-问题分析" class="headerlink" title="2. 问题分析"></a>2. 问题分析</h1><h2 id="2-1-第一个问题"><a href="#2-1-第一个问题" class="headerlink" title="2.1 第一个问题"></a>2.1 第一个问题</h2><p>在 <code>Linux kernel 2.6.36</code> 中已经完全删除了 <code>struct file_operations</code> 结构中的 <code>ioctl</code> 函数指针，取而代之的是 <code>unlocked_ioctl</code>。之后的内核版本中，<code>struct file_operations</code> 含有下面两个函数指针：<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/Linux64位系统兼容32位应用程序.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
 	  
