@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://yoursite.com/googled81f063c4dc7b3b9.html</loc>
+    <lastmod>2018-09-21T02:10:16.051Z</lastmod>
+  </url>  <url>
     <loc>http://yoursite.com/C%E8%AF%AD%E8%A8%80%E7%BB%93%E6%9E%84%E4%BD%93%E4%B8%ADchar-0-%E5%92%8Cchar-1-%E7%9A%84%E7%94%A8%E6%B3%95.html</loc>
     <lastmod>2018-09-20T08:42:59.706Z</lastmod>
   </url>  <url>
@@ -12,8 +15,5 @@
   </url>  <url>
     <loc>http://yoursite.com/%E4%B8%89%E5%B1%82%E6%9E%B6%E6%9E%84.html</loc>
     <lastmod>2018-09-13T05:19:18.208Z</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/hello-world.html</loc>
-    <lastmod>2018-09-06T08:06:31.279Z</lastmod>
   </url>
 </urlset>
