@@ -18,7 +18,7 @@ categories: [Linux驱动]
 ## 2.1 第一个问题
 
 在 `Linux kernel 2.6.36` 中已经完全删除了 `struct file_operations` 结构中的 `ioctl` 函数指针，取而代之的是 `unlocked_ioctl`。之后的内核版本中，`struct file_operations` 含有下面两个函数指针：
-
+<!-- more -->
 ``` C
 struct file_operations {
         ... ...
@@ -49,4 +49,8 @@ struct file_operations {
 
 * 使用compat_ptr()宏转换64位的unsigned long数据类型到32位的地址。
 * 对ioctl函数的参数也要使用compat_ptr()进行转换。
-* 避免使用指针，可用 `char[0]` 或 `char[1]` 代替。关于`char[0]` 和 `char[1]`的用法，参照这篇文章。
+* 避免使用指针，可用 `char[0]` 或 `char[1]` 代替。关于`char[0]` 和 `char[1]`的用法，参照[这篇文章](https://do-do-do.github.io/C%E8%AF%AD%E8%A8%80%E7%BB%93%E6%9E%84%E4%BD%93%E4%B8%ADchar-0-%E5%92%8Cchar-1-%E7%9A%84%E7%94%A8%E6%B3%95.html)。
+
+
+
+---
