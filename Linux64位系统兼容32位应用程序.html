@@ -91,7 +91,7 @@
 <meta name="keywords" content="linux,驱动,兼容">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux64位系统兼容32位应用程序">
-<meta property="og:url" content="http://yoursite.com/Linux64位系统兼容32位应用程序.html">
+<meta property="og:url" content="https://do-do-do.github.io/Linux64位系统兼容32位应用程序.html">
 <meta property="og:site_name" content="Melville&#39;blog">
 <meta property="og:description" content="1. 问题现象在进行64位驱动兼容32位应用程序的修改中，发现了如下几个问题：   32位应用程序调用ioctl时，返回ENOTTY（inappropriate ioctl for device）错误。经过调试发现根本没调用到内核的ioctl函数。 解决完第一个问题后，应用程序进入了ioctl中，但是用户程序和驱动打印的ioctl命令号不一样，导致在switch的时候，找不到对应命令号。 从用户空">
 <meta property="og:locale" content="zh-Hans">
@@ -128,7 +128,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/Linux64位系统兼容32位应用程序.html"/>
+  <link rel="canonical" href="https://do-do-do.github.io/Linux64位系统兼容32位应用程序.html"/>
 
 
 
@@ -273,7 +273,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Linux64位系统兼容32位应用程序.html">
+    <link itemprop="mainEntityOfPage" href="https://do-do-do.github.io/Linux64位系统兼容32位应用程序.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Melville">
@@ -410,7 +410,7 @@
 <ul>
 <li>使用compat_ptr()宏转换64位的unsigned long数据类型到32位的地址。</li>
 <li>对ioctl函数的参数也要使用compat_ptr()进行转换。</li>
-<li>避免使用指针，可用 <code>char[0]</code> 或 <code>char[1]</code> 代替。关于<code>char[0]</code> 和 <code>char[1]</code>的用法，参照<a href="https://do-do-do.github.io/C%E8%AF%AD%E8%A8%80%E7%BB%93%E6%9E%84%E4%BD%93%E4%B8%ADchar-0-%E5%92%8Cchar-1-%E7%9A%84%E7%94%A8%E6%B3%95.html" target="_blank" rel="noopener">这篇文章</a>。</li>
+<li>避免使用指针，可用 <code>char[0]</code> 或 <code>char[1]</code> 代替。关于<code>char[0]</code> 和 <code>char[1]</code>的用法，参照<a href="https://do-do-do.github.io/C%E8%AF%AD%E8%A8%80%E7%BB%93%E6%9E%84%E4%BD%93%E4%B8%ADchar-0-%E5%92%8Cchar-1-%E7%9A%84%E7%94%A8%E6%B3%95.html">这篇文章</a>。</li>
 </ul>
 <hr>
 
