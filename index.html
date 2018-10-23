@@ -266,150 +266,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/baidu_verify_3nmNAJJ0OT.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Melville">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Melville'blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/baidu_verify_3nmNAJJ0OT.html" itemprop="url">未命名</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-23T11:05:58+08:00">
-                2018-10-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/baidu_verify_3nmNAJJ0OT.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/baidu_verify_3nmNAJJ0OT.html" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/baidu_verify_3nmNAJJ0OT.html" class="leancloud_visitors" data-flag-title="">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            3nmNAJJ0OT
-          
-        
-      
-	  
-	  <div>
-	    
-	  </div>
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/iptables和firewalled的区别.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -451,6 +307,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux系统/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux系统</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -501,9 +379,16 @@
 
       
         
-          
-            
-          
+          <h1 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h1><p>保证数据的安全性是继可用性之后最为重要的一项工作，防火墙技术作为公网与内网之间的保护屏障，起着至关重要的作用。面对同学们普遍不了解在红帽RHEL7系统中新旧两款防火墙的差异，刘遄老师决定先带领读者正确的认识在红帽RHEL7系统中firewalld防火墙服务与iptables防火墙服务之间的关系，从理论和事实层面剖析真相。</p>
+<p>本章节内将会分别使用iptables、firewall-cmd、firewall-config和Tcp_wrappers等防火墙策略配置服务来完成数十个根据真实工作需求而设计的防火墙策略配置实验，让同学们不仅能够熟练的对请求数据包流量进行过滤，还能够基于服务程序进行允许和关闭操作，做到保证Linux系统安全万无一失。</p>
+<h1 id="1-防火墙管理工具"><a href="#1-防火墙管理工具" class="headerlink" title="1. 防火墙管理工具"></a>1. 防火墙管理工具</h1><p>保证数据的安全性是继可用性之后最为重要的一项工作，众所周知外部公网相比企业内网更加的“罪恶丛生”，因此防火墙技术作为公网与内网之间的保护屏障，虽然有软件或硬件之分，但主要功能都是依据策略对外部请求进行过滤。防火墙技术能够做到监控每一个数据包并判断是否有相应的匹配策略规则，直到匹配到其中一条策略规则或执行默认策略为止，防火墙策略可以基于来源地址、请求动作或协议等信息来定制，最终仅让合法的用户请求流入到内网中，其余的均被丢弃。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/iptables和firewalled的区别.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
 	  
@@ -667,15 +552,17 @@
 
       
         
-          
-            <h1 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h1><p>为了验证虚拟网卡驱动的性能，需要两台主机之间互相收发数据，我使用iperf工具进行测试，报错“unable to connect to server: No route to host”，但是可以ping通另一台主机。</p>
+          <h1 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h1><p>为了验证虚拟网卡驱动的性能，需要两台主机之间互相收发数据，我使用iperf工具进行测试，报错“unable to connect to server: No route to host”，但是可以ping通另一台主机。</p>
 <h1 id="Solvent"><a href="#Solvent" class="headerlink" title="Solvent"></a>Solvent</h1><p>Google了一下，发现是防火墙的问题，需要将防火墙关掉，大部分搜索到的结果都是：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iptables -F</span><br></pre></td></tr></table></figure>
-<p>执行此操作后并没有解决问题（我用的是中标麒麟V5.0系统），我就把系统防火墙firewalld全部关闭，问题解决。指令如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop firewalld</span><br><span class="line">systemctl <span class="built_in">disable</span> firewalld</span><br><span class="line">systemctl stop firewalld.service</span><br><span class="line">systemctl <span class="built_in">disable</span> firewalld.service</span><br></pre></td></tr></table></figure>
-<font face="黑体" size="30">想知道iptables和firewalled有什么区别？请参照<a href="">《iptables和firewalled的区别》</a></font>
-
-          
+<p>执行此操作后并没有解决问题（我用的是中标麒麟V5.0系统），我就把系统防火墙firewalld全部关闭，问题解决。指令如下：<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/Linux下用iperf测试网络时出现unable-to-connect-to-server-No-route-to-host.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
 	  
@@ -1619,7 +1506,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1630,7 +1517,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1641,7 +1528,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

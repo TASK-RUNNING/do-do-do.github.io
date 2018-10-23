@@ -91,7 +91,7 @@
 <meta property="og:site_name" content="Melville&#39;blog">
 <meta property="og:description" content="Problem为了验证虚拟网卡驱动的性能，需要两台主机之间互相收发数据，我使用iperf工具进行测试，报错“unable to connect to server: No route to host”，但是可以ping通另一台主机。 SolventGoogle了一下，发现是防火墙的问题，需要将防火墙关掉，大部分搜索到的结果都是： 1iptables -F 执行此操作后并没有解决问题（我用的是中标麒">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-23T01:55:19.541Z">
+<meta property="og:updated_time" content="2018-10-23T03:35:03.889Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux下用iperf测试网络时出现unable to connect to server: No route to host">
 <meta name="twitter:description" content="Problem为了验证虚拟网卡驱动的性能，需要两台主机之间互相收发数据，我使用iperf工具进行测试，报错“unable to connect to server: No route to host”，但是可以ping通另一台主机。 SolventGoogle了一下，发现是防火墙的问题，需要将防火墙关掉，大部分搜索到的结果都是： 1iptables -F 执行此操作后并没有解决问题（我用的是中标麒">
@@ -380,9 +380,8 @@
         <h1 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h1><p>为了验证虚拟网卡驱动的性能，需要两台主机之间互相收发数据，我使用iperf工具进行测试，报错“unable to connect to server: No route to host”，但是可以ping通另一台主机。</p>
 <h1 id="Solvent"><a href="#Solvent" class="headerlink" title="Solvent"></a>Solvent</h1><p>Google了一下，发现是防火墙的问题，需要将防火墙关掉，大部分搜索到的结果都是：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iptables -F</span><br></pre></td></tr></table></figure>
-<p>执行此操作后并没有解决问题（我用的是中标麒麟V5.0系统），我就把系统防火墙firewalld全部关闭，问题解决。指令如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop firewalld</span><br><span class="line">systemctl <span class="built_in">disable</span> firewalld</span><br><span class="line">systemctl stop firewalld.service</span><br><span class="line">systemctl <span class="built_in">disable</span> firewalld.service</span><br></pre></td></tr></table></figure>
-<font face="黑体" size="30">想知道iptables和firewalled有什么区别？请参照<a href="">《iptables和firewalled的区别》</a></font>
+<p>执行此操作后并没有解决问题（我用的是中标麒麟V5.0系统），我就把系统防火墙firewalld全部关闭，问题解决。指令如下：<br><a id="more"></a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop firewalld</span><br><span class="line">systemctl <span class="built_in">disable</span> firewalld</span><br><span class="line">systemctl stop firewalld.service</span><br><span class="line">systemctl <span class="built_in">disable</span> firewalld.service</span><br></pre></td></tr></table></figure></p>
+<p>想知道iptables和firewalled有什么区别？请参照<a href="">《iptables和firewalled的区别》</a></p>
 
       
 	  
@@ -552,7 +551,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -563,7 +562,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -574,7 +573,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
