@@ -27,20 +27,20 @@ override: false
 # For example, you put your favicons into `hexo-site/source/images` directory.
 # Then need to rename & redefine they on any other names, otherwise icons from Next will rewrite your custom icons in Hexo.
 favicon:
-  small: /images/favicon-16x16-next.png
-  medium: /images/favicon-32x32-next.png
+  small: /images/favicon-16x16-next.ico
+  medium: /images/favicon-32x32-next.ico
   apple_touch_icon: /images/apple-touch-icon-next.png
   safari_pinned_tab: /images/logo.svg
   android_manifest: /images/manifest.json
   ms_browserconfig: /images/browserconfig.xml
 
 # Set default keywords (Use a comma to separate)
-keywords: "melville, 博客"
+keywords: "Melville's blog"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
 # Set rss to specific value if you have burned your feed already.
-rss:
+rss: /atom.xml
 
 footer:
   # Specify the date when the site was setup.
@@ -138,8 +138,8 @@ scheme: Gemini
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
 social:
   GitHub: https://github.com/do-do-do || github
-  weibo: https://www.weibo.com/3938468211/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1 || weibo
-  #E-Mail: mailto:yourname@gmail.com || envelope
+  WeiBo: https://www.weibo.com/3938468211/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1 || weibo
+  E-Mail: y.dark.woood@gmail.com || envelope
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
   #FB Page: https://www.facebook.com/yourname || facebook
@@ -156,12 +156,12 @@ social_icons:
 
 # Blog rolls
 links_icon: link
-links_title: Links
-links_layout: block
-#links_layout: inline
-#links:
-  #Title: http://example.com/
-
+links_title: 推荐阅读
+#links_layout: block
+links_layout: inline
+links:
+  C语言结构体中char-0-和char-1-的用法: https://do-do-do.github.io/C%E8%AF%AD%E8%A8%80%E7%BB%93%E6%9E%84%E4%BD%93%E4%B8%ADchar-0-%E5%92%8Cchar-1-%E7%9A%84%E7%94%A8%E6%B3%95.html
+  Linux64位系统兼容32位应用程序: https://do-do-do.github.io/Linux64%E4%BD%8D%E7%B3%BB%E7%BB%9F%E5%85%BC%E5%AE%B932%E4%BD%8D%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F.html
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
 # in site  directory(source/uploads): /uploads/avatar.gif
