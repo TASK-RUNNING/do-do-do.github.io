@@ -76,7 +76,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT, melville, 博客" />
+  <meta name="keywords" content="melville, 博客" />
 
 
 
@@ -132,7 +132,7 @@
 
 
 
-  <title> Hexo, NexT, melville, 博客 - Melville'blog开源大法好 </title>
+  <title> melville, 博客 - Melville'blog开源大法好 </title>
   
 
 
@@ -236,6 +236,16 @@
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
             关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            日程表
           </a>
         </li>
       
@@ -385,9 +395,7 @@
 
       
         
-          <h1 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h1><p>保证数据的安全性是继可用性之后最为重要的一项工作，防火墙技术作为公网与内网之间的保护屏障，起着至关重要的作用。面对同学们普遍不了解在红帽RHEL7系统中新旧两款防火墙的差异，刘遄老师决定先带领读者正确的认识在红帽RHEL7系统中firewalld防火墙服务与iptables防火墙服务之间的关系，从理论和事实层面剖析真相。</p>
-<p>本章节内将会分别使用iptables、firewall-cmd、firewall-config和Tcp_wrappers等防火墙策略配置服务来完成数十个根据真实工作需求而设计的防火墙策略配置实验，让同学们不仅能够熟练的对请求数据包流量进行过滤，还能够基于服务程序进行允许和关闭操作，做到保证Linux系统安全万无一失。</p>
-<h1 id="1-防火墙管理工具"><a href="#1-防火墙管理工具" class="headerlink" title="1. 防火墙管理工具"></a>1. 防火墙管理工具</h1><p>保证数据的安全性是继可用性之后最为重要的一项工作，众所周知外部公网相比企业内网更加的“罪恶丛生”，因此防火墙技术作为公网与内网之间的保护屏障，虽然有软件或硬件之分，但主要功能都是依据策略对外部请求进行过滤。防火墙技术能够做到监控每一个数据包并判断是否有相应的匹配策略规则，直到匹配到其中一条策略规则或执行默认策略为止，防火墙策略可以基于来源地址、请求动作或协议等信息来定制，最终仅让合法的用户请求流入到内网中，其余的均被丢弃。<br>
+          <h1 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h1><p>保证数据的安全性是继可用性之后最为重要的一项工作，防火墙技术作为公网与内网之间的保护屏障，起着至关重要的作用。面对同学们普遍不了解在红帽RHEL7系统中新旧两款防火墙的差异，刘遄老师决定先带领读者正确的认识在红帽RHEL7系统中firewalld防火墙服务与iptables防火墙服务之间的关系，从理论和事实层面剖析真相。<br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/iptables和firewalled的区别.html#more" rel="contents">
@@ -558,10 +566,7 @@
 
       
         
-          <h1 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h1><p>为了验证虚拟网卡驱动的性能，需要两台主机之间互相收发数据，我使用iperf工具进行测试，报错“unable to connect to server: No route to host”，但是可以ping通另一台主机。</p>
-<h1 id="Solvent"><a href="#Solvent" class="headerlink" title="Solvent"></a>Solvent</h1><p>Google了一下，发现是防火墙的问题，需要将防火墙关掉，大部分搜索到的结果都是：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">service iptables stop</span><br><span class="line">iptables -F</span><br></pre></td></tr></table></figure>
-<p>执行此操作后并没有解决问题（我用的是中标麒麟V5.0系统），我就把系统防火墙firewalld全部关闭，问题解决。指令如下：<br>
+          <h1 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h1><p>为了验证虚拟网卡驱动的性能，需要两台主机之间互相收发数据，我使用iperf工具进行测试，报错“unable to connect to server: No route to host”，但是可以ping通另一台主机。<br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/Linux下用iperf测试网络时出现unable-to-connect-to-server-No-route-to-host.html#more" rel="contents">
@@ -732,8 +737,7 @@
 
       
         
-          <h1 id="1-写在前面"><a href="#1-写在前面" class="headerlink" title="1.写在前面"></a>1.写在前面</h1><p>我在进行Linux 64位驱动程序兼容32位应用程序的适配过程中，深深的感觉指针操作带来的麻烦，特别是应用层的32位指针传到内核层后，指针大小变成64位，需要进行频繁的大小调整，及其难受。等我快完成所有工作的时候，听一位同事说可以使用char[0]用法来代替指针，我差点一口老血喷出来。“你咋不早说…”。接下来从网上各种google，发现了这种用法的巧妙，特写下此篇文章，以做记录。<br>（PS：还是要感谢我那位同事YYL，让我又get到一个技能^_^）</p>
-<p>在结构体最后加char[0]或char[1]的用法是GNU C的扩展，<font color="#FF0000">在ISO/IEC 9899-1999里面，这么写是非法的</font>。这种用法在C99中叫做 <strong>柔性数组</strong>。柔性数组成员前面必须至少有一个其它类型成员。包含柔性数组成员的结构要用<code>malloc</code>进行动态内存分配，并且分配的内存应该大于结构的大小，以适应柔性数组的预期大小。<br>
+          <h1 id="1-写在前面"><a href="#1-写在前面" class="headerlink" title="1.写在前面"></a>1.写在前面</h1><p>我在进行Linux 64位驱动程序兼容32位应用程序的适配过程中，深深的感觉指针操作带来的麻烦，特别是应用层的32位指针传到内核层后，指针大小变成64位，需要进行频繁的大小调整，及其难受。等我快完成所有工作的时候，听一位同事说可以使用char[0]用法来代替指针，我差点一口老血喷出来。“你咋不早说…”。接下来从网上各种google，发现了这种用法的巧妙，特写下此篇文章，以做记录。<br>（PS：还是要感谢我那位同事YYL，让我又get到一个技能^_^）<br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/C语言结构体中char-0-和char-1-的用法.html#more" rel="contents">
@@ -909,10 +913,7 @@
 <ol>
 <li>32位应用程序调用ioctl时，返回ENOTTY（inappropriate ioctl for device）错误。经过调试发现根本没调用到内核的ioctl函数。</li>
 <li>解决完第一个问题后，应用程序进入了ioctl中，但是用户程序和驱动打印的ioctl命令号不一样，导致在switch的时候，找不到对应命令号。</li>
-<li>从用户空间拷贝数据的时候（copy_from_user()）失败。拷贝的数据结构里面含有指针。</li>
-</ol>
-</blockquote>
-<h1 id="2-问题分析"><a href="#2-问题分析" class="headerlink" title="2. 问题分析"></a>2. 问题分析</h1><h2 id="2-1-第一个问题"><a href="#2-1-第一个问题" class="headerlink" title="2.1 第一个问题"></a>2.1 第一个问题</h2><p>在 <code>Linux kernel 2.6.36</code> 中已经完全删除了 <code>struct file_operations</code> 结构中的 <code>ioctl</code> 函数指针，取而代之的是 <code>unlocked_ioctl</code>。之后的内核版本中，<code>struct file_operations</code> 含有下面两个函数指针：<br>
+<li>从用户空间拷贝数据的时候（copy_from_user()）失败。拷贝的数据结构里面含有指针。
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/Linux64位系统兼容32位应用程序.html#more" rel="contents">
@@ -1083,17 +1084,7 @@
 
       
         
-          <h1 id="1-什么是三层架构"><a href="#1-什么是三层架构" class="headerlink" title="1. 什么是三层架构"></a>1. 什么是三层架构</h1><p>所谓的三层开发就是将系统的整个业务应用划分为 <code>表示层</code>,<code>业务逻辑层</code>,<code>数据访问层</code>，这样有利于系统的开发、维护、部署和扩展。分层是为了实现 <strong>“高内聚，低耦合”</strong>，采用 <strong>“分而治之”</strong> 的思想，把问题划分开来各个解决，易于控制、易于延展、易于分配资源。</p>
-<p>进行软件开发设计，一定要懂得</p>
-<blockquote>
-<p><strong>分而治之</strong></p>
-<p><strong>分而治之</strong></p>
-<p><strong>分而治之</strong></p>
-</blockquote>
-<ul>
-<li>表示层：负责直接跟用户进行交互，一般也就是指系统的界面，用于数据录入，数据显示等。意味着只做与外观显示相关的工作，不属于他的工作不用做。</li>
-<li>业务逻辑层：用于做一些有效的验证工作，以更好地保证程序运行的健壮性。如完成数据添加、修改和查询等；不允许指定的文本框中输入空字符串，数据格式是否正确及数据类型验证；用户的权限合法性判断等。通过以上诸多判断以决定是否将操作继续向后传递，尽量保证程序的正常运行。</li>
-<li>数据访问层：顾名思义，就是专门跟数据库进行交互，执行数据的添加、删除、修改和显示等。需要强调的是，所有的数据对象只在这一层被引用，除数据层之外的任何地方都不应该出现这样的引用。
+          <h1 id="1-什么是三层架构"><a href="#1-什么是三层架构" class="headerlink" title="1. 什么是三层架构"></a>1. 什么是三层架构</h1><p>所谓的三层开发就是将系统的整个业务应用划分为 <code>表示层</code>,<code>业务逻辑层</code>,<code>数据访问层</code>，这样有利于系统的开发、维护、部署和扩展。分层是为了实现 <strong>“高内聚，低耦合”</strong>，采用 <strong>“分而治之”</strong> 的思想，把问题划分开来各个解决，易于控制、易于延展、易于分配资源。<br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/三层架构.html#more" rel="contents">
@@ -1264,16 +1255,7 @@
 
       
         
-          <h1 id="1-关于Markdown"><a href="#1-关于Markdown" class="headerlink" title="1 关于Markdown"></a>1 关于Markdown</h1><p>Markdown是一种轻量级<a href="https://baike.baidu.com/item/%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80/5964436?fr=aladdin" target="_blank" rel="noopener">标记语言</a>，它的目的是希望大家使用“易于阅读、易于撰写的纯文字格式，并选择性的转换成有效的HTML(或XHTML)”。</p>
-<ol>
-<li><p>优点</p>
-<ul>
-<li>易读<blockquote>
-<p>易读是指Markdown文件（即 <em>.md</em> 文件）容易阅读，与HTML相比，它没有各种繁杂的尖括号&lt;&gt;和缩进。整体简洁美观。</p>
-</blockquote>
-</li>
-<li>易写<blockquote>
-<p>使用Markdown可以让你专注于文字，不用像office软件一样需要用鼠标疯狂点击那些排版按钮，可以做到手不离键盘且快速高效的将写作与排版一气呵成。而且Markdown语法简单，花半个小时就能学会基本语法。</p>
+          <h1 id="1-关于Markdown"><a href="#1-关于Markdown" class="headerlink" title="1 关于Markdown"></a>1 关于Markdown</h1><p>Markdown是一种轻量级<a href="https://baike.baidu.com/item/%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80/5964436?fr=aladdin" target="_blank" rel="noopener">标记语言</a>，它的目的是希望大家使用“易于阅读、易于撰写的纯文字格式，并选择性的转换成有效的HTML(或XHTML)”。<br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/Markdown.html#more" rel="contents">
