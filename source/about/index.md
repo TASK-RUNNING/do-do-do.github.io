@@ -1,6 +1,8 @@
 ---
 title: 自述
 date: 2018-09-05 15:25:14
+type: "about"
+comments: false
 ---
 
 
