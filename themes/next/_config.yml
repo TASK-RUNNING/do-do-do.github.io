@@ -106,6 +106,16 @@ menu_icons:
   enable: true
 
 
+  
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
+
+url: https://do-do-do.github.io/
+
+
+
 # ---------------------------------------------------------------
 # Scheme Settings
 # ---------------------------------------------------------------
@@ -384,7 +394,7 @@ valine:
   appkey: LrKlAVEWOYfv1JwbdQGXAl3K # your leancloud application appkey
   notify: false # mail notifier , https://github.com/xCss/Valine/wiki
   verify: false # Verification code
-  placeholder: 在此处留言... # comment box placeholder
+  placeholder: 添加评论... # comment box placeholder
   avatar: mm # gravatar style
   guest_info: nick,mail,link # custom comment header
   pageSize: 10 # pagination size
@@ -462,7 +472,8 @@ needmoreshare2:
 
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
-#google_site_verification:
+google_site_verification: true
+baidu_site_verification: true
 
 # Google Analytics
 #google_analytics:
@@ -572,7 +583,7 @@ busuanzi_count:
 
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
-baidu_push: false
+baidu_push: true
 
 # Google Calendar
 # Share your recent schedule to others via calendar page

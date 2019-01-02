@@ -182,7 +182,7 @@ Markdown是一种轻量级[标记语言](https://baike.baidu.com/item/%E6%A0%87%
 ```
 
 效果如下：
-![tree](http://petq8khru.bkt.clouddn.com/blog/180910/84HfBh2a3d.jpg?imageslim)
+![tree](https://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8Markdown/tree.jpg)
 
 一般情况下，我们插入的图片大小都不一样，如果像上面的图片一样过大，就会铺满整个屏幕，显示效果就会大打折扣。可惜Markdown没有能处理图片大小的语法（Markdown只注重文字，不注重精细的排版）。天无绝人之路，好在Markdown支持内嵌HTML语句，可以使用HTML来实现图片大小的控制。语法如下：
 
@@ -193,7 +193,7 @@ width：宽度比例  height：高度比例。width和height也可以填写具�
 ```
 
 效果如下：
-<img src="http://petq8khru.bkt.clouddn.com/blog/180910/84HfBh2a3d.jpg?imageslim" width=30% height=30%>
+<img src="https://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8Markdown/tree.jpg" width=30% height=30%>
 
 
 如果有使用[七牛](https://portal.qiniu.com/)作为图床的同学，可以查看[七牛API文档](https://developer.qiniu.com/dora/manual/1270/the-advanced-treatment-of-images-imagemogr2)，他们提供了更多形式的图片处理接口，这里不做过多介绍。

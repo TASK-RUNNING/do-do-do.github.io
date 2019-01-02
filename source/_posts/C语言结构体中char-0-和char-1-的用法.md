@@ -2,7 +2,7 @@
 title: 'C语言结构体中char[0]和char[1]的用法'
 date: 2018-09-18 17:45:22
 tags: [C语言,结构体,指针,内存]
-categories: [语言]
+categories: [编程语言]
 ---
 
 # 1.写在前面
@@ -131,7 +131,4 @@ b4.data addr = 0x7ffded4f3647
 
 
 ---
-
-
-
 
