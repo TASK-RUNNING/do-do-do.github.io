@@ -87,6 +87,15 @@
 
 
 
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/faff8786.js","daovoice")
+  daovoice('init', {
+      app_id: "faff8786"
+    });
+  daovoice('update');
+  </script>
+
+
 <meta name="description" content="1. 什么是三层架构所谓的三层开发就是将系统的整个业务应用划分为 表示层,业务逻辑层,数据访问层，这样有利于系统的开发、维护、部署和扩展。分层是为了实现 “高内聚，低耦合”，采用 “分而治之” 的思想，把问题划分开来各个解决，易于控制、易于延展、易于分配资源。进行软件开发设计，一定要懂得  分而治之 分而治之 分而治之   表示层：负责直接跟用户进行交互，一般也就是指系统的界面，用于数据录入，数据">
 <meta name="keywords" content="架构,系统,软件">
 <meta property="og:type" content="article">
@@ -108,7 +117,7 @@
     root: '/',
     scheme: 'Gemini',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -824,13 +833,6 @@
       
 
       
-        <div class="back-to-top">
-          <i class="fa fa-arrow-up"></i>
-          
-            <span id="scrollpercent"><span>0</span>%</span>
-          
-        </div>
-      
 
     </div>
   </aside>
@@ -878,6 +880,13 @@
       </div>
     </footer>
 
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
     
 
     

@@ -87,6 +87,15 @@
 
 
 
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/faff8786.js","daovoice")
+  daovoice('init', {
+      app_id: "faff8786"
+    });
+  daovoice('update');
+  </script>
+
+
 <meta name="description" content="1.写在前面我在进行Linux 64位驱动程序兼容32位应用程序的适配过程中，深深的感觉指针操作带来的麻烦，特别是应用层的32位指针传到内核层后，指针大小变成64位，需要进行频繁的大小调整，及其难受。等我快完成所有工作的时候，听一位同事说可以使用char[0]用法来代替指针，我差点一口老血喷出来。“你咋不早说…”。接下来从网上各种google，发现了这种用法的巧妙，特写下此篇文章，以做记录。（PS">
 <meta name="keywords" content="C语言,结构体,指针,内存">
 <meta property="og:type" content="article">
@@ -108,7 +117,7 @@
     root: '/',
     scheme: 'Gemini',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -771,13 +780,6 @@
       
 
       
-        <div class="back-to-top">
-          <i class="fa fa-arrow-up"></i>
-          
-            <span id="scrollpercent"><span>0</span>%</span>
-          
-        </div>
-      
 
     </div>
   </aside>
@@ -825,6 +827,13 @@
       </div>
     </footer>
 
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
     
 
     
