@@ -12,7 +12,7 @@ categories: [Linux驱动]
 > 1. 32位应用程序调用ioctl时，返回ENOTTY（inappropriate ioctl for device）错误。经过调试发现根本没调用到内核的ioctl函数。
 > 2. 解决完第一个问题后，应用程序进入了ioctl中，但是用户程序和驱动打印的ioctl命令号不一样，导致在switch的时候，找不到对应命令号。
 > 3. 从用户空间拷贝数据的时候（copy_from_user()）失败。拷贝的数据结构里面含有指针。
-<!-- more -->
+
 # 2. 问题分析
 
 ## 2.1 第一个问题

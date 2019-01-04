@@ -141,7 +141,7 @@ social:
   WeiBo: https://www.weibo.com/3938468211/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1 || weibo
   E-Mail: y.dark.woood@gmail.com || envelope
   #Google: https://plus.google.com/yourname || google
-  #Twitter: https://twitter.com/yourname || twitter
+  Twitter: https://twitter.com/Melville_IT_Dog || twitter
   #FB Page: https://www.facebook.com/yourname || facebook
   #VK Group: https://vk.com/yourname || vk
   #StackOverflow: https://stackoverflow.com/yourname || stack-overflow
@@ -205,7 +205,7 @@ sidebar:
   b2t: false
 
   # Scroll percent label in b2t button.
-  scrollpercent: false
+  scrollpercent: true
 
   # Enable sidebar on narrow view (only for Muse | Mist).
   onmobile: false
@@ -227,8 +227,8 @@ excerpt_description: true
 # Automatically Excerpt. Not recommend.
 # Please use <!-- more --> in the post to control excerpt accurately.
 auto_excerpt:
-  enable: false
-  length: 150
+  enable: true
+  length: 100
 
 # Post meta display settings
 post_meta:
@@ -260,7 +260,7 @@ alipay: /images/alipay.jpg
 
 # Declare license on posts
 post_copyright:
-  enable: false
+  enable: true
   license: CC BY-NC-SA 3.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
 
@@ -364,7 +364,7 @@ han: false
 #swiftype_key:
 
 # Baidu Analytics ID
-#baidu_analytics:
+baidu_analytics: 787e46f45505018733a8af49bce8c4a5
 
 # Duoshuo ShortName
 #duoshuo_shortname:
@@ -394,8 +394,8 @@ valine:
   appkey: LrKlAVEWOYfv1JwbdQGXAl3K # your leancloud application appkey
   notify: false # mail notifier , https://github.com/xCss/Valine/wiki
   verify: false # Verification code
-  placeholder: 添加评论... # comment box placeholder
-  avatar: mm # gravatar style
+  placeholder: 来啊，快活啊... # comment box placeholder
+  avatar: mp # gravatar style
   guest_info: nick,mail,link # custom comment header
   pageSize: 10 # pagination size
 
@@ -415,12 +415,12 @@ gitment:
   mint: true # RECOMMEND, A mint on Gitment, to support count, language and proxy_gateway
   count: true # Show comments count in post meta area
   lazy: false # Comments lazy loading with a button
-  cleanly: false # Hide 'Powered by ...' on footer, and more
+  cleanly: true # Hide 'Powered by ...' on footer, and more
   language: zh-Hans
-  github_user: # MUST HAVE, Your Github ID
-  github_repo: # MUST HAVE, The repo you use to store Gitment comments
-  client_id: # MUST HAVE, Github client id for the Gitment
-  client_secret: # EITHER this or proxy_gateway, Github access secret token for the Gitment
+  github_user: do-do-do # MUST HAVE, Your Github ID
+  github_repo: do-do-do.github.io # MUST HAVE, The repo you use to store Gitment comments
+  client_id: 406efaced0cc37a0bf4e # MUST HAVE, Github client id for the Gitment
+  client_secret: 71f3140ec76b6490354d89893ba439a498dac435 # EITHER this or proxy_gateway, Github access secret token for the Gitment
   proxy_gateway: # Address of api proxy, See: https://github.com/aimingoo/intersect
   redirect_protocol: # Protocol of redirect_uri with force_redirect_protocol when mint enabled
 
@@ -615,13 +615,17 @@ algolia_search:
 # Local search
 # Dependencies: https://github.com/flashlab/hexo-generator-search
 local_search:
-  enable: false
+  enable: true
   # if auto, trigger search by changing input
   # if manual, trigger search by pressing enter key or search button
   trigger: auto
   # show top n results per article, show all results by setting to -1
   top_n_per_article: 1
 
+
+# Online contact 
+daovoice: true
+daovoice_app_id: faff8786
 
 # ---------------------------------------------------------------
 # Tags Settings
@@ -706,7 +710,7 @@ pace: false
 pace_theme: pace-theme-minimal
 
 # Canvas-nest
-canvas_nest: false
+canvas_nest: true
 
 # three_waves
 three_waves: false
@@ -785,14 +789,14 @@ vendors:
 
   # Internal version: 1.0.0
   # https://github.com/hustcc/canvas-nest.js
-  canvas_nest:
+  canvas_nest: 
 
   # three
   three:
 
   # three_waves
   # https://github.com/jjandxa/three_waves
-  three_waves:
+  three_waves: 
 
   # three_waves
   # https://github.com/jjandxa/canvas_lines

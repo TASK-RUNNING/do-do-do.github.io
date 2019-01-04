@@ -5,7 +5,7 @@
 # Site
 title: Melville'blog
 subtitle:
-description: 开源大法好
+description: 改革春风吹满地
 keywords:
 author: Melville
 language: zh-Hans
@@ -75,26 +75,6 @@ Plugins:
 - hexo-generate-feed
 ## Themes: https://hexo.io/themes/
 theme: next
-
-# 点击所有文章时配置项
-#jsonContent:
-#    meta: false
-#    pages: false
-#    posts:
-#      title: true
-#      date: true
-#      path: true
-#      text: false
-#      raw: false
-#      content: false
-#      slug: false
-#      updated: false
-#      comments: false
-#      link: false
-#      permalink: false
-#      excerpt: false
-#      categories: false
-#      tags: true
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
