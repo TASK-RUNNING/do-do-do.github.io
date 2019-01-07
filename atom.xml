@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://do-do-do.github.io/"/>
-  <updated>2019-01-07T10:09:23.679Z</updated>
+  <updated>2019-01-07T10:12:37.306Z</updated>
   <id>https://do-do-do.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://do-do-do.github.io/Windows10%E4%BC%81%E4%B8%9A%E7%89%88%E6%BF%80%E6%B4%BB%E6%96%B9%E6%B3%95.html"/>
     <id>https://do-do-do.github.io/Windows10企业版激活方法.html</id>
     <published>2019-01-07T09:52:13.000Z</published>
-    <updated>2019-01-07T10:09:23.679Z</updated>
+    <updated>2019-01-07T10:12:37.306Z</updated>
     
     <content type="html"><![CDATA[<h1 id="1-效果图"><a href="#1-效果图" class="headerlink" title="1. 效果图"></a>1. 效果图</h1><p><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/Windows10%E4%BC%81%E4%B8%9A%E7%89%88%E6%BF%80%E6%B4%BB%E6%96%B9%E6%B3%95/Windows10%E6%BF%80%E6%B4%BB.png" alt=""></p><h1 id="2-激活方法"><a href="#2-激活方法" class="headerlink" title="2. 激活方法"></a>2. 激活方法</h1><p>以管理员身份运行<code>命令提示符</code>，依次输入以下命令：</p><p><strong>a. 卸载产品秘钥</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slmgr.vbs /upk</span><br></pre></td></tr></table></figure></p><p><strong>b. 安装产品秘钥</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slmgr /ipk NPPR9-FWDCX-D2C8J-H872K-2YT43</span><br></pre></td></tr></table></figure></p><p><strong>c. 设置计算机名称</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slmgr /skms zh.us.to</span><br></pre></td></tr></table></figure></p><p><strong>d. 激活</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slmgr /ato</span><br></pre></td></tr></table></figure></p><h1 id="3-查看"><a href="#3-查看" class="headerlink" title="3. 查看"></a>3. 查看</h1><p>上述步骤完成后，如果提示成功激活，应该可以从<code>控制面板-&gt;系统和安全-&gt;系统</code>中看到激活状态，如果还是未激活，关机重启后再查看。</p><p><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/Windows10%E4%BC%81%E4%B8%9A%E7%89%88%E6%BF%80%E6%B4%BB%E6%96%B9%E6%B3%95/Windows%E6%BF%80%E6%B4%BB%E7%8A%B6%E6%80%81.png" alt=""></p><hr>]]></content>
     
@@ -34,7 +34,7 @@
     
     </summary>
     
-      <category term="Windows10" scheme="https://do-do-do.github.io/categories/Windows10/"/>
+      <category term="Windows" scheme="https://do-do-do.github.io/categories/Windows/"/>
     
     
       <category term="激活" scheme="https://do-do-do.github.io/tags/%E6%BF%80%E6%B4%BB/"/>
