@@ -107,7 +107,7 @@
 <meta property="og:image" content="http://petq8khru.bkt.clouddn.com/blog/180910/3GJDfkIC37.png?imageslim">
 <meta property="og:image" content="https://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8Markdown/tree.jpg">
 <meta property="og:image" content="https://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8Markdown/tree.jpg">
-<meta property="og:updated_time" content="2019-01-04T06:56:12.216Z">
+<meta property="og:updated_time" content="2019-01-07T08:17:22.541Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习使用Markdown">
 <meta name="twitter:description" content="1 关于MarkdownMarkdown是一种轻量级标记语言，它的目的是希望大家使用“易于阅读、易于撰写的纯文字格式，并选择性的转换成有效的HTML(或XHTML)”。  优点  易读 易读是指Markdown文件（即 .md 文件）容易阅读，与HTML相比，它没有各种繁杂的尖括号&amp;lt;&amp;gt;和缩进。整体简洁美观。   易写 使用Markdown可以让你专注于文字，不用像office软件一样需">
@@ -194,7 +194,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle"></p>
+        <p class="site-subtitle">个人博客</p>
       
   </div>
 
@@ -270,6 +270,26 @@
               <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
             
             日程表
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-message">
+          <a href="/message/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-list-alt"></i> <br />
+            
+            留言板
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
           </a>
         </li>
       
@@ -630,11 +650,12 @@
 </ul>
 </li>
 </ul>
-<h2 id="2-11-修改文字颜色和格式"><a href="#2-11-修改文字颜色和格式" class="headerlink" title="2.11 修改文字颜色和格式"></a>2.11 修改文字颜色和格式</h2><p>我们写文章的时候，可能需要强调一些文字（颜色、大小、字体等），让读者引起注意，但是Markdown里面没有修改文字颜色的语法，这就需要用HTML语法来实现修改文字颜色。语法如下：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">font</span> 格式&gt;</span> 文字内容 <span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line"></span><br><span class="line">其中，“格式”的语法如下：</span><br><span class="line">更改颜色：color=#FF0000    //色号是十六进制的</span><br><span class="line">更改字体：face="宋体"</span><br><span class="line">更改大小：size= 5</span><br><span class="line"></span><br><span class="line">例如：</span><br><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">face</span>=<span class="string">"宋体"</span>&gt;</span>这段文字是宋体<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">#FF0000</span> <span class="attr">face</span>=<span class="string">"黑体"</span> <span class="attr">size</span>=<span class="string">30</span>&gt;</span>这段文字是红色，黑体，大小30<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="2-11-修改文字颜色和格式"><a href="#2-11-修改文字颜色和格式" class="headerlink" title="2.11 修改文字颜色和格式"></a>2.11 修改文字颜色和格式</h2><p>我们写文章的时候，可能需要强调一些文字（颜色、大小、字体、位置等），让读者引起注意，但是Markdown里面没有修改文字颜色的语法，这就需要用HTML语法来实现修改文字颜色。语法如下：</p>
+<p><strong>a. 颜色、大小、字体修改</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">font</span> 格式&gt;</span> 文字内容 <span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line"></span><br><span class="line">其中，“格式”的语法如下：</span><br><span class="line">更改颜色：color=#FF0000    //色号是十六进制的</span><br><span class="line">更改字体：face="宋体"</span><br><span class="line">更改大小：size= 5</span><br><span class="line"></span><br><span class="line">例如：</span><br><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">face</span>=<span class="string">"宋体"</span>&gt;</span>这段文字是宋体<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">#FF0000</span> <span class="attr">face</span>=<span class="string">"黑体"</span> <span class="attr">size</span>=<span class="string">30</span>&gt;</span>这段文字是红色，黑体，大小30<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <font face="宋体">这段文字是宋体</font><br><font color="#FF0000" face="黑体" size="30">这段文字是红色，黑体，大小30</font>
 
-<h1 id="3、支持Markdown语法的软件或网站"><a href="#3、支持Markdown语法的软件或网站" class="headerlink" title="3、支持Markdown语法的软件或网站"></a>3、支持Markdown语法的软件或网站</h1><p>编辑软件：</p>
+<p><strong>b. 文字居中</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">center</span>&gt;</span> 文字居中 <span class="tag">&lt;/<span class="name">center</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="这是一段居中的文字"><a href="#这是一段居中的文字" class="headerlink" title=" 这是一段居中的文字 "></a><center> 这是一段居中的文字 </center></h2><h1 id="3、支持Markdown语法的软件或网站"><a href="#3、支持Markdown语法的软件或网站" class="headerlink" title="3、支持Markdown语法的软件或网站"></a>3、支持Markdown语法的软件或网站</h1><p>编辑软件：</p>
 <ol>
 <li>atom —— 21世纪黑客文本编辑器，里面有各种插件，程序猿专用软件，也是我目前在用的编辑软件。</li>
 <li>Visual Studio Code —— 一心想要统治地球的软件，对Markdown语法要求严格，经常会出现红波浪线和绿波浪线。</li>
@@ -939,7 +960,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-关于Markdown"><span class="nav-text">1 关于Markdown</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-基本语法"><span class="nav-text">2 基本语法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-标题"><span class="nav-text">2.1 标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-列表"><span class="nav-text">2.2 列表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-无序列表"><span class="nav-text">1. 无序列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-有序列表"><span class="nav-text">2. 有序列表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-字体"><span class="nav-text">2.3 字体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-引用"><span class="nav-text">2.4 引用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-分割线"><span class="nav-text">2.5 分割线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-6-超链接"><span class="nav-text">2.6 超链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-7-插入图片"><span class="nav-text">2.7 插入图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-8-表格"><span class="nav-text">2.8 表格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-9-代码"><span class="nav-text">2.9 代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-10-待办事宜-Todo-列表"><span class="nav-text">2.10 待办事宜 Todo 列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-11-修改文字颜色和格式"><span class="nav-text">2.11 修改文字颜色和格式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3、支持Markdown语法的软件或网站"><span class="nav-text">3、支持Markdown语法的软件或网站</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-关于Markdown"><span class="nav-text">1 关于Markdown</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-基本语法"><span class="nav-text">2 基本语法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-标题"><span class="nav-text">2.1 标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-列表"><span class="nav-text">2.2 列表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-无序列表"><span class="nav-text">1. 无序列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-有序列表"><span class="nav-text">2. 有序列表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-字体"><span class="nav-text">2.3 字体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-引用"><span class="nav-text">2.4 引用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-分割线"><span class="nav-text">2.5 分割线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-6-超链接"><span class="nav-text">2.6 超链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-7-插入图片"><span class="nav-text">2.7 插入图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-8-表格"><span class="nav-text">2.8 表格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-9-代码"><span class="nav-text">2.9 代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-10-待办事宜-Todo-列表"><span class="nav-text">2.10 待办事宜 Todo 列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-11-修改文字颜色和格式"><span class="nav-text">2.11 修改文字颜色和格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#这是一段居中的文字"><span class="nav-text"> 这是一段居中的文字 </span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3、支持Markdown语法的软件或网站"><span class="nav-text">3、支持Markdown语法的软件或网站</span></a></li></ol></div>
             
 
           </div>
