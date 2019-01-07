@@ -98,8 +98,9 @@ menu:
   archives: /archives/ || archive
   about: /about/ || user
   schedule: /schedule/ || calendar
+  message: /message/ || list-alt
   #sitemap: /sitemap.xml || sitemap
-  #commonweal: /404/ || heartbeat
+  commonweal: /404/ || heartbeat
 
 # Enable/Disable menu icons.
 menu_icons:
