@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://do-do-do.github.io/"/>
-  <updated>2019-01-10T07:32:40.820Z</updated>
+  <updated>2019-01-10T07:35:19.781Z</updated>
   <id>https://do-do-do.github.io/</id>
   
   <author>
@@ -21,18 +21,20 @@
     <link href="https://do-do-do.github.io/hexo-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D.html"/>
     <id>https://do-do-do.github.io/hexo-搭建博客添加自定义域名.html</id>
     <published>2019-01-10T07:32:40.000Z</published>
-    <updated>2019-01-10T07:32:40.820Z</updated>
+    <updated>2019-01-10T07:35:19.781Z</updated>
     
     <summary type="html">
     
     </summary>
     
-      <category term="categories1" scheme="https://do-do-do.github.io/categories/categories1/"/>
+      <category term="博客" scheme="https://do-do-do.github.io/categories/%E5%8D%9A%E5%AE%A2/"/>
     
     
-      <category term="tag1" scheme="https://do-do-do.github.io/tags/tag1/"/>
+      <category term="博客" scheme="https://do-do-do.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
     
-      <category term="tag2" scheme="https://do-do-do.github.io/tags/tag2/"/>
+      <category term="hexo" scheme="https://do-do-do.github.io/tags/hexo/"/>
+    
+      <category term="自定义域名" scheme="https://do-do-do.github.io/tags/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D/"/>
     
   </entry>
   

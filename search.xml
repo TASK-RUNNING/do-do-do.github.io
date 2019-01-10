@@ -13,16 +13,18 @@
       
       <categories>
           
-          <category> categories1 </category>
+          <category> 博客 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> tag1 </tag>
+            <tag> 博客 </tag>
             
-            <tag> tag2 </tag>
+            <tag> hexo </tag>
+            
+            <tag> 自定义域名 </tag>
             
         </tags>
       
