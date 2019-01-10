@@ -74,7 +74,7 @@
 
 
 
-  <meta name="keywords" content="markdown," />
+  <meta name="keywords" content="博客,hexo,next," />
 
 
 
@@ -96,22 +96,38 @@
   </script>
 
 
-<meta name="description" content="1 关于MarkdownMarkdown是一种轻量级标记语言，它的目的是希望大家使用“易于阅读、易于撰写的纯文字格式，并选择性的转换成有效的HTML(或XHTML)”。  优点  易读 易读是指Markdown文件（即 .md 文件）容易阅读，与HTML相比，它没有各种繁杂的尖括号&amp;lt;&amp;gt;和缩进。整体简洁美观。   易写 使用Markdown可以让你专注于文字，不用像office软件一样需">
-<meta name="keywords" content="markdown">
+<meta name="description" content="前言反反复复搞了很多天，终于搭建好自己的博客了，因为要配置的个性化东西很多，而且网上查找的结果都是比较零散的，所以我搭建博客时浪费了很多时间，也走了很多的坑。为了节约大家的时间，方便大家搭建自己的博客，特地记录下搭建的过程。如果大家在搭建过程中有什么疑问，欢迎留言，同时也请大家收藏网站，防止自己忘记!!! 1. GitHub Pages和hexo简介 GitHub Pages旨在从GitHub存储">
+<meta name="keywords" content="博客,hexo,next">
 <meta property="og:type" content="article">
-<meta property="og:title" content="学习使用Markdown">
-<meta property="og:url" content="https://do-do-do.github.io/Markdown.html">
+<meta property="og:title" content="史上最全hexo+GitHubPages搭建个人博客">
+<meta property="og:url" content="https://do-do-do.github.io/史上最全hexo-GitHub-Pages搭建个人博客.html">
 <meta property="og:site_name" content="Melville&#39;s blog">
-<meta property="og:description" content="1 关于MarkdownMarkdown是一种轻量级标记语言，它的目的是希望大家使用“易于阅读、易于撰写的纯文字格式，并选择性的转换成有效的HTML(或XHTML)”。  优点  易读 易读是指Markdown文件（即 .md 文件）容易阅读，与HTML相比，它没有各种繁杂的尖括号&amp;lt;&amp;gt;和缩进。整体简洁美观。   易写 使用Markdown可以让你专注于文字，不用像office软件一样需">
+<meta property="og:description" content="前言反反复复搞了很多天，终于搭建好自己的博客了，因为要配置的个性化东西很多，而且网上查找的结果都是比较零散的，所以我搭建博客时浪费了很多时间，也走了很多的坑。为了节约大家的时间，方便大家搭建自己的博客，特地记录下搭建的过程。如果大家在搭建过程中有什么疑问，欢迎留言，同时也请大家收藏网站，防止自己忘记!!! 1. GitHub Pages和hexo简介 GitHub Pages旨在从GitHub存储">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://petq8khru.bkt.clouddn.com/blog/180910/3GJDfkIC37.png?imageslim">
-<meta property="og:image" content="https://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8Markdown/tree.jpg">
-<meta property="og:image" content="https://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8Markdown/tree.jpg">
-<meta property="og:updated_time" content="2019-01-07T08:17:22.541Z">
+<meta property="og:image" content="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93.png">
+<meta property="og:image" content="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93%E5%90%8D%E5%AD%97.png">
+<meta property="og:image" content="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E5%88%9B%E5%BB%BA%E6%88%90%E5%8A%9F.png">
+<meta property="og:image" content="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E6%9F%A5%E7%9C%8B%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE.png">
+<meta property="og:image" content="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E6%9F%A5%E7%9C%8BGitHubpages%E7%BD%91%E5%9D%80.png">
+<meta property="og:image" content="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/Git%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F.png">
+<meta property="og:image" content="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E8%B4%A6%E6%88%B7%E8%AE%BE%E7%BD%AE.png">
+<meta property="og:image" content="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/GIT%E6%96%B0%E5%BB%BASSH%20key.png">
+<meta property="og:image" content="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E8%BE%93%E5%85%A5SSHkey.png">
+<meta property="og:image" content="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/sshkey%E6%B7%BB%E5%8A%A0%E6%88%90%E5%8A%9F.png">
+<meta property="og:image" content="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E4%BB%93%E5%BA%93URL.png">
+<meta property="og:image" content="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/hexo%E5%88%9D%E5%A7%8B%E5%8C%96%E5%90%8E%E7%9A%84%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.png">
+<meta property="og:image" content="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/hexo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%95%8C%E9%9D%A2.png">
+<meta property="og:image" content="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/config%E6%96%87%E4%BB%B6.png">
+<meta property="og:image" content="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/preo%E5%9C%B0%E5%9D%80.png">
+<meta property="og:image" content="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/config%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AEdeploy.png">
+<meta property="og:image" content="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/GitHub%E5%88%9B%E5%BB%BA%E5%88%86%E6%94%AF.png">
+<meta property="og:image" content="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E7%82%B9%E5%87%BB%E5%88%86%E6%94%AF.png">
+<meta property="og:image" content="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E6%94%B9%E5%8F%98%E5%88%86%E6%94%AF.png">
+<meta property="og:updated_time" content="2019-01-10T02:48:17.218Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="学习使用Markdown">
-<meta name="twitter:description" content="1 关于MarkdownMarkdown是一种轻量级标记语言，它的目的是希望大家使用“易于阅读、易于撰写的纯文字格式，并选择性的转换成有效的HTML(或XHTML)”。  优点  易读 易读是指Markdown文件（即 .md 文件）容易阅读，与HTML相比，它没有各种繁杂的尖括号&amp;lt;&amp;gt;和缩进。整体简洁美观。   易写 使用Markdown可以让你专注于文字，不用像office软件一样需">
-<meta name="twitter:image" content="http://petq8khru.bkt.clouddn.com/blog/180910/3GJDfkIC37.png?imageslim">
+<meta name="twitter:title" content="史上最全hexo+GitHubPages搭建个人博客">
+<meta name="twitter:description" content="前言反反复复搞了很多天，终于搭建好自己的博客了，因为要配置的个性化东西很多，而且网上查找的结果都是比较零散的，所以我搭建博客时浪费了很多时间，也走了很多的坑。为了节约大家的时间，方便大家搭建自己的博客，特地记录下搭建的过程。如果大家在搭建过程中有什么疑问，欢迎留言，同时也请大家收藏网站，防止自己忘记!!! 1. GitHub Pages和hexo简介 GitHub Pages旨在从GitHub存储">
+<meta name="twitter:image" content="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93.png">
 
 
 
@@ -141,13 +157,13 @@
 
 
 
-  <link rel="canonical" href="https://do-do-do.github.io/Markdown.html"/>
+  <link rel="canonical" href="https://do-do-do.github.io/史上最全hexo-GitHub-Pages搭建个人博客.html"/>
 
 
 
 
 
-  <title>学习使用Markdown | Melville's blog</title>
+  <title>史上最全hexo+GitHubPages搭建个人博客 | Melville's blog</title>
   
 
 
@@ -360,7 +376,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://do-do-do.github.io/Markdown.html">
+    <link itemprop="mainEntityOfPage" href="https://do-do-do.github.io/史上最全hexo-GitHub-Pages搭建个人博客.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Melville">
@@ -377,7 +393,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">学习使用Markdown</h1>
+          <h1 class="post-title" itemprop="name headline">史上最全hexo+GitHubPages搭建个人博客</h1>
         
 
         <div class="post-meta">
@@ -389,8 +405,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-06T15:46:35+08:00">
-                2018-09-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-08T14:12:57+08:00">
+                2019-01-08
               </time>
             
 
@@ -405,8 +421,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-01-07T16:17:22+08:00">
-                2019-01-07
+              <time title="更新于" itemprop="dateModified" datetime="2019-01-10T10:48:17+08:00">
+                2019-01-10
               </time>
             
           </span>
@@ -424,8 +440,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/语言/" itemprop="url" rel="index">
-                    <span itemprop="name">语言</span>
+                  <a href="/categories/博客/" itemprop="url" rel="index">
+                    <span itemprop="name">博客</span>
                   </a>
                 </span>
 
@@ -436,22 +452,10 @@
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/Markdown.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/Markdown.html" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
 
           
           
-             <span id="/Markdown.html" class="leancloud_visitors" data-flag-title="学习使用Markdown">
+             <span id="/史上最全hexo-GitHub-Pages搭建个人博客.html" class="leancloud_visitors" data-flag-title="史上最全hexo+GitHubPages搭建个人博客">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -482,209 +486,95 @@
       
 
       
-        <h1 id="1-关于Markdown"><a href="#1-关于Markdown" class="headerlink" title="1 关于Markdown"></a>1 关于Markdown</h1><p>Markdown是一种轻量级<a href="https://baike.baidu.com/item/%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80/5964436?fr=aladdin" target="_blank" rel="noopener">标记语言</a>，它的目的是希望大家使用“易于阅读、易于撰写的纯文字格式，并选择性的转换成有效的HTML(或XHTML)”。</p>
-<ol>
-<li><p>优点</p>
-<ul>
-<li>易读<blockquote>
-<p>易读是指Markdown文件（即 <em>.md</em> 文件）容易阅读，与HTML相比，它没有各种繁杂的尖括号&lt;&gt;和缩进。整体简洁美观。</p>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>反反复复搞了很多天，终于搭建好自己的博客了，因为要配置的个性化东西很多，而且网上查找的结果都是比较零散的，所以我搭建博客时浪费了很多时间，也走了很多的坑。为了节约大家的时间，方便大家搭建自己的博客，特地记录下搭建的过程。如果大家在搭建过程中有什么疑问，<strong>欢迎留言</strong>，同时也请大家收藏网站，防止自己忘记!!!</p>
+<h1 id="1-GitHub-Pages和hexo简介"><a href="#1-GitHub-Pages和hexo简介" class="headerlink" title="1. GitHub Pages和hexo简介"></a>1. GitHub Pages和hexo简介</h1><blockquote>
+<p>GitHub Pages旨在从GitHub存储库托管您的个人，组织或项目页面，是为您和您的项目快速发布漂亮网站的最佳方式。使用GitHub Pages搭建个人网站，可以省去购买服务器、域名等一系列费用，搭建起来非常简单。而且可以上传网页的源代码、更改网页的样式，全部在自己的掌控之中。</p>
 </blockquote>
-</li>
-<li>易写<blockquote>
-<p>使用Markdown可以让你专注于文字，不用像office软件一样需要用鼠标疯狂点击那些排版按钮，可以做到手不离键盘且快速高效的将写作与排版一气呵成。而且Markdown语法简单，花半个小时就能学会基本语法。</p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p>缺点</p>
-<ul>
-<li>标准不统一<blockquote>
-<p>目前Markdown语法众多、编辑器层出不穷，每个编辑器支持的语法也不同，这就导致在一个编辑器上写的md文件，放到其它编辑器上，出现排版混乱，甚至是不支持某些语法的现象。这就是人们所说的 “<strong>方言现象</strong>”，这也是目前Markdown最突出的问题。</p>
-</blockquote>
-</li>
-<li>图片支持不够<blockquote>
-<p>不能直接显示图片，不能调整大小。且不同编辑器对图片的处理也有所不同。</p>
-</blockquote>
-</li>
-<li>表格支持不够<blockquote>
-<p>原生的Markdown是不支持表格的，但现在大部分编辑器都支持简单的表格，也有支持复杂表格的语法，但是书写困难，且不被大多数编辑器支持。</p>
-</blockquote>
-</li>
-<li>占用特殊字符<blockquote>
-<p>Markdown的语法占用了一些特殊字符，导致想在文本中输入特殊字符的时候，需要进行转义操作。</p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p>使用群体</p>
-<ul>
-<li>喜欢写博客的人</li>
-<li>经常阅读书写各种技术文档的技术人员</li>
-<li>混迹于各种技术论坛和社区的程序员</li>
-<li>追求简洁排版、快速编辑的文字工作者</li>
-</ul>
-</li>
-</ol>
-<h1 id="2-基本语法"><a href="#2-基本语法" class="headerlink" title="2 基本语法"></a>2 基本语法</h1><h2 id="2-1-标题"><a href="#2-1-标题" class="headerlink" title="2.1 标题"></a>2.1 标题</h2><p>只需要在文本前面加上 <code>#</code> 号即可(<code>注意#号后面有一个空格</code>)，二级标题加两个 <code>##</code> ，三级标题加三个 <code>###</code> ，以此类推，最多六级标题。</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># 一级标题</span></span><br><span class="line"><span class="section">## 二级标题</span></span><br><span class="line"><span class="section">### 三级标题</span></span><br><span class="line"><span class="section">#### 四级标题</span></span><br><span class="line"><span class="section">##### 五级标题</span></span><br><span class="line"><span class="section">###### 六级标题</span></span><br></pre></td></tr></table></figure>
-<p>效果如下：</p>
 <blockquote>
-<p><img src="http://petq8khru.bkt.clouddn.com/blog/180910/3GJDfkIC37.png?imageslim" alt="mark"></p>
+<p>Hexo 是一款基于Node.js的快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。依赖少易于安装使用，是搭建博客的首选框架。</p>
 </blockquote>
-<h2 id="2-2-列表"><a href="#2-2-列表" class="headerlink" title="2.2 列表"></a>2.2 列表</h2><h3 id="1-无序列表"><a href="#1-无序列表" class="headerlink" title="1. 无序列表"></a>1. 无序列表</h3><p>使用 <code>*，+，-</code> 表示无序列表。列表可以嵌套，上一级和下一级之间敲三个空格即可，建议相同级别的列表项使用相同的符号，并且保持缩进一致，如一级列表用 <code>*</code>，二级列表用 <code>+</code>，三级列表用 <code>-</code> 。 <code>（注意后面需要加空格）</code></p>
-<p>示例：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">* </span>无序列表项1</span><br><span class="line">   + 无序列表项1.1</span><br><span class="line"><span class="code">      - 无序列表项1.1.1</span></span><br><span class="line">   + 无序列表项1.2</span><br><span class="line"><span class="code">      - 无序列表项1.2.1</span></span><br><span class="line"><span class="bullet">* </span>无序列表项2</span><br><span class="line"><span class="bullet">* </span>无序列表项3</span><br></pre></td></tr></table></figure>
-<p>效果如下：</p>
-<ul>
-<li>无序列表项1<ul>
-<li>无序列表项1.1<ul>
-<li>无序列表项1.1.1</li>
-</ul>
-</li>
-<li>无序列表项1.2<ul>
-<li>无序列表项1.2.1</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>无序列表项2</li>
-<li>无序列表项3</li>
-</ul>
-<h3 id="2-有序列表"><a href="#2-有序列表" class="headerlink" title="2. 有序列表"></a>2. 有序列表</h3><p>使用数字和点表示有序列表。<code>（注意后面需要加空格）</code></p>
-<p>示例：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1. </span>有序列表项</span><br><span class="line"><span class="bullet">2. </span>有序列表项</span><br><span class="line"><span class="bullet">3. </span>有序列表项</span><br></pre></td></tr></table></figure>
-<p>效果如下：</p>
-<ol>
-<li>有序列表项</li>
-<li>有序列表项</li>
-<li>有序列表项</li>
-</ol>
-<h2 id="2-3-字体"><a href="#2-3-字体" class="headerlink" title="2.3 字体"></a>2.3 字体</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">*斜体*</span><br><span class="line">**加粗**</span><br><span class="line">***斜体加粗***</span><br><span class="line">~~删除线~~</span><br></pre></td></tr></table></figure>
-<p>效果如下：</p>
-<ul>
-<li><em>斜体</em></li>
-<li><strong>加粗</strong></li>
-<li><strong><em>斜体加粗</em></strong></li>
-<li><del>删除线</del></li>
-</ul>
-<h2 id="2-4-引用"><a href="#2-4-引用" class="headerlink" title="2.4 引用"></a>2.4 引用</h2><p>在引用的文字前加&gt;即可。引用也可以嵌套，如加两个&gt;&gt;三个&gt;&gt;&gt;，貌似可以一直嵌套下去。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; 引用</span><br><span class="line">&gt;&gt; 引用</span><br><span class="line">&gt;&gt;&gt; 引用</span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; 引用</span><br></pre></td></tr></table></figure>
-<p>效果如下：</p>
-<blockquote>
-<p>引用</p>
-<blockquote>
-<p>引用</p>
-<blockquote>
-<p>引用</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>引用</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-<h2 id="2-5-分割线"><a href="#2-5-分割线" class="headerlink" title="2.5 分割线"></a>2.5 分割线</h2><p>使用三个或三个以上的 <code>-</code> 或 <code>*</code>。<br>示例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">--------</span><br><span class="line">***</span><br><span class="line">********</span><br></pre></td></tr></table></figure>
-<p>效果如下：</p>
-<hr>
-<h2 id="2-6-超链接"><a href="#2-6-超链接" class="headerlink" title="2.6 超链接"></a>2.6 超链接</h2><p>加入超链接的格式如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[链接名字](链接地址, &quot;链接title&quot;)</span><br></pre></td></tr></table></figure>
-<p>其中链接title可以不填。<br>例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[百度一下](https://www.baidu.com/)</span><br></pre></td></tr></table></figure>
-<p>注意：不能直接写成 <code>www.baidu.com</code> ，需要加 <code>https://或http://</code></p>
-<p>效果如下：<br><a href="https://www.baidu.com/" target="_blank" rel="noopener">百度一下</a></p>
-<h2 id="2-7-插入图片"><a href="#2-7-插入图片" class="headerlink" title="2.7 插入图片"></a>2.7 插入图片</h2><p>插入图片的格式如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![图片描述](图片地址)</span><br></pre></td></tr></table></figure>
-<p>其中图片title可以不填。<br>例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![tree](http://hru.com/blog/180910/84.jpg?imageim)</span><br></pre></td></tr></table></figure>
-<p>效果如下：<br><img src="https://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8Markdown/tree.jpg" alt="tree"></p>
-<p>一般情况下，我们插入的图片大小都不一样，如果像上面的图片一样过大，就会铺满整个屏幕，显示效果就会大打折扣。可惜Markdown没有能处理图片大小的语法（Markdown只注重文字，不注重精细的排版）。天无绝人之路，好在Markdown支持内嵌HTML语句，可以使用HTML来实现图片大小的控制。语法如下：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"http://hru.com/blog/180910/84.jpg?imageim"</span> <span class="attr">width</span>=<span class="string">30%</span> <span class="attr">height</span>=<span class="string">30%</span>&gt;</span></span><br><span class="line"></span><br><span class="line">width：宽度比例  height：高度比例。width和height也可以填写具体数值</span><br></pre></td></tr></table></figure>
-<p>效果如下：<br><img src="https://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8Markdown/tree.jpg" width="30%" height="30%"></p>
-<p>如果有使用<a href="https://portal.qiniu.com/" target="_blank" rel="noopener">七牛</a>作为图床的同学，可以查看<a href="https://developer.qiniu.com/dora/manual/1270/the-advanced-treatment-of-images-imagemogr2" target="_blank" rel="noopener">七牛API文档</a>，他们提供了更多形式的图片处理接口，这里不做过多介绍。</p>
-<h2 id="2-8-表格"><a href="#2-8-表格" class="headerlink" title="2.8 表格"></a>2.8 表格</h2><p>下面是一般表格的书写格式：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">表头|表头|表头</span><br><span class="line">---|---|---</span><br><span class="line">内容|内容|内容</span><br><span class="line">内容|内容|内容</span><br></pre></td></tr></table></figure>
-<p>表的两边可以加 | 将表包围起来，也可以不加，效果一样，如下所示：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">|表头|表头|表头|</span><br><span class="line">|---|---|---|</span><br><span class="line">|内容|内容|内容|</span><br><span class="line">|内容|内容|内容|</span><br></pre></td></tr></table></figure>
-<p>Markdown默认表的内容是左对齐，标题是居中对齐，我们可以根据需要，使用 <code>:</code> 来进行对齐。<br>示例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">左对齐|居中|右对齐</span><br><span class="line">:---|:---:|---:</span><br><span class="line">内容|内容|内容</span><br><span class="line">内容|内容|内容</span><br><span class="line"></span><br><span class="line">&quot;-&quot;短线每一栏加1个就够了，这里为了对齐，都加了3个。</span><br><span class="line">左边加&quot;:&quot;表示文字居左。</span><br><span class="line">两边加&quot;:&quot;表示文字居中。</span><br><span class="line">右边加&quot;:&quot;表示文字居右。</span><br></pre></td></tr></table></figure>
-<p>效果如下：</p>
+<h1 id="2-创建GitHub-Pages"><a href="#2-创建GitHub-Pages" class="headerlink" title="2. 创建GitHub Pages"></a>2. 创建GitHub Pages</h1><h2 id="2-1-注册GitHub"><a href="#2-1-注册GitHub" class="headerlink" title="2.1 注册GitHub"></a>2.1 注册GitHub</h2><p>如果你看到这篇文章，90%的可能性已经是GitHub会员了，这里就不介绍注册步骤了，<strong><a href="https://github.com/" target="_blank" rel="noopener">GitHub入口</a>。</strong></p>
+<h2 id="2-2-创建仓库"><a href="#2-2-创建仓库" class="headerlink" title="2.2 创建仓库"></a>2.2 创建仓库</h2><p>进入GitHub个人页面，点击右上角的 <strong>+</strong> 号新建仓库。<br><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93.png" alt=""></p>
+<p>在新建仓库页面，输入仓库名字，选择pulic和初始化README，点击 <code>Create repository</code> 新建仓库，如下图所示。</p>
+<font color="#FF0000">注意：仓库名字一定要和自己的用户名一样，规则就是 <code>用户名.github.io</code>。不这样命名会出错。</font><br><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93%E5%90%8D%E5%AD%97.png" width="60%" height="60%"><br><br>创建完成后，在个人仓库页面会出现刚才创建的仓库，点击仓库名称进入仓库。<br><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E5%88%9B%E5%BB%BA%E6%88%90%E5%8A%9F.png" width="60%" height="60%"><br><br>进入仓库后，点击Settings，往下翻，查看仓库的GitHub Pages，已经分配了一个网址，这个网址就是你的博客地址，可以访问。<br><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E6%9F%A5%E7%9C%8B%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE.png" width="60%" height="60%"><br><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E6%9F%A5%E7%9C%8BGitHubpages%E7%BD%91%E5%9D%80.png" width="60%" height="60%"><br><br># 3. 安装工具并设置<br>## 3.1 安装Git，关联自己的远程仓库<br>Git是开源的分布式版本控制系统，用于敏捷高效地处理项目。我们网站在本地搭建好了，需要使用Git同步到GitHub上。Git是一个工具，GitHub是用于托管项目的网站，不要搞混淆了。 <strong><a href="https://git-scm.com/download/win" target="_blank" rel="noopener">Git下载地址</a></strong><br>下载并安装完成后，鼠标右键点击桌面（或文件系统的其它地方），会出现 <code>Git GUI Here</code>, <code>Git Bash Here</code> 两个选项。<br><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/Git%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F.png" alt=""><br><br>点击 <code>Git Bash Here</code>，打开命令窗口。输入以下指令设置Git用户信息。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;你的GitHub用户名&quot;</span><br><span class="line">git config --global user.email &quot;你的GitHub注册邮箱&quot;</span><br></pre></td></tr></table></figure><br><br>生成ssh密钥文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;你的GitHub注册邮箱&quot;</span><br></pre></td></tr></table></figure><br><br>输入这个命令时会提示一些信息，直接三次回车即可，然后在 <code>C:\Users\用户名\.ssh</code> 目录下会生成两个文件 <code>id_rsa</code> 和 <code>id_rsa.pub</code>。 <code>id_rsa</code>是私钥文件，<code>id_rsa.pub</code>是公钥文件。将 <code>id_rsa.pub</code>用记事本打开，拷贝文件里面的所有内容。 然后打开GitHub个人主页，点击右上角的头像，选择Settings<br><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E8%B4%A6%E6%88%B7%E8%AE%BE%E7%BD%AE.png" alt=""><br>找到 <code>SSH and GPG keys</code>，点击 <code>New SSH key</code>。<br><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/GIT%E6%96%B0%E5%BB%BASSH%20key.png" width="70%" height="70%"><br>输入标题和key的内容，点击 <strong>Add SSH key</strong><br><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E8%BE%93%E5%85%A5SSHkey.png" width="70%" height="70%"><br>在Git Bash中检测GitHub公钥设置是否成功，输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh git@github.com</span><br></pre></td></tr></table></figure><br><br>结果如下图所示，则说明设置成功<br><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/sshkey%E6%B7%BB%E5%8A%A0%E6%88%90%E5%8A%9F.png" alt=""><br>&gt; <strong>GitHub添加SSH key的目的：</strong>通过非对称加密的公钥与私钥来完成加密，公钥放置在GitHub上，私钥放置在自己的电脑里。GitHub要求每次推送代码都是合法用户，所以每次推送都需要输入账号密码验证推送用户是否是合法用户，为了省去每次输入密码的步骤，采用了SSH，当你推送的时候，Git就会匹配你的私钥跟GitHub上面的公钥是否是配对的，若是匹配就认为你是合法用户，则允许推送。这样可以保证每次的推送都是正确合法的。<br><br>## 3.2 clone远程仓库到本地<br>不克隆仓库也可以正常部署博客，这一步的目的是为了方便提交本地的配置文件到GitHub上，在 <strong>5.2</strong> 章节会提到。<br>在本地新建一个空文件夹，克隆刚才新建的仓库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone 仓库的URL</span><br></pre></td></tr></table></figure><br><br>其中，仓库的URL可从仓库主页获取，如下图：<br><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E4%BB%93%E5%BA%93URL.png" alt=""><br><br>## 3.3 安装node.js<br><a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">Node.js下载</a>，注意安装Node.js会包含环境变量及npm的安装，安装后，检测Node.js和npm是否安装成功，在命令行中输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v   #显示版本号则说明安装成功</span><br><span class="line">npm -v    #显示版本号则说明安装成功</span><br></pre></td></tr></table></figure><br><br>## 3.4 安装hexo<br>进入我们在 <strong>3.2</strong> 章节中创建的文件夹中，按住shift键，右击鼠标点击命令行（或者是powershell，都是一样的）。输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure><br><br>开始安装hexo，<font color="#FF0000">注意，安装hexo以及下面对hexo初始化的操作，一定要在刚才创建的文件夹中进行。</font>
+
+<h1 id="4-初始化博客以及常用命令"><a href="#4-初始化博客以及常用命令" class="headerlink" title="4. 初始化博客以及常用命令"></a>4. 初始化博客以及常用命令</h1><p>hexo安装完成后，开始对其进行初始化<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure></p>
+<p>初始化的过程稍微有点长，需要等待一会儿。初始化完成之后，文件夹下面应该有这些文件<br><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/hexo%E5%88%9D%E5%A7%8B%E5%8C%96%E5%90%8E%E7%9A%84%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.png" alt=""><br>测试一下，依次输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure></p>
+<p>打开浏览器，输入 <code>localhost:4000</code>，回车，出现<br><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/hexo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%95%8C%E9%9D%A2.png" alt=""><br>OK，博客搭建已经完成一半了，接下来我先介绍几个常用的命令</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:left">左对齐标题</th>
-<th style="text-align:center">居中标题</th>
-<th style="text-align:right">右对齐标题</th>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">简写</th>
+<th style="text-align:left">描述</th>
+<th style="text-align:left">备注</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">内容</td>
-<td style="text-align:center">内容</td>
-<td style="text-align:right">内容</td>
+<td style="text-align:center">hexo init [folder]</td>
+<td style="text-align:center">-</td>
+<td style="text-align:left">在指定目录初始化博客</td>
+<td style="text-align:left">如果不加[folder]参数，则默认在当前目录初始化</td>
 </tr>
 <tr>
-<td style="text-align:left">内容</td>
-<td style="text-align:center">内容</td>
-<td style="text-align:right">内容</td>
+<td style="text-align:center">hexo clean</td>
+<td style="text-align:center">-</td>
+<td style="text-align:left">清除缓存文件 (db.json) 和已生成的静态文件 (public)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">hexo generate</td>
+<td style="text-align:center">hexo g</td>
+<td style="text-align:left">生成静态文件</td>
+<td style="text-align:left">-</td>
+</tr>
+<tr>
+<td style="text-align:center">hexo deploy</td>
+<td style="text-align:center">hexo d</td>
+<td style="text-align:left">部署网站</td>
+<td style="text-align:left">可以和hexo g合并成 hexo g -d，生成静态网页并部署网站，用的比较多</td>
+</tr>
+<tr>
+<td style="text-align:center">hexo version</td>
+<td style="text-align:center">hexo -v</td>
+<td style="text-align:left">查看hexo版本</td>
+<td style="text-align:left">-</td>
+</tr>
+<tr>
+<td style="text-align:center">hexo new [layout] [filename]</td>
+<td style="text-align:center">-</td>
+<td style="text-align:left">新建一篇文章</td>
+<td style="text-align:left">如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来。</td>
+</tr>
+<tr>
+<td style="text-align:center">hexo publish [layout] [filename]</td>
+<td style="text-align:center">-</td>
+<td style="text-align:left">发表草稿</td>
+<td style="text-align:left">-</td>
+</tr>
+<tr>
+<td style="text-align:center">hexo server</td>
+<td style="text-align:center">hexo s</td>
+<td style="text-align:left">启动服务器。默认情况下，访问网址为： <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a></td>
+<td style="text-align:left">加参数-p，可以指定端口号</td>
+</tr>
+<tr>
+<td style="text-align:center">hexo list [type]</td>
+<td style="text-align:center">-</td>
+<td style="text-align:left">列出网站指定类型的资料</td>
+<td style="text-align:left">type类型可以是 page, post, route, tag, category等</td>
 </tr>
 </tbody>
 </table>
-<h2 id="2-9-代码"><a href="#2-9-代码" class="headerlink" title="2.9 代码"></a>2.9 代码</h2><p>Markdown可以内嵌代码，还支持代码高亮，不同开发语言有不同的高亮形式。</p>
-<p>语法如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">单行代码使用两个 ` 将代码包围起来：</span><br><span class="line"></span><br><span class="line">&gt; `代码`</span><br><span class="line"></span><br><span class="line">多行代码使用两个 ``` 加代码语言标识：</span><br><span class="line"></span><br><span class="line">&gt; (``` 语言标识)</span><br><span class="line">&gt; 代码块</span><br><span class="line">&gt; (```)</span><br><span class="line"></span><br><span class="line">上面的括号和&gt;不用写，这里为了方便展示多加了，请忽略</span><br></pre></td></tr></table></figure>
-<p>语言标识是对各种语言的分类，如：python，c，bash，java，php，sql……</p>
-<p>效果如下：</p>
-<p>单行代码： <code>unsigned int a;</code></p>
-<p>多行代码(语言标识：C)：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> a = <span class="number">9</span>;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, a);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="2-10-待办事宜-Todo-列表"><a href="#2-10-待办事宜-Todo-列表" class="headerlink" title="2.10 待办事宜 Todo 列表"></a>2.10 待办事宜 Todo 列表</h2><p>使用带有 [ ] 或 [x] （未完成或已完成）项的列表语法撰写一个待办事宜列表，并且支持子列表嵌套以及混用Markdown语法，例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">- [ ] 一级任务</span><br><span class="line">    - [ ] 二级任务</span><br><span class="line">    - [x] 二级任务</span><br><span class="line">    - [x] 二级任务</span><br><span class="line">        - [x] 三级任务</span><br><span class="line">        - [x] 三级任务</span><br><span class="line">- [ ] 一级任务</span><br><span class="line">    - [ ] 二级任务</span><br></pre></td></tr></table></figure></p>
-<p>效果如下：</p>
-<ul>
-<li style="list-style: none"><input type="checkbox"> 一级任务<ul>
-<li style="list-style: none"><input type="checkbox"> 二级任务</li>
-<li style="list-style: none"><input type="checkbox" checked> 二级任务</li>
-<li style="list-style: none"><input type="checkbox" checked> 二级任务<ul>
-<li style="list-style: none"><input type="checkbox" checked> 三级任务</li>
-<li style="list-style: none"><input type="checkbox" checked> 三级任务</li>
-</ul>
-</li>
-</ul>
-</li>
-<li style="list-style: none"><input type="checkbox"> 一级任务<ul>
-<li style="list-style: none"><input type="checkbox"> 二级任务</li>
-</ul>
-</li>
-</ul>
-<h2 id="2-11-修改文字颜色和格式"><a href="#2-11-修改文字颜色和格式" class="headerlink" title="2.11 修改文字颜色和格式"></a>2.11 修改文字颜色和格式</h2><p>我们写文章的时候，可能需要强调一些文字（颜色、大小、字体、位置等），让读者引起注意，但是Markdown里面没有修改文字颜色的语法，这就需要用HTML语法来实现修改文字颜色。语法如下：</p>
-<p><strong>a. 颜色、大小、字体修改</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">font</span> 格式&gt;</span> 文字内容 <span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line"></span><br><span class="line">其中，“格式”的语法如下：</span><br><span class="line">更改颜色：color=#FF0000    //色号是十六进制的</span><br><span class="line">更改字体：face="宋体"</span><br><span class="line">更改大小：size= 5</span><br><span class="line"></span><br><span class="line">例如：</span><br><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">face</span>=<span class="string">"宋体"</span>&gt;</span>这段文字是宋体<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">#FF0000</span> <span class="attr">face</span>=<span class="string">"黑体"</span> <span class="attr">size</span>=<span class="string">30</span>&gt;</span>这段文字是红色，黑体，大小30<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<font face="宋体">这段文字是宋体</font><br><font color="#FF0000" face="黑体" size="30">这段文字是红色，黑体，大小30</font>
-
-<p><strong>b. 文字居中</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">center</span>&gt;</span> 文字居中 <span class="tag">&lt;/<span class="name">center</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="这是一段居中的文字"><a href="#这是一段居中的文字" class="headerlink" title=" 这是一段居中的文字 "></a><center> 这是一段居中的文字 </center></h2><h1 id="3、支持Markdown语法的软件或网站"><a href="#3、支持Markdown语法的软件或网站" class="headerlink" title="3、支持Markdown语法的软件或网站"></a>3、支持Markdown语法的软件或网站</h1><p>编辑软件：</p>
-<ol>
-<li>atom —— 21世纪黑客文本编辑器，里面有各种插件，程序猿专用软件，也是我目前在用的编辑软件。</li>
-<li>Visual Studio Code —— 一心想要统治地球的软件，对Markdown语法要求严格，经常会出现红波浪线和绿波浪线。</li>
-<li>MarkdownPad —— 一款全功能的编辑器，被很多人称赞为windows 平台最好用的markdown编辑器。</li>
-<li>Sublime Text 2 —— 界面简约大方，定位专业。</li>
-<li>Smark</li>
-<li>MdCharm</li>
-</ol>
-<p>网站（在线编辑器）：</p>
-<ol>
-<li>简书 —— 一个很好的博客平台，简约美观，写文章时可以直接拖入图片生成链接。</li>
-<li>dillinger —— 支持md, html, pdf 文件导出。支持dropbox, onedrive，google drive, github.</li>
-<li>Cmd Markdown</li>
-<li>小书匠编辑器</li>
-</ol>
-<p>如果上面没有适合你的编辑器，请自行上网查找其它的编辑器。</p>
-<hr>
+<h1 id="5-GitHub-Pages和hexo关联"><a href="#5-GitHub-Pages和hexo关联" class="headerlink" title="5. GitHub Pages和hexo关联"></a>5. GitHub Pages和hexo关联</h1><h2 id="5-1-更改hexo站点配置文件"><a href="#5-1-更改hexo站点配置文件" class="headerlink" title="5.1 更改hexo站点配置文件"></a>5.1 更改hexo站点配置文件</h2><p>打开文件夹下面的_config.yml文件<br><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/config%E6%96%87%E4%BB%B6.png" alt=""><br>翻到最后，填写配置，其中repo可以在你新建的仓库中获取到，<br><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/preo%E5%9C%B0%E5%9D%80.png" alt=""></p>
+<p><font color="#FF0000">注意<code>:</code>号后面有一个空格</font>。如下图所示<br><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/config%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AEdeploy.png" alt=""></p>
+<h2 id="5-2-给仓库创建分支"><a href="#5-2-给仓库创建分支" class="headerlink" title="5.2 给仓库创建分支"></a>5.2 给仓库创建分支</h2><p>这里的branch填的是master，这个master是你建立的github.io仓库的主干，用于存放生成的静态网页，你从自己博客网站上看到的东西都是在master这个主干上，而我们本地存放的不仅有博客文章，还有网站的配置文件，这就引发了一个问题，如果我们的电脑硬盘坏了，这些配置文件就丢了，我们再想更改网站的配置，就只能从头再来。所以我们要及时对这些文件做好备份，最好的方法当然是备份到GitHub上，我们可以在master的基础上创建一个分支，比如叫hexo，把网站的配置文件都放在hexo分支上，如果我们电脑硬盘坏了或者想换电脑了，直接从hexo分支上pull到本地即可。下面是创建的方法：</p>
+<p>直接在此处输入hexo，如果没有这个分支，会提示创建，直接回车即可创建hexo分支。如下图所示<br><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/GitHub%E5%88%9B%E5%BB%BA%E5%88%86%E6%94%AF.png" alt=""></p>
+<p>点击 <strong>branches</strong>，将GitHub的默认分支改成hexo<br><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E7%82%B9%E5%87%BB%E5%88%86%E6%94%AF.png" alt=""><br><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E6%94%B9%E5%8F%98%E5%88%86%E6%94%AF.png" alt=""><br>创建好以后，就可以将我们本地的文件提交到hexo上了。关于git的命令，大家自己百度学习。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .               # 添加所有文件</span><br><span class="line">git commit -m &quot;描述&quot;    # 提交</span><br><span class="line">git push origin hexo    # push到hexo分支上</span><br></pre></td></tr></table></figure></p>
+<h1 id="6-新建一篇博客，并部署"><a href="#6-新建一篇博客，并部署" class="headerlink" title="6. 新建一篇博客，并部署"></a>6. 新建一篇博客，并部署</h1><p>接下来就可以写博客啦，我们先新建一个文章，部署上去看看效果。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo new myTestFile</span><br><span class="line">hexo g -d</span><br></pre></td></tr></table></figure></p>
+<p>部署完成后，打开你的博客网址：https://用户名.github.io，在主页上就能看到你刚才的文章啦。</p>
+<h1 id="7-搭建主题"><a href="#7-搭建主题" class="headerlink" title="7. 搭建主题"></a>7. 搭建主题</h1><h1 id="8-主题配置"><a href="#8-主题配置" class="headerlink" title="8. 主题配置"></a>8. 主题配置</h1><h1 id="9-自定义域名"><a href="#9-自定义域名" class="headerlink" title="9. 自定义域名"></a>9. 自定义域名</h1><hr>
 
       
 	  
@@ -744,7 +634,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://do-do-do.github.io/Markdown.html" title="学习使用Markdown">https://do-do-do.github.io/Markdown.html</a>
+    <a href="https://do-do-do.github.io/史上最全hexo-GitHub-Pages搭建个人博客.html" title="史上最全hexo+GitHubPages搭建个人博客">https://do-do-do.github.io/史上最全hexo-GitHub-Pages搭建个人博客.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -759,7 +649,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/markdown/" <i class="fa fa-tag"></i> markdown</a>
+            <a href="/tags/博客/" <i class="fa fa-tag"></i> 博客</a>
+          
+            <a href="/tags/hexo/" <i class="fa fa-tag"></i> hexo</a>
+          
+            <a href="/tags/next/" <i class="fa fa-tag"></i> next</a>
           
         </div>
       
@@ -772,15 +666,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/Windows10企业版激活方法.html" rel="next" title="Windows10企业版激活方法">
+                <i class="fa fa-chevron-left"></i> Windows10企业版激活方法
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/三层架构.html" rel="prev" title="三层架构：表示层——业务逻辑层——数据访问层">
-                三层架构：表示层——业务逻辑层——数据访问层 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -808,13 +702,6 @@
 
 
           
-
-  
-    <div class="comments" id="comments">
-    </div>
-  
-
-
 
         </div>
         
@@ -972,7 +859,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-关于Markdown"><span class="nav-text">1 关于Markdown</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-基本语法"><span class="nav-text">2 基本语法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-标题"><span class="nav-text">2.1 标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-列表"><span class="nav-text">2.2 列表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-无序列表"><span class="nav-text">1. 无序列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-有序列表"><span class="nav-text">2. 有序列表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-字体"><span class="nav-text">2.3 字体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-引用"><span class="nav-text">2.4 引用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-分割线"><span class="nav-text">2.5 分割线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-6-超链接"><span class="nav-text">2.6 超链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-7-插入图片"><span class="nav-text">2.7 插入图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-8-表格"><span class="nav-text">2.8 表格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-9-代码"><span class="nav-text">2.9 代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-10-待办事宜-Todo-列表"><span class="nav-text">2.10 待办事宜 Todo 列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-11-修改文字颜色和格式"><span class="nav-text">2.11 修改文字颜色和格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#这是一段居中的文字"><span class="nav-text"> 这是一段居中的文字 </span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3、支持Markdown语法的软件或网站"><span class="nav-text">3、支持Markdown语法的软件或网站</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-GitHub-Pages和hexo简介"><span class="nav-text">1. GitHub Pages和hexo简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-创建GitHub-Pages"><span class="nav-text">2. 创建GitHub Pages</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-注册GitHub"><span class="nav-text">2.1 注册GitHub</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-创建仓库"><span class="nav-text">2.2 创建仓库</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-初始化博客以及常用命令"><span class="nav-text">4. 初始化博客以及常用命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-GitHub-Pages和hexo关联"><span class="nav-text">5. GitHub Pages和hexo关联</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-1-更改hexo站点配置文件"><span class="nav-text">5.1 更改hexo站点配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-2-给仓库创建分支"><span class="nav-text">5.2 给仓库创建分支</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-新建一篇博客，并部署"><span class="nav-text">6. 新建一篇博客，并部署</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-搭建主题"><span class="nav-text">7. 搭建主题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#8-主题配置"><span class="nav-text">8. 主题配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#9-自定义域名"><span class="nav-text">9. 自定义域名</span></a></li></ol></div>
             
 
           </div>
