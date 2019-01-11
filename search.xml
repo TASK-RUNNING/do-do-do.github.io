@@ -4,9 +4,9 @@
   
     
     <entry>
-      <title>编使用workbench译报错“变量重复定义”</title>
-      <link href="/%E7%BC%96%E4%BD%BF%E7%94%A8workbench%E8%AF%91%E6%8A%A5%E9%94%99%E2%80%9C%E5%8F%98%E9%87%8F%E9%87%8D%E5%A4%8D%E5%AE%9A%E4%B9%89%E2%80%9D.html"/>
-      <url>/%E7%BC%96%E4%BD%BF%E7%94%A8workbench%E8%AF%91%E6%8A%A5%E9%94%99%E2%80%9C%E5%8F%98%E9%87%8F%E9%87%8D%E5%A4%8D%E5%AE%9A%E4%B9%89%E2%80%9D.html</url>
+      <title>使用workbench编译报错“变量重复定义”</title>
+      <link href="/%E4%BD%BF%E7%94%A8workbench%E7%BC%96%E8%AF%91%E6%8A%A5%E9%94%99%E2%80%9C%E5%8F%98%E9%87%8F%E9%87%8D%E5%A4%8D%E5%AE%9A%E4%B9%89%E2%80%9D.html"/>
+      <url>/%E4%BD%BF%E7%94%A8workbench%E7%BC%96%E8%AF%91%E6%8A%A5%E9%94%99%E2%80%9C%E5%8F%98%E9%87%8F%E9%87%8D%E5%A4%8D%E5%AE%9A%E4%B9%89%E2%80%9D.html</url>
       
         <content type="html"><![CDATA[<p>今天在其他同事编写的demo的基础上做修改，使用workbench编译时报了 <strong>main.c</strong> 中变量重复定义的错误，查遍整个工程，只有一个 <strong>config.c</strong> 文件定义了该变量，并没有重复定义的情况。</p><p>刚开始怀疑过编译器是不是坏了，我把工程全部删掉重新做一遍，还是一样的错误。排查了很久，最后发现在 <strong>main.c</strong> 文件的中间，包含了定义该变量的 <strong>config.c</strong> 文件（<code>#include &quot;config.c&quot;</code>），所以变量被重复定义了。</p><p>真让人苦恼，搞不懂为什么我的同事要这样做。</p><hr>]]></content>
       
@@ -138,9 +138,9 @@
       
         <tags>
             
-            <tag> 激活 </tag>
-            
             <tag> Windows10 </tag>
+            
+            <tag> 激活 </tag>
             
         </tags>
       
@@ -165,9 +165,9 @@
       
         <tags>
             
-            <tag> SublimeText3 </tag>
-            
             <tag> 激活 </tag>
+            
+            <tag> SublimeText3 </tag>
             
         </tags>
       
