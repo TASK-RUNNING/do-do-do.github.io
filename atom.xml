@@ -5,9 +5,9 @@
   <subtitle>个人博客</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://do-do-do.github.io/"/>
-  <updated>2019-01-10T07:37:00.417Z</updated>
-  <id>https://do-do-do.github.io/</id>
+  <link href="https:melville.club/"/>
+  <updated>2019-01-11T09:47:33.006Z</updated>
+  <id>https:melville.club/</id>
   
   <author>
     <name>Melville</name>
@@ -17,11 +17,41 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>编使用workbench译报错“变量重复定义”</title>
+    <link href="https:melville.club/%E7%BC%96%E4%BD%BF%E7%94%A8workbench%E8%AF%91%E6%8A%A5%E9%94%99%E2%80%9C%E5%8F%98%E9%87%8F%E9%87%8D%E5%A4%8D%E5%AE%9A%E4%B9%89%E2%80%9D.html"/>
+    <id>https:melville.club/编使用workbench译报错“变量重复定义”.html</id>
+    <published>2019-01-11T09:34:53.000Z</published>
+    <updated>2019-01-11T09:47:33.006Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天在其他同事编写的demo的基础上做修改，使用workbench编译时报了 <strong>main.c</strong> 中变量重复定义的错误，查遍整个工程，只有一个 <strong>config.c</strong> 文件定义了该变量，并没有重复定义的情况。</p><p>刚开始怀疑过编译器是不是坏了，我把工程全部删掉重新做一遍，还是一样的错误。排查了很久，最后发现在 <strong>main.c</strong> 文件的中间，包含了定义该变量的 <strong>config.c</strong> 文件（<code>#include &quot;config.c&quot;</code>），所以变量被重复定义了。</p><p>真让人苦恼，搞不懂为什么我的同事要这样做。</p><hr>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;今天在其他同事编写的demo的基础上做修改，使用workbench编译时报了 &lt;strong&gt;main.c&lt;/strong&gt; 中变量重复定义的错误，查遍整个工程，只有一个 &lt;strong&gt;config.c&lt;/strong&gt; 文件定义了该变量，并没有重复定义的情况。&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="bug" scheme="https:melville.club/categories/bug/"/>
+    
+    
+      <category term="bug" scheme="https:melville.club/tags/bug/"/>
+    
+      <category term="workbench" scheme="https:melville.club/tags/workbench/"/>
+    
+      <category term="调试" scheme="https:melville.club/tags/%E8%B0%83%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
     <title>hexo 搭建博客添加自定义域名</title>
-    <link href="https://do-do-do.github.io/hexo-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D.html"/>
-    <id>https://do-do-do.github.io/hexo-搭建博客添加自定义域名.html</id>
+    <link href="https:melville.club/hexo-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D.html"/>
+    <id>https:melville.club/hexo-搭建博客添加自定义域名.html</id>
     <published>2019-01-10T07:32:40.000Z</published>
-    <updated>2019-01-10T07:37:00.417Z</updated>
+    <updated>2019-01-10T08:23:04.512Z</updated>
     
     <content type="html"><![CDATA[<p><a href="https://blog.github.com/2018-05-01-github-pages-custom-domains-https/" target="_blank" rel="noopener">https://blog.github.com/2018-05-01-github-pages-custom-domains-https/</a><br><a href="https://help.github.com/articles/setting-up-an-apex-domain/#configuring-a-records-with-your-dns-provider" target="_blank" rel="noopener">https://help.github.com/articles/setting-up-an-apex-domain/#configuring-a-records-with-your-dns-provider</a><br><a href="https://jp.v2ex.com/t/451406" target="_blank" rel="noopener">https://jp.v2ex.com/t/451406</a></p>]]></content>
     
@@ -34,49 +64,56 @@
     
     </summary>
     
-      <category term="博客" scheme="https://do-do-do.github.io/categories/%E5%8D%9A%E5%AE%A2/"/>
+      <category term="博客" scheme="https:melville.club/categories/%E5%8D%9A%E5%AE%A2/"/>
     
     
-      <category term="博客" scheme="https://do-do-do.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+      <category term="博客" scheme="https:melville.club/tags/%E5%8D%9A%E5%AE%A2/"/>
     
-      <category term="hexo" scheme="https://do-do-do.github.io/tags/hexo/"/>
+      <category term="hexo" scheme="https:melville.club/tags/hexo/"/>
     
-      <category term="自定义域名" scheme="https://do-do-do.github.io/tags/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D/"/>
+      <category term="自定义域名" scheme="https:melville.club/tags/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D/"/>
     
   </entry>
   
   <entry>
-    <title>hexo next主题配置</title>
-    <link href="https://do-do-do.github.io/hexo-next%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE.html"/>
-    <id>https://do-do-do.github.io/hexo-next主题配置.html</id>
+    <title>hexo站点配置+next主题配置</title>
+    <link href="https:melville.club/hexo%E7%AB%99%E7%82%B9%E9%85%8D%E7%BD%AE+next%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE.html"/>
+    <id>https:melville.club/hexo站点配置+next主题配置.html</id>
     <published>2019-01-10T07:31:50.000Z</published>
-    <updated>2019-01-10T07:33:42.943Z</updated>
+    <updated>2019-01-11T09:47:52.891Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>大家一定要区分站点配置文件和主题配置文件所在位置，因为两个文件的文件名相同，都是 <strong>_config.yml</strong> ，刚开始接触时容易混淆。</p><blockquote><p><strong>站点配置文件：</strong> 位置在主目录下（主目录就是你博客初始化的目录）<br><strong>主题配置文件：</strong> 位置在themes文件夹下面的相应主题根目录（比如next主题的配置文件在 <code>/themes/next</code> 下面）</p></blockquote><h1 id="1-下载主题"><a href="#1-下载主题" class="headerlink" title="1. 下载主题"></a>1. 下载主题</h1><p> <strong><a href="https://hexo.io/themes/" target="_blank" rel="noopener">hexo主题下载</a></strong> ，里面有很多hexo的主题，选择一款喜欢的主题，点进去，会跳转到该主题的GitHub页面，download到本地。并将主题 <strong>文件夹</strong> 放到themes文件夹下面。然后在站点配置文件中更改为该主题，就可以使用了，下面会介绍如何更改。</p><h1 id="2-站点配置"><a href="#2-站点配置" class="headerlink" title="2. 站点配置"></a>2. 站点配置</h1><p>下表列出hexo站点文件的基本配置参数</p><p><strong>网站</strong><br>参数 | 描述 | 默认值<br>—|—|—<br>title       | 网站标题       |<br>subtitle    | 网站副标题     |<br>description | 网站描述       |<br>keywords    | 网站关键词     |<br>author      | 你的名字       |<br>language    | 网站使用的语言 |<br>timezone    | 网站时区       | Hexo 默认使用您电脑的时区</p><p><strong>网址</strong><br>参数|    描述    |默认值<br>—|—|—<br>url                    |网址                     |<br>root                |网站根目录               |<br>permalink           |文章的 永久链接 格式     |:year/:month/:day/:title/<br>permalink_defaults    |永久链接中各部分的默认值 |    </p><blockquote><p>如果您的网站存放在子目录中，例如 <a href="http://yoursite.com/blog，" target="_blank" rel="noopener">http://yoursite.com/blog，</a><br>则请将您的 url 设为 <a href="http://yoursite.com/blog" target="_blank" rel="noopener">http://yoursite.com/blog</a> 并把 root 设为 /blog/。</p></blockquote><p><strong>目录</strong><br>参数|描述|默认值<br>—|—|—<br>source_dir    |资源文件夹，这个文件夹用来存放内容               |source<br>public_dir    |公共文件夹，这个文件夹用于存放生成的站点文件。   |public<br>tag_dir       |标签文件夹                                       |tags<br>archive_dir   |归档文件夹                                       |archives<br>category_dir  |分类文件夹                                       |categories<br>code_dir      |Include code 文件夹                              |downloads/code<br>i18n_dir      |国际化（i18n）文件夹                                |:lang<br>skip_render   |跳过指定文件的渲染，您可使用 glob 表达式来匹配路径。    </p><blockquote><p><strong>注意：</strong> 如果您刚刚开始接触Hexo，通常没有必要修改这一部分的值。</p></blockquote><p><strong>文章</strong><br>参数|描述|默认值<br>—|—|—<br>new_post_name     |新文章的文件名称          |:title.md<br>default_layout    |预设布局                  |post<br>auto_spacing      |在中文和英文之间加入空格  |false<br>titlecase         |把标题转换为 title case   |false<br>external_link     |在新标签中打开链接        |true<br>filename_case     |把文件名称转换为 (1) 小写或 (2) 大写 |0<br>render_drafts     |显示草稿                  |false<br>post_asset_folder |启动 Asset 文件夹         |false<br>relative_link     |把链接改为与根目录的相对位址 |false<br>future            |显示未来的文章            |true<br>highlight         |代码块的设置</p><blockquote><p><strong>相对地址：</strong> 默认情况下，Hexo生成的超链接都是绝对地址。例如，如果您的网站域名为 example.com，您有一篇文章名为hello，那么绝对链接可能像这样：<a href="http://example.com/hello.html，" target="_blank" rel="noopener">http://example.com/hello.html，</a> 它是绝对于域名的。相对链接像这样：/hello.html，也就是说，无论用什么域名访问该站点，都没有关系，这在进行反向代理时可能用到。通常情况下，建议使用绝对地址。</p></blockquote><p><strong>分类 &amp; 标签</strong><br>参数|描述|默认值<br>—|—|—<br>default_category  |默认分类   |uncategorized<br>category_map      |分类别名   |<br>tag_map           |标签别名   |</p><p><strong>日期 / 时间格式</strong><br>参数|描述|默认值<br>—|—|—<br>date_format |日期格式    |YYYY-MM-DD<br>time_format |时间格式    |HH:mm:ss</p><blockquote><p>Hexo 使用 Moment.js 来解析和显示时间。</p></blockquote><p><strong>分页</strong><br>参数|描述|默认值<br>—|—|—<br>per_page       |每页显示的文章量 (0 = 关闭分页功能)    |10<br>pagination_dir |分页目录                            |page</p><h1 id="3-主题配置"><a href="#3-主题配置" class="headerlink" title="3. 主题配置"></a>3. 主题配置</h1><hr>]]></content>
     
     <summary type="html">
     
+      
+      
+        &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;大家一定要区分站点配置文件和主题配置文件所在位置，因为两个文件的文件名相同，都是 &lt;strong&gt;_config.yml&lt;/
+      
+    
     </summary>
     
-      <category term="博客" scheme="https://do-do-do.github.io/categories/%E5%8D%9A%E5%AE%A2/"/>
+      <category term="博客" scheme="https:melville.club/categories/%E5%8D%9A%E5%AE%A2/"/>
     
     
-      <category term="博客" scheme="https://do-do-do.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+      <category term="博客" scheme="https:melville.club/tags/%E5%8D%9A%E5%AE%A2/"/>
     
-      <category term="hexo" scheme="https://do-do-do.github.io/tags/hexo/"/>
+      <category term="hexo" scheme="https:melville.club/tags/hexo/"/>
     
-      <category term="next" scheme="https://do-do-do.github.io/tags/next/"/>
+      <category term="next" scheme="https:melville.club/tags/next/"/>
     
-      <category term="主题" scheme="https://do-do-do.github.io/tags/%E4%B8%BB%E9%A2%98/"/>
+      <category term="主题" scheme="https:melville.club/tags/%E4%B8%BB%E9%A2%98/"/>
     
   </entry>
   
   <entry>
     <title>史上最全hexo+GitHubPages搭建个人博客</title>
-    <link href="https://do-do-do.github.io/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHub-Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html"/>
-    <id>https://do-do-do.github.io/史上最全hexo-GitHub-Pages搭建个人博客.html</id>
+    <link href="https:melville.club/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHub-Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html"/>
+    <id>https:melville.club/史上最全hexo-GitHub-Pages搭建个人博客.html</id>
     <published>2019-01-09T06:12:57.000Z</published>
-    <updated>2019-01-10T07:36:54.806Z</updated>
+    <updated>2019-01-10T07:51:59.179Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>反反复复搞了很多天，终于搭建好自己的博客了，因为要配置的个性化东西很多，而且网上查找的结果都是比较零散的，所以我搭建博客时浪费了很多时间，也走了很多的坑。为了节约大家的时间，方便大家搭建自己的博客，特地记录下搭建的过程。如果大家在搭建过程中有什么疑问，<strong>欢迎留言</strong>，同时也请大家收藏网站，防止自己忘记!!!</p><h1 id="1-GitHub-Pages和hexo简介"><a href="#1-GitHub-Pages和hexo简介" class="headerlink" title="1. GitHub Pages和hexo简介"></a>1. GitHub Pages和hexo简介</h1><blockquote><p>GitHub Pages旨在从GitHub存储库托管您的个人，组织或项目页面，是为您和您的项目快速发布漂亮网站的最佳方式。使用GitHub Pages搭建个人网站，可以省去购买服务器、域名等一系列费用，搭建起来非常简单。而且可以上传网页的源代码、更改网页的样式，全部在自己的掌控之中。</p></blockquote><blockquote><p>Hexo 是一款基于Node.js的快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。依赖少易于安装使用，是搭建博客的首选框架。</p></blockquote><h1 id="2-创建GitHub-Pages"><a href="#2-创建GitHub-Pages" class="headerlink" title="2. 创建GitHub Pages"></a>2. 创建GitHub Pages</h1><h2 id="2-1-注册GitHub"><a href="#2-1-注册GitHub" class="headerlink" title="2.1 注册GitHub"></a>2.1 注册GitHub</h2><p>如果你看到这篇文章，90%的可能性已经是GitHub会员了，这里就不介绍注册步骤了，<strong><a href="https://github.com/" target="_blank" rel="noopener">GitHub入口</a>。</strong></p><h2 id="2-2-创建仓库"><a href="#2-2-创建仓库" class="headerlink" title="2.2 创建仓库"></a>2.2 创建仓库</h2><p>进入GitHub个人页面，点击右上角的 <strong>+</strong> 号新建仓库。</p><p><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93.png" alt=""></p><p>在新建仓库页面，输入仓库名字，选择pulic和初始化README，点击 <code>Create repository</code> 新建仓库，如下图所示。</p><font color="#FF0000">注意：仓库名字一定要和自己的用户名一样，规则就是 <code>用户名.github.io</code>。不这样命名会出错。</font><p><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93%E5%90%8D%E5%AD%97.png" width="60%" height="60%"></p><p>创建完成后，在个人仓库页面会出现刚才创建的仓库，点击仓库名称进入仓库。</p><p><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E5%88%9B%E5%BB%BA%E6%88%90%E5%8A%9F.png" width="60%" height="60%"></p><p>进入仓库后，点击Settings，往下翻，查看仓库的GitHub Pages，已经分配了一个网址，这个网址就是你的博客地址，可以访问。</p><p><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E6%9F%A5%E7%9C%8B%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE.png" width="60%" height="60%"></p><p><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E6%9F%A5%E7%9C%8BGitHubpages%E7%BD%91%E5%9D%80.png" width="60%" height="60%"></p><h1 id="3-安装工具并设置"><a href="#3-安装工具并设置" class="headerlink" title="3. 安装工具并设置"></a>3. 安装工具并设置</h1><h2 id="3-1-安装Git，关联自己的远程仓库"><a href="#3-1-安装Git，关联自己的远程仓库" class="headerlink" title="3.1 安装Git，关联自己的远程仓库"></a>3.1 安装Git，关联自己的远程仓库</h2><p>Git是开源的分布式版本控制系统，用于敏捷高效地处理项目。我们网站在本地搭建好了，需要使用Git同步到GitHub上。Git是一个工具，GitHub是用于托管项目的网站，不要搞混淆了。 <strong><a href="https://git-scm.com/download/win" target="_blank" rel="noopener">Git下载地址</a></strong><br>下载并安装完成后，鼠标右键点击桌面（或文件系统的其它地方），会出现 <code>Git GUI Here</code>, <code>Git Bash Here</code> 两个选项。</p><p><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/Git%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F.png" alt=""></p><p>点击 <code>Git Bash Here</code>，打开命令窗口。输入以下指令设置Git用户信息。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;你的GitHub用户名&quot;</span><br><span class="line">git config --global user.email &quot;你的GitHub注册邮箱&quot;</span><br></pre></td></tr></table></figure><p>生成ssh密钥文件</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;你的GitHub注册邮箱&quot;</span><br></pre></td></tr></table></figure><p>输入这个命令时会提示一些信息，直接三次回车即可，然后在 <code>C:\Users\用户名\.ssh</code> 目录下会生成两个文件 <code>id_rsa</code> 和 <code>id_rsa.pub</code>。 <code>id_rsa</code>是私钥文件，<code>id_rsa.pub</code>是公钥文件。将 <code>id_rsa.pub</code>用记事本打开，拷贝文件里面的所有内容。 然后打开GitHub个人主页，点击右上角的头像，选择Settings</p><p><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E8%B4%A6%E6%88%B7%E8%AE%BE%E7%BD%AE.png" alt=""></p><p>找到 <code>SSH and GPG keys</code>，点击 <code>New SSH key</code>。</p><p><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/GIT%E6%96%B0%E5%BB%BASSH%20key.png" width="70%" height="70%"></p><p>输入标题和key的内容，点击 <strong>Add SSH key</strong></p><p><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E8%BE%93%E5%85%A5SSHkey.png" width="70%" height="70%"></p><p>在Git Bash中检测GitHub公钥设置是否成功，输入</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh git@github.com</span><br></pre></td></tr></table></figure><p>结果如下图所示，则说明设置成功</p><p><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/sshkey%E6%B7%BB%E5%8A%A0%E6%88%90%E5%8A%9F.png" alt=""></p><blockquote><p><strong>GitHub添加SSH key的目的：</strong>通过非对称加密的公钥与私钥来完成加密，公钥放置在GitHub上，私钥放置在自己的电脑里。GitHub要求每次推送代码都是合法用户，所以每次推送都需要输入账号密码验证推送用户是否是合法用户，为了省去每次输入密码的步骤，采用了SSH，当你推送的时候，Git就会匹配你的私钥跟GitHub上面的公钥是否是配对的，若是匹配就认为你是合法用户，则允许推送。这样可以保证每次的推送都是正确合法的。</p></blockquote><h2 id="3-2-clone远程仓库到本地"><a href="#3-2-clone远程仓库到本地" class="headerlink" title="3.2 clone远程仓库到本地"></a>3.2 clone远程仓库到本地</h2><p>不克隆仓库也可以正常部署博客，这一步的目的是为了方便提交本地的配置文件到GitHub上，在 <strong>5.2</strong> 章节会提到。<br>在本地新建一个空文件夹，克隆刚才新建的仓库</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone 仓库的URL</span><br></pre></td></tr></table></figure><p>其中，仓库的URL可从仓库主页获取，如下图：</p><p><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E4%BB%93%E5%BA%93URL.png" alt=""></p><h2 id="3-3-安装node-js"><a href="#3-3-安装node-js" class="headerlink" title="3.3 安装node.js"></a>3.3 安装node.js</h2><p><a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">Node.js下载</a>，注意安装Node.js会包含环境变量及npm的安装，安装后，检测Node.js和npm是否安装成功，在命令行中输入</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v   #显示版本号则说明安装成功</span><br><span class="line">npm -v    #显示版本号则说明安装成功</span><br></pre></td></tr></table></figure><h2 id="3-4-安装hexo"><a href="#3-4-安装hexo" class="headerlink" title="3.4 安装hexo"></a>3.4 安装hexo</h2><p>进入我们在 <strong>3.2</strong> 章节中创建的文件夹中，按住shift键，右击鼠标点击命令行（或者是powershell，都是一样的）。输入</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure><p>开始安装hexo，<font color="#FF0000">注意，安装hexo以及下面对hexo初始化的操作，一定要在刚才创建的文件夹中进行。</font></p><h1 id="4-初始化博客以及常用命令"><a href="#4-初始化博客以及常用命令" class="headerlink" title="4. 初始化博客以及常用命令"></a>4. 初始化博客以及常用命令</h1><p>hexo安装完成后，开始对其进行初始化</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure><p>初始化的过程稍微有点长，需要等待一会儿。初始化完成之后，文件夹下面应该有这些文件</p><p><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/hexo%E5%88%9D%E5%A7%8B%E5%8C%96%E5%90%8E%E7%9A%84%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.png" alt=""></p><blockquote><p><strong>node_modules：</strong> 框架，一般不用改动</p></blockquote><blockquote><p><strong>scaffolds：</strong> scaffolds就是脚手架的意思，这里放了三个模板文件，分别是新添加博客文章（posts）、新添加博客页（page）和新添加草稿（draft）的目标样式。这部分可以修改的内容是，我们可以在模板上添加比如categories等自定义内容</p></blockquote><blockquote><p><strong>source：</strong> source是放置我们博客内容的地方，里面初始只有两个文件夹，一个是drafts（草稿），一个posts（文章），但之后我们通过命令新建tags（标签）还有categories（分类）页后，这里会相应地增加文件夹。</p></blockquote><blockquote><p><strong>themes：</strong> 放置主题文件包的地方。Hexo会根据这个文件来生成静态页面。初始状态下只有landscape一个文件夹，后续我们可以添加自己喜欢的。</p></blockquote><blockquote><p><strong>config.yml：</strong> 博客的配置文件，博客的名称、关键词、作者、语言、博客主题…设置都在里面。</p></blockquote><blockquote><p><strong>package.json：</strong> 应用程序信息，新添加的插件内容也会出现在这里面，我们可以不修改这里的内容。</p></blockquote><p>测试一下，依次输入</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure><p>打开浏览器，输入 <code>localhost:4000</code>，回车，出现</p><p><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/hexo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%95%8C%E9%9D%A2.png" alt=""></p><p>OK，博客搭建已经完成一半了，接下来我先介绍几个常用的命令</p><table><thead><tr><th style="text-align:center">命令</th><th style="text-align:center">简写</th><th style="text-align:left">描述</th><th style="text-align:left">备注</th></tr></thead><tbody><tr><td style="text-align:center">hexo init [folder]</td><td style="text-align:center">-</td><td style="text-align:left">在指定目录初始化博客</td><td style="text-align:left">如果不加[folder]参数，则默认在当前目录初始化</td></tr><tr><td style="text-align:center">hexo clean</td><td style="text-align:center">-</td><td style="text-align:left">清除缓存文件 (db.json) 和已生成的静态文件 (public)</td><td style="text-align:left"></td></tr><tr><td style="text-align:center">hexo generate</td><td style="text-align:center">hexo g</td><td style="text-align:left">生成静态文件</td><td style="text-align:left">-</td></tr><tr><td style="text-align:center">hexo deploy</td><td style="text-align:center">hexo d</td><td style="text-align:left">部署网站</td><td style="text-align:left">可以和hexo g合并成 hexo g -d，生成静态网页并部署网站，用的比较多</td></tr><tr><td style="text-align:center">hexo version</td><td style="text-align:center">hexo -v</td><td style="text-align:left">查看hexo版本</td><td style="text-align:left">-</td></tr><tr><td style="text-align:center">hexo new [layout] [filename]</td><td style="text-align:center">-</td><td style="text-align:left">新建一篇文章</td><td style="text-align:left">如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来。</td></tr><tr><td style="text-align:center">hexo publish [layout] [filename]</td><td style="text-align:center">-</td><td style="text-align:left">发表草稿</td><td style="text-align:left">-</td></tr><tr><td style="text-align:center">hexo server</td><td style="text-align:center">hexo s</td><td style="text-align:left">启动服务器。默认情况下，访问网址为： <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a></td><td style="text-align:left">加参数-p，可以指定端口号</td></tr><tr><td style="text-align:center">hexo list [type]</td><td style="text-align:center">-</td><td style="text-align:left">列出网站指定类型的资料</td><td style="text-align:left">type类型可以是 page, post, route, tag, category等</td></tr></tbody></table><h1 id="5-GitHub-Pages和hexo关联"><a href="#5-GitHub-Pages和hexo关联" class="headerlink" title="5. GitHub Pages和hexo关联"></a>5. GitHub Pages和hexo关联</h1><h2 id="5-1-更改hexo站点配置文件"><a href="#5-1-更改hexo站点配置文件" class="headerlink" title="5.1 更改hexo站点配置文件"></a>5.1 更改hexo站点配置文件</h2><p>打开文件夹下面的_config.yml文件</p><p><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/config%E6%96%87%E4%BB%B6.png" alt=""></p><p>翻到最后，填写配置</p><p><font color="#FF0000">注意<code>:</code>号后面有一个空格</font>。如下图所示</p><p><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/config%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AEdeploy.png" alt=""></p><p>其中,repo可以在你新建的仓库中获取到</p><p><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/preo%E5%9C%B0%E5%9D%80.png" alt=""></p><h2 id="5-2-给仓库创建分支"><a href="#5-2-给仓库创建分支" class="headerlink" title="5.2 给仓库创建分支"></a>5.2 给仓库创建分支</h2><p>这里的branch填的是master，这个master是你建立的github.io仓库的主干，用于存放生成的静态网页，你从自己博客网站上看到的东西都是在master这个主干上，而我们本地存放的不仅有博客文章，还有网站的配置文件，这就引发了一个问题，如果我们的电脑硬盘坏了，这些配置文件就丢了，我们再想更改网站的配置，就只能从头再来。所以我们要及时对这些文件做好备份，最好的方法当然是备份到GitHub上，我们可以在master的基础上创建一个分支，比如叫hexo，把网站的配置文件都放在hexo分支上，如果我们电脑硬盘坏了或者想换电脑了，直接从hexo分支上pull到本地即可。下面是创建的方法：</p><p>直接在此处输入hexo，如果没有这个分支，会提示创建，直接回车即可创建hexo分支。如下图所示</p><p><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/GitHub%E5%88%9B%E5%BB%BA%E5%88%86%E6%94%AF.png" alt=""></p><p>点击 <strong>branches</strong>，将GitHub的默认分支改成hexo</p><p><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E7%82%B9%E5%87%BB%E5%88%86%E6%94%AF.png" alt=""></p><p><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E6%94%B9%E5%8F%98%E5%88%86%E6%94%AF.png" alt=""></p><p>创建好以后，就可以将我们本地的文件提交到hexo上了。关于git的命令，大家自己百度学习。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .               # 添加所有文件</span><br><span class="line">git commit -m &quot;描述&quot;    # 提交</span><br><span class="line">git push origin hexo    # push到hexo分支上</span><br></pre></td></tr></table></figure><h1 id="6-新建一篇博客，并部署"><a href="#6-新建一篇博客，并部署" class="headerlink" title="6. 新建一篇博客，并部署"></a>6. 新建一篇博客，并部署</h1><p>首先安装Git部署插件</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure><p>接下来就可以写博客啦，我们先新建一个文章，部署上去看看效果。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo new myTestFile</span><br><span class="line">hexo g -d</span><br></pre></td></tr></table></figure><p>部署完成后，打开你的博客网址：https://用户名.github.io，在主页上就能看到你刚才的文章啦。</p><h1 id="7-添加个性主题及配置"><a href="#7-添加个性主题及配置" class="headerlink" title="7. 添加个性主题及配置"></a>7. 添加个性主题及配置</h1><p>由于文章内容较多，主题配置放在了另一篇文章，<a href="https://melville.club/hexo-next%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE.html#more" target="_blank" rel="noopener">点击链接，查看hexo的next主题</a></p><h1 id="9-自定义域名"><a href="#9-自定义域名" class="headerlink" title="9. 自定义域名"></a>9. 自定义域名</h1><p>由于文章内容较多，自定义域名放在了另一篇文章，<a href="https://melville.club/hexo-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D.html#more" target="_blank" rel="noopener">点击链接，查看hexo的自定义域名</a></p><hr>]]></content>
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>反反复复搞了很多天，终于搭建好自己的博客了，因为要配置的个性化东西很多，而且网上查找的结果都是比较零散的，所以我搭建博客时浪费了很多时间，也走了很多的坑。为了节约大家的时间，方便大家搭建自己的博客，特地记录下搭建的过程。如果大家在搭建过程中有什么疑问，<strong>欢迎留言</strong>，同时也请大家收藏网站，防止自己忘记!!!</p><h1 id="1-GitHub-Pages和hexo简介"><a href="#1-GitHub-Pages和hexo简介" class="headerlink" title="1. GitHub Pages和hexo简介"></a>1. GitHub Pages和hexo简介</h1><blockquote><p>GitHub Pages旨在从GitHub存储库托管您的个人，组织或项目页面，是为您和您的项目快速发布漂亮网站的最佳方式。使用GitHub Pages搭建个人网站，可以省去购买服务器、域名等一系列费用，搭建起来非常简单。而且可以上传网页的源代码、更改网页的样式，全部在自己的掌控之中。</p></blockquote><blockquote><p>Hexo 是一款基于Node.js的快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。依赖少易于安装使用，是搭建博客的首选框架。</p></blockquote><h1 id="2-创建GitHub-Pages"><a href="#2-创建GitHub-Pages" class="headerlink" title="2. 创建GitHub Pages"></a>2. 创建GitHub Pages</h1><h2 id="2-1-注册GitHub"><a href="#2-1-注册GitHub" class="headerlink" title="2.1 注册GitHub"></a>2.1 注册GitHub</h2><p>如果你看到这篇文章，90%的可能性已经是GitHub会员了，这里就不介绍注册步骤了，<strong><a href="https://github.com/" target="_blank" rel="noopener">GitHub入口</a>。</strong></p><h2 id="2-2-创建仓库"><a href="#2-2-创建仓库" class="headerlink" title="2.2 创建仓库"></a>2.2 创建仓库</h2><p>进入GitHub个人页面，点击右上角的 <strong>+</strong> 号新建仓库。</p><p><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93.png" alt=""></p><p>在新建仓库页面，输入仓库名字，选择pulic和初始化README，点击 <code>Create repository</code> 新建仓库，如下图所示。</p><font color="#FF0000">注意：仓库名字一定要和自己的用户名一样，规则就是 <code>用户名.github.io</code>。不这样命名会出错。</font><p><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93%E5%90%8D%E5%AD%97.png" width="60%" height="60%"></p><p>创建完成后，在个人仓库页面会出现刚才创建的仓库，点击仓库名称进入仓库。</p><p><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E5%88%9B%E5%BB%BA%E6%88%90%E5%8A%9F.png" width="60%" height="60%"></p><p>进入仓库后，点击Settings，往下翻，查看仓库的GitHub Pages，已经分配了一个网址，这个网址就是你的博客地址，可以访问。</p><p><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E6%9F%A5%E7%9C%8B%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE.png" width="60%" height="60%"></p><p><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E6%9F%A5%E7%9C%8BGitHubpages%E7%BD%91%E5%9D%80.png" width="60%" height="60%"></p><h1 id="3-安装工具并设置"><a href="#3-安装工具并设置" class="headerlink" title="3. 安装工具并设置"></a>3. 安装工具并设置</h1><h2 id="3-1-安装Git，关联自己的远程仓库"><a href="#3-1-安装Git，关联自己的远程仓库" class="headerlink" title="3.1 安装Git，关联自己的远程仓库"></a>3.1 安装Git，关联自己的远程仓库</h2><p>Git是开源的分布式版本控制系统，用于敏捷高效地处理项目。我们网站在本地搭建好了，需要使用Git同步到GitHub上。Git是一个工具，GitHub是用于托管项目的网站，不要搞混淆了。 <strong><a href="https://git-scm.com/download/win" target="_blank" rel="noopener">Git下载地址</a></strong><br>下载并安装完成后，鼠标右键点击桌面（或文件系统的其它地方），会出现 <code>Git GUI Here</code>, <code>Git Bash Here</code> 两个选项。</p><p><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/Git%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F.png" alt=""></p><p>点击 <code>Git Bash Here</code>，打开命令窗口。输入以下指令设置Git用户信息。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;你的GitHub用户名&quot;</span><br><span class="line">git config --global user.email &quot;你的GitHub注册邮箱&quot;</span><br></pre></td></tr></table></figure><p>生成ssh密钥文件</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;你的GitHub注册邮箱&quot;</span><br></pre></td></tr></table></figure><p>输入这个命令时会提示一些信息，直接三次回车即可，然后在 <code>C:\Users\用户名\.ssh</code> 目录下会生成两个文件 <code>id_rsa</code> 和 <code>id_rsa.pub</code>。 <code>id_rsa</code>是私钥文件，<code>id_rsa.pub</code>是公钥文件。将 <code>id_rsa.pub</code>用记事本打开，拷贝文件里面的所有内容。 然后打开GitHub个人主页，点击右上角的头像，选择Settings</p><p><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E8%B4%A6%E6%88%B7%E8%AE%BE%E7%BD%AE.png" alt=""></p><p>找到 <code>SSH and GPG keys</code>，点击 <code>New SSH key</code>。</p><p><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/GIT%E6%96%B0%E5%BB%BASSH%20key.png" width="70%" height="70%"></p><p>输入标题和key的内容，点击 <strong>Add SSH key</strong></p><p><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E8%BE%93%E5%85%A5SSHkey.png" width="70%" height="70%"></p><p>在Git Bash中检测GitHub公钥设置是否成功，输入</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh git@github.com</span><br></pre></td></tr></table></figure><p>结果如下图所示，则说明设置成功</p><p><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/sshkey%E6%B7%BB%E5%8A%A0%E6%88%90%E5%8A%9F.png" alt=""></p><blockquote><p><strong>GitHub添加SSH key的目的：</strong>通过非对称加密的公钥与私钥来完成加密，公钥放置在GitHub上，私钥放置在自己的电脑里。GitHub要求每次推送代码都是合法用户，所以每次推送都需要输入账号密码验证推送用户是否是合法用户，为了省去每次输入密码的步骤，采用了SSH，当你推送的时候，Git就会匹配你的私钥跟GitHub上面的公钥是否是配对的，若是匹配就认为你是合法用户，则允许推送。这样可以保证每次的推送都是正确合法的。</p></blockquote><h2 id="3-2-clone远程仓库到本地"><a href="#3-2-clone远程仓库到本地" class="headerlink" title="3.2 clone远程仓库到本地"></a>3.2 clone远程仓库到本地</h2><p>不克隆仓库也可以正常部署博客，这一步的目的是为了方便提交本地的配置文件到GitHub上，在 <strong>5.2</strong> 章节会提到。<br>在本地新建一个空文件夹，克隆刚才新建的仓库</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone 仓库的URL</span><br></pre></td></tr></table></figure><p>其中，仓库的URL可从仓库主页获取，如下图：</p><p><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E4%BB%93%E5%BA%93URL.png" alt=""></p><h2 id="3-3-安装node-js"><a href="#3-3-安装node-js" class="headerlink" title="3.3 安装node.js"></a>3.3 安装node.js</h2><p><a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">Node.js下载</a>，注意安装Node.js会包含环境变量及npm的安装，安装后，检测Node.js和npm是否安装成功，在命令行中输入</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v   #显示版本号则说明安装成功</span><br><span class="line">npm -v    #显示版本号则说明安装成功</span><br></pre></td></tr></table></figure><h2 id="3-4-安装hexo"><a href="#3-4-安装hexo" class="headerlink" title="3.4 安装hexo"></a>3.4 安装hexo</h2><p>进入我们在 <strong>3.2</strong> 章节中创建的文件夹中，按住shift键，右击鼠标点击命令行（或者是powershell，都是一样的）。输入</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure><p>开始安装hexo，<font color="#FF0000">注意，安装hexo以及下面对hexo初始化的操作，一定要在刚才创建的文件夹中进行。</font></p><h1 id="4-初始化博客以及常用命令"><a href="#4-初始化博客以及常用命令" class="headerlink" title="4. 初始化博客以及常用命令"></a>4. 初始化博客以及常用命令</h1><p>hexo安装完成后，开始对其进行初始化</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure><p>初始化的过程稍微有点长，需要等待一会儿。初始化完成之后，文件夹下面应该有这些文件</p><p><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/hexo%E5%88%9D%E5%A7%8B%E5%8C%96%E5%90%8E%E7%9A%84%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.png" alt=""></p><blockquote><p><strong>node_modules：</strong> 框架，一般不用改动</p></blockquote><blockquote><p><strong>scaffolds：</strong> scaffolds就是脚手架的意思，这里放了三个模板文件，分别是新添加博客文章（posts）、新添加博客页（page）和新添加草稿（draft）的目标样式。这部分可以修改的内容是，我们可以在模板上添加比如categories等自定义内容</p></blockquote><blockquote><p><strong>source：</strong> source是放置我们博客内容的地方，里面初始只有两个文件夹，一个是drafts（草稿），一个posts（文章），但之后我们通过命令新建tags（标签）还有categories（分类）页后，这里会相应地增加文件夹。</p></blockquote><blockquote><p><strong>themes：</strong> 放置主题文件包的地方。Hexo会根据这个文件来生成静态页面。初始状态下只有landscape一个文件夹，后续我们可以添加自己喜欢的。</p></blockquote><blockquote><p><strong>config.yml：</strong> 博客的配置文件，博客的名称、关键词、作者、语言、博客主题…设置都在里面。</p></blockquote><blockquote><p><strong>package.json：</strong> 应用程序信息，新添加的插件内容也会出现在这里面，我们可以不修改这里的内容。</p></blockquote><p>测试一下，依次输入</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure><p>打开浏览器，输入 <code>localhost:4000</code>，回车，出现</p><p><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/hexo%E5%88%9D%E5%A7%8B%E5%8C%96%E7%95%8C%E9%9D%A2.png" alt=""></p><p>OK，博客搭建已经完成一半了，接下来我先介绍几个常用的命令</p><table><thead><tr><th style="text-align:center">命令</th><th style="text-align:center">简写</th><th style="text-align:left">描述</th><th style="text-align:left">备注</th></tr></thead><tbody><tr><td style="text-align:center">hexo init [folder]</td><td style="text-align:center">-</td><td style="text-align:left">在指定目录初始化博客</td><td style="text-align:left">如果不加[folder]参数，则默认在当前目录初始化</td></tr><tr><td style="text-align:center">hexo clean</td><td style="text-align:center">-</td><td style="text-align:left">清除缓存文件 (db.json) 和已生成的静态文件 (public)</td><td style="text-align:left"></td></tr><tr><td style="text-align:center">hexo generate</td><td style="text-align:center">hexo g</td><td style="text-align:left">生成静态文件</td><td style="text-align:left">-</td></tr><tr><td style="text-align:center">hexo deploy</td><td style="text-align:center">hexo d</td><td style="text-align:left">部署网站</td><td style="text-align:left">可以和hexo g合并成 hexo g -d，生成静态网页并部署网站，用的比较多</td></tr><tr><td style="text-align:center">hexo version</td><td style="text-align:center">hexo -v</td><td style="text-align:left">查看hexo版本</td><td style="text-align:left">-</td></tr><tr><td style="text-align:center">hexo new [layout] [filename]</td><td style="text-align:center">-</td><td style="text-align:left">新建一篇文章</td><td style="text-align:left">如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来。</td></tr><tr><td style="text-align:center">hexo publish [layout] [filename]</td><td style="text-align:center">-</td><td style="text-align:left">发表草稿</td><td style="text-align:left">-</td></tr><tr><td style="text-align:center">hexo server</td><td style="text-align:center">hexo s</td><td style="text-align:left">启动服务器。默认情况下，访问网址为： <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a></td><td style="text-align:left">加参数-p，可以指定端口号</td></tr><tr><td style="text-align:center">hexo list [type]</td><td style="text-align:center">-</td><td style="text-align:left">列出网站指定类型的资料</td><td style="text-align:left">type类型可以是 page, post, route, tag, category等</td></tr></tbody></table><h1 id="5-GitHub-Pages和hexo关联"><a href="#5-GitHub-Pages和hexo关联" class="headerlink" title="5. GitHub Pages和hexo关联"></a>5. GitHub Pages和hexo关联</h1><h2 id="5-1-更改hexo站点配置文件"><a href="#5-1-更改hexo站点配置文件" class="headerlink" title="5.1 更改hexo站点配置文件"></a>5.1 更改hexo站点配置文件</h2><p>打开文件夹下面的_config.yml文件</p><p><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/config%E6%96%87%E4%BB%B6.png" alt=""></p><p>翻到最后，填写配置</p><p><font color="#FF0000">注意<code>:</code>号后面有一个空格</font>。如下图所示</p><p><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/config%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AEdeploy.png" alt=""></p><p>其中,repo可以在你新建的仓库中获取到</p><p><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/preo%E5%9C%B0%E5%9D%80.png" alt=""></p><h2 id="5-2-给仓库创建分支"><a href="#5-2-给仓库创建分支" class="headerlink" title="5.2 给仓库创建分支"></a>5.2 给仓库创建分支</h2><p>这里的branch填的是master，这个master是你建立的github.io仓库的主干，用于存放生成的静态网页，你从自己博客网站上看到的东西都是在master这个主干上，而我们本地存放的不仅有博客文章，还有网站的配置文件，这就引发了一个问题，如果我们的电脑硬盘坏了，这些配置文件就丢了，我们再想更改网站的配置，就只能从头再来。所以我们要及时对这些文件做好备份，最好的方法当然是备份到GitHub上，我们可以在master的基础上创建一个分支，比如叫hexo，把网站的配置文件都放在hexo分支上，如果我们电脑硬盘坏了或者想换电脑了，直接从hexo分支上pull到本地即可。下面是创建的方法：</p><p>直接在此处输入hexo，如果没有这个分支，会提示创建，直接回车即可创建hexo分支。如下图所示</p><p><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/GitHub%E5%88%9B%E5%BB%BA%E5%88%86%E6%94%AF.png" alt=""></p><p>点击 <strong>branches</strong>，将GitHub的默认分支改成hexo</p><p><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E7%82%B9%E5%87%BB%E5%88%86%E6%94%AF.png" alt=""></p><p><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8hexo-GitHubPages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/%E6%94%B9%E5%8F%98%E5%88%86%E6%94%AF.png" alt=""></p><p>创建好以后，就可以将我们本地的文件提交到hexo上了。关于git的命令，大家自己百度学习。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .               # 添加所有文件</span><br><span class="line">git commit -m &quot;描述&quot;    # 提交</span><br><span class="line">git push origin hexo    # push到hexo分支上</span><br></pre></td></tr></table></figure><h1 id="6-新建一篇博客，并部署"><a href="#6-新建一篇博客，并部署" class="headerlink" title="6. 新建一篇博客，并部署"></a>6. 新建一篇博客，并部署</h1><p>首先安装Git部署插件</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure><p>接下来就可以写博客啦，我们先新建一个文章，部署上去看看效果。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo new myTestFile</span><br><span class="line">hexo g -d</span><br></pre></td></tr></table></figure><p>部署完成后，打开你的博客网址：https://用户名.github.io，在主页上就能看到你刚才的文章啦。</p><h1 id="7-添加个性主题及配置"><a href="#7-添加个性主题及配置" class="headerlink" title="7. 添加个性主题及配置"></a>7. 添加个性主题及配置</h1><p>由于文章内容较多，主题配置放在了另一篇文章，<strong><a href="https://melville.club/hexo-next%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE.html#more" target="_blank" rel="noopener">点击链接，查看hexo站点配置+next主题配置</a></strong></p><h1 id="9-自定义域名"><a href="#9-自定义域名" class="headerlink" title="9. 自定义域名"></a>9. 自定义域名</h1><p>由于文章内容较多，自定义域名放在了另一篇文章，<strong><a href="https://melville.club/hexo-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D.html#more" target="_blank" rel="noopener">点击链接，查看hexo的自定义域名</a></strong></p><hr>]]></content>
     
     <summary type="html">
     
@@ -87,21 +124,21 @@
     
     </summary>
     
-      <category term="博客" scheme="https://do-do-do.github.io/categories/%E5%8D%9A%E5%AE%A2/"/>
+      <category term="博客" scheme="https:melville.club/categories/%E5%8D%9A%E5%AE%A2/"/>
     
     
-      <category term="博客" scheme="https://do-do-do.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+      <category term="博客" scheme="https:melville.club/tags/%E5%8D%9A%E5%AE%A2/"/>
     
-      <category term="hexo" scheme="https://do-do-do.github.io/tags/hexo/"/>
+      <category term="hexo" scheme="https:melville.club/tags/hexo/"/>
     
-      <category term="next" scheme="https://do-do-do.github.io/tags/next/"/>
+      <category term="next" scheme="https:melville.club/tags/next/"/>
     
   </entry>
   
   <entry>
     <title>Windows10企业版激活方法</title>
-    <link href="https://do-do-do.github.io/Windows10%E4%BC%81%E4%B8%9A%E7%89%88%E6%BF%80%E6%B4%BB%E6%96%B9%E6%B3%95.html"/>
-    <id>https://do-do-do.github.io/Windows10企业版激活方法.html</id>
+    <link href="https:melville.club/Windows10%E4%BC%81%E4%B8%9A%E7%89%88%E6%BF%80%E6%B4%BB%E6%96%B9%E6%B3%95.html"/>
+    <id>https:melville.club/Windows10企业版激活方法.html</id>
     <published>2019-01-07T09:52:13.000Z</published>
     <updated>2019-01-09T06:22:47.762Z</updated>
     
@@ -116,19 +153,19 @@
     
     </summary>
     
-      <category term="Windows" scheme="https://do-do-do.github.io/categories/Windows/"/>
+      <category term="Windows" scheme="https:melville.club/categories/Windows/"/>
     
     
-      <category term="激活" scheme="https://do-do-do.github.io/tags/%E6%BF%80%E6%B4%BB/"/>
+      <category term="激活" scheme="https:melville.club/tags/%E6%BF%80%E6%B4%BB/"/>
     
-      <category term="Windows10" scheme="https://do-do-do.github.io/tags/Windows10/"/>
+      <category term="Windows10" scheme="https:melville.club/tags/Windows10/"/>
     
   </entry>
   
   <entry>
     <title>SublimeText3激活码</title>
-    <link href="https://do-do-do.github.io/SublimeText3%E6%BF%80%E6%B4%BB%E7%A0%81.html"/>
-    <id>https://do-do-do.github.io/SublimeText3激活码.html</id>
+    <link href="https:melville.club/SublimeText3%E6%BF%80%E6%B4%BB%E7%A0%81.html"/>
+    <id>https:melville.club/SublimeText3激活码.html</id>
     <published>2019-01-07T09:46:40.000Z</published>
     <updated>2019-01-07T09:50:46.533Z</updated>
     
@@ -143,19 +180,19 @@
     
     </summary>
     
-      <category term="工具" scheme="https://do-do-do.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+      <category term="工具" scheme="https:melville.club/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
-      <category term="SublimeText3" scheme="https://do-do-do.github.io/tags/SublimeText3/"/>
+      <category term="SublimeText3" scheme="https:melville.club/tags/SublimeText3/"/>
     
-      <category term="激活" scheme="https://do-do-do.github.io/tags/%E6%BF%80%E6%B4%BB/"/>
+      <category term="激活" scheme="https:melville.club/tags/%E6%BF%80%E6%B4%BB/"/>
     
   </entry>
   
   <entry>
     <title>VMwareWorkstation15Pro激活秘钥</title>
-    <link href="https://do-do-do.github.io/VMwareWorkstation15Pro%E6%BF%80%E6%B4%BB%E7%A7%98%E9%92%A5.html"/>
-    <id>https://do-do-do.github.io/VMwareWorkstation15Pro激活秘钥.html</id>
+    <link href="https:melville.club/VMwareWorkstation15Pro%E6%BF%80%E6%B4%BB%E7%A7%98%E9%92%A5.html"/>
+    <id>https:melville.club/VMwareWorkstation15Pro激活秘钥.html</id>
     <published>2019-01-07T09:20:09.000Z</published>
     <updated>2019-01-07T09:41:36.540Z</updated>
     
@@ -170,21 +207,21 @@
     
     </summary>
     
-      <category term="工具" scheme="https://do-do-do.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+      <category term="工具" scheme="https:melville.club/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
-      <category term="激活" scheme="https://do-do-do.github.io/tags/%E6%BF%80%E6%B4%BB/"/>
+      <category term="激活" scheme="https:melville.club/tags/%E6%BF%80%E6%B4%BB/"/>
     
-      <category term="VMwareWorkstation" scheme="https://do-do-do.github.io/tags/VMwareWorkstation/"/>
+      <category term="VMwareWorkstation" scheme="https:melville.club/tags/VMwareWorkstation/"/>
     
-      <category term="秘钥" scheme="https://do-do-do.github.io/tags/%E7%A7%98%E9%92%A5/"/>
+      <category term="秘钥" scheme="https:melville.club/tags/%E7%A7%98%E9%92%A5/"/>
     
   </entry>
   
   <entry>
     <title>iptables和firewalled的区别</title>
-    <link href="https://do-do-do.github.io/iptables%E5%92%8Cfirewalled%E7%9A%84%E5%8C%BA%E5%88%AB.html"/>
-    <id>https://do-do-do.github.io/iptables和firewalled的区别.html</id>
+    <link href="https:melville.club/iptables%E5%92%8Cfirewalled%E7%9A%84%E5%8C%BA%E5%88%AB.html"/>
+    <id>https:melville.club/iptables和firewalled的区别.html</id>
     <published>2018-10-23T02:15:57.000Z</published>
     <updated>2019-01-04T06:56:01.786Z</updated>
     
@@ -199,25 +236,25 @@
     
     </summary>
     
-      <category term="Linux系统" scheme="https://do-do-do.github.io/categories/Linux%E7%B3%BB%E7%BB%9F/"/>
+      <category term="Linux系统" scheme="https:melville.club/categories/Linux%E7%B3%BB%E7%BB%9F/"/>
     
     
-      <category term="linux" scheme="https://do-do-do.github.io/tags/linux/"/>
+      <category term="linux" scheme="https:melville.club/tags/linux/"/>
     
-      <category term="网络" scheme="https://do-do-do.github.io/tags/%E7%BD%91%E7%BB%9C/"/>
+      <category term="网络" scheme="https:melville.club/tags/%E7%BD%91%E7%BB%9C/"/>
     
-      <category term="防火墙" scheme="https://do-do-do.github.io/tags/%E9%98%B2%E7%81%AB%E5%A2%99/"/>
+      <category term="防火墙" scheme="https:melville.club/tags/%E9%98%B2%E7%81%AB%E5%A2%99/"/>
     
   </entry>
   
   <entry>
     <title>Linux下用iperf测试网络时出现unable to connect to server: No route to host</title>
-    <link href="https://do-do-do.github.io/Linux%E4%B8%8B%E7%94%A8iperf%E6%B5%8B%E8%AF%95%E7%BD%91%E7%BB%9C%E6%97%B6%E5%87%BA%E7%8E%B0unable-to-connect-to-server-No-route-to-host.html"/>
-    <id>https://do-do-do.github.io/Linux下用iperf测试网络时出现unable-to-connect-to-server-No-route-to-host.html</id>
+    <link href="https:melville.club/Linux%E4%B8%8B%E7%94%A8iperf%E6%B5%8B%E8%AF%95%E7%BD%91%E7%BB%9C%E6%97%B6%E5%87%BA%E7%8E%B0unable-to-connect-to-server-No-route-to-host.html"/>
+    <id>https:melville.club/Linux下用iperf测试网络时出现unable-to-connect-to-server-No-route-to-host.html</id>
     <published>2018-10-23T01:27:01.000Z</published>
     <updated>2019-01-04T06:56:08.807Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h1><p>为了验证虚拟网卡驱动的性能，需要两台主机之间互相收发数据，我使用iperf工具进行测试，报错“unable to connect to server: No route to host”，但是可以ping通另一台主机。</p><h1 id="Solvent"><a href="#Solvent" class="headerlink" title="Solvent"></a>Solvent</h1><p>Google了一下，发现是防火墙的问题，需要将防火墙关掉，大部分搜索到的结果都是：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">service iptables stop</span><br><span class="line">iptables -F</span><br></pre></td></tr></table></figure><p>执行此操作后并没有解决问题（我用的是中标麒麟V5.0系统），我就把系统防火墙firewalld全部关闭，问题解决。指令如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop firewalld</span><br><span class="line">systemctl <span class="built_in">disable</span> firewalld</span><br><span class="line">systemctl stop firewalld.service</span><br><span class="line">systemctl <span class="built_in">disable</span> firewalld.service</span><br></pre></td></tr></table></figure></p><p>想知道iptables和firewalled有什么区别？请参照<a href="https://do-do-do.github.io/iptables%E5%92%8Cfirewalled%E7%9A%84%E5%8C%BA%E5%88%AB.html">《iptables和firewalled的区别》</a></p><hr>]]></content>
+    <content type="html"><![CDATA[<h1 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h1><p>为了验证虚拟网卡驱动的性能，需要两台主机之间互相收发数据，我使用iperf工具进行测试，报错“unable to connect to server: No route to host”，但是可以ping通另一台主机。</p><h1 id="Solvent"><a href="#Solvent" class="headerlink" title="Solvent"></a>Solvent</h1><p>Google了一下，发现是防火墙的问题，需要将防火墙关掉，大部分搜索到的结果都是：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">service iptables stop</span><br><span class="line">iptables -F</span><br></pre></td></tr></table></figure><p>执行此操作后并没有解决问题（我用的是中标麒麟V5.0系统），我就把系统防火墙firewalld全部关闭，问题解决。指令如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop firewalld</span><br><span class="line">systemctl <span class="built_in">disable</span> firewalld</span><br><span class="line">systemctl stop firewalld.service</span><br><span class="line">systemctl <span class="built_in">disable</span> firewalld.service</span><br></pre></td></tr></table></figure></p><p>想知道iptables和firewalled有什么区别？请参照<a href="https://do-do-do.github.io/iptables%E5%92%8Cfirewalled%E7%9A%84%E5%8C%BA%E5%88%AB.html" target="_blank" rel="noopener">《iptables和firewalled的区别》</a></p><hr>]]></content>
     
     <summary type="html">
     
@@ -228,21 +265,21 @@
     
     </summary>
     
-      <category term="工具" scheme="https://do-do-do.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+      <category term="工具" scheme="https:melville.club/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
-      <category term="linux" scheme="https://do-do-do.github.io/tags/linux/"/>
+      <category term="linux" scheme="https:melville.club/tags/linux/"/>
     
-      <category term="网络" scheme="https://do-do-do.github.io/tags/%E7%BD%91%E7%BB%9C/"/>
+      <category term="网络" scheme="https:melville.club/tags/%E7%BD%91%E7%BB%9C/"/>
     
-      <category term="iperf" scheme="https://do-do-do.github.io/tags/iperf/"/>
+      <category term="iperf" scheme="https:melville.club/tags/iperf/"/>
     
   </entry>
   
   <entry>
     <title>C语言结构体中char[0]和char[1]的用法</title>
-    <link href="https://do-do-do.github.io/C%E8%AF%AD%E8%A8%80%E7%BB%93%E6%9E%84%E4%BD%93%E4%B8%ADchar-0-%E5%92%8Cchar-1-%E7%9A%84%E7%94%A8%E6%B3%95.html"/>
-    <id>https://do-do-do.github.io/C语言结构体中char-0-和char-1-的用法.html</id>
+    <link href="https:melville.club/C%E8%AF%AD%E8%A8%80%E7%BB%93%E6%9E%84%E4%BD%93%E4%B8%ADchar-0-%E5%92%8Cchar-1-%E7%9A%84%E7%94%A8%E6%B3%95.html"/>
+    <id>https:melville.club/C语言结构体中char-0-和char-1-的用法.html</id>
     <published>2018-09-18T09:45:22.000Z</published>
     <updated>2019-01-07T08:40:44.316Z</updated>
     
@@ -257,27 +294,27 @@
     
     </summary>
     
-      <category term="编程语言" scheme="https://do-do-do.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+      <category term="编程语言" scheme="https:melville.club/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
     
     
-      <category term="C语言" scheme="https://do-do-do.github.io/tags/C%E8%AF%AD%E8%A8%80/"/>
+      <category term="C语言" scheme="https:melville.club/tags/C%E8%AF%AD%E8%A8%80/"/>
     
-      <category term="结构体" scheme="https://do-do-do.github.io/tags/%E7%BB%93%E6%9E%84%E4%BD%93/"/>
+      <category term="结构体" scheme="https:melville.club/tags/%E7%BB%93%E6%9E%84%E4%BD%93/"/>
     
-      <category term="指针" scheme="https://do-do-do.github.io/tags/%E6%8C%87%E9%92%88/"/>
+      <category term="指针" scheme="https:melville.club/tags/%E6%8C%87%E9%92%88/"/>
     
-      <category term="内存" scheme="https://do-do-do.github.io/tags/%E5%86%85%E5%AD%98/"/>
+      <category term="内存" scheme="https:melville.club/tags/%E5%86%85%E5%AD%98/"/>
     
   </entry>
   
   <entry>
     <title>Linux64位系统兼容32位应用程序</title>
-    <link href="https://do-do-do.github.io/Linux64%E4%BD%8D%E7%B3%BB%E7%BB%9F%E5%85%BC%E5%AE%B932%E4%BD%8D%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F.html"/>
-    <id>https://do-do-do.github.io/Linux64位系统兼容32位应用程序.html</id>
+    <link href="https:melville.club/Linux64%E4%BD%8D%E7%B3%BB%E7%BB%9F%E5%85%BC%E5%AE%B932%E4%BD%8D%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F.html"/>
+    <id>https:melville.club/Linux64位系统兼容32位应用程序.html</id>
     <published>2018-09-18T09:21:40.000Z</published>
     <updated>2019-01-04T06:56:05.441Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="1-问题现象"><a href="#1-问题现象" class="headerlink" title="1. 问题现象"></a>1. 问题现象</h1><p>在进行64位驱动兼容32位应用程序的修改中，发现了如下几个问题：</p><blockquote><ol><li>32位应用程序调用ioctl时，返回ENOTTY（inappropriate ioctl for device）错误。经过调试发现根本没调用到内核的ioctl函数。</li><li>解决完第一个问题后，应用程序进入了ioctl中，但是用户程序和驱动打印的ioctl命令号不一样，导致在switch的时候，找不到对应命令号。</li><li>从用户空间拷贝数据的时候（copy_from_user()）失败。拷贝的数据结构里面含有指针。</li></ol></blockquote><h1 id="2-问题分析"><a href="#2-问题分析" class="headerlink" title="2. 问题分析"></a>2. 问题分析</h1><h2 id="2-1-第一个问题"><a href="#2-1-第一个问题" class="headerlink" title="2.1 第一个问题"></a>2.1 第一个问题</h2><p>在 <code>Linux kernel 2.6.36</code> 中已经完全删除了 <code>struct file_operations</code> 结构中的 <code>ioctl</code> 函数指针，取而代之的是 <code>unlocked_ioctl</code>。之后的内核版本中，<code>struct file_operations</code> 含有下面两个函数指针：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">file_operations</span> &#123;</span></span><br><span class="line">        ... ...</span><br><span class="line">    <span class="keyword">long</span> (*unlocked_ioctl) (struct file *, <span class="keyword">unsigned</span> <span class="keyword">int</span>, <span class="keyword">unsigned</span> <span class="keyword">long</span>);</span><br><span class="line">    <span class="keyword">long</span> (*compat_ioctl) (struct file *, <span class="keyword">unsigned</span> <span class="keyword">int</span>, <span class="keyword">unsigned</span> <span class="keyword">long</span>);</span><br><span class="line">        ... ...</span><br><span class="line">&#125;；</span><br></pre></td></tr></table></figure><ul><li><p>如果是64位用户程序运行在64位的内核上，调用的是unlocked_ioctl;</p><p>如果是32位用户程序运行在32位的内核上，调用的也是unlocked_ioctl;</p></li><li><p>支持64位的驱动必须要实现compat_ioctl，如果没有实现，那么32位的用户程序在64位的内核上执行ioctl时会返回错误 ENOTTY。</p></li></ul><p>要解决第一个问题，就需要在驱动层实现 <code>compat_ioctl</code>.</p><h2 id="2-2-第二个问题"><a href="#2-2-第二个问题" class="headerlink" title="2.2 第二个问题"></a>2.2 第二个问题</h2><p>命令号中的参数部分含有指针，32位用户程序的指针是4字节，64位驱动的指针是8字节，导致最终计算出的命令号不一致。可采用如下方法解决：</p><ul><li>尽量避免使用指针类型</li><li>提供64位和32位大小一致的结构</li><li>先将传入的指针转成64位，使其能进入ioctl函数，在函数内部再对指针进行处理。</li></ul><h2 id="2-3-第三个问题"><a href="#2-3-第三个问题" class="headerlink" title="2.3 第三个问题"></a>2.3 第三个问题</h2><p>由于传入内核的数据结构里面含有指针类型，所以在拷贝的时候，用户态结构和内核态结构的大小就不一样，导致拷贝失败。解决方法如下：</p><ul><li>使用compat_ptr()宏转换64位的unsigned long数据类型到32位的地址。</li><li>对ioctl函数的参数也要使用compat_ptr()进行转换。</li><li>避免使用指针，可用 <code>char[0]</code> 或 <code>char[1]</code> 代替。关于<code>char[0]</code> 和 <code>char[1]</code>的用法，参照<a href="https://do-do-do.github.io/C%E8%AF%AD%E8%A8%80%E7%BB%93%E6%9E%84%E4%BD%93%E4%B8%ADchar-0-%E5%92%8Cchar-1-%E7%9A%84%E7%94%A8%E6%B3%95.html">这篇文章</a>。</li></ul><hr>]]></content>
+    <content type="html"><![CDATA[<h1 id="1-问题现象"><a href="#1-问题现象" class="headerlink" title="1. 问题现象"></a>1. 问题现象</h1><p>在进行64位驱动兼容32位应用程序的修改中，发现了如下几个问题：</p><blockquote><ol><li>32位应用程序调用ioctl时，返回ENOTTY（inappropriate ioctl for device）错误。经过调试发现根本没调用到内核的ioctl函数。</li><li>解决完第一个问题后，应用程序进入了ioctl中，但是用户程序和驱动打印的ioctl命令号不一样，导致在switch的时候，找不到对应命令号。</li><li>从用户空间拷贝数据的时候（copy_from_user()）失败。拷贝的数据结构里面含有指针。</li></ol></blockquote><h1 id="2-问题分析"><a href="#2-问题分析" class="headerlink" title="2. 问题分析"></a>2. 问题分析</h1><h2 id="2-1-第一个问题"><a href="#2-1-第一个问题" class="headerlink" title="2.1 第一个问题"></a>2.1 第一个问题</h2><p>在 <code>Linux kernel 2.6.36</code> 中已经完全删除了 <code>struct file_operations</code> 结构中的 <code>ioctl</code> 函数指针，取而代之的是 <code>unlocked_ioctl</code>。之后的内核版本中，<code>struct file_operations</code> 含有下面两个函数指针：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">file_operations</span> &#123;</span></span><br><span class="line">        ... ...</span><br><span class="line">    <span class="keyword">long</span> (*unlocked_ioctl) (struct file *, <span class="keyword">unsigned</span> <span class="keyword">int</span>, <span class="keyword">unsigned</span> <span class="keyword">long</span>);</span><br><span class="line">    <span class="keyword">long</span> (*compat_ioctl) (struct file *, <span class="keyword">unsigned</span> <span class="keyword">int</span>, <span class="keyword">unsigned</span> <span class="keyword">long</span>);</span><br><span class="line">        ... ...</span><br><span class="line">&#125;；</span><br></pre></td></tr></table></figure><ul><li><p>如果是64位用户程序运行在64位的内核上，调用的是unlocked_ioctl;</p><p>如果是32位用户程序运行在32位的内核上，调用的也是unlocked_ioctl;</p></li><li><p>支持64位的驱动必须要实现compat_ioctl，如果没有实现，那么32位的用户程序在64位的内核上执行ioctl时会返回错误 ENOTTY。</p></li></ul><p>要解决第一个问题，就需要在驱动层实现 <code>compat_ioctl</code>.</p><h2 id="2-2-第二个问题"><a href="#2-2-第二个问题" class="headerlink" title="2.2 第二个问题"></a>2.2 第二个问题</h2><p>命令号中的参数部分含有指针，32位用户程序的指针是4字节，64位驱动的指针是8字节，导致最终计算出的命令号不一致。可采用如下方法解决：</p><ul><li>尽量避免使用指针类型</li><li>提供64位和32位大小一致的结构</li><li>先将传入的指针转成64位，使其能进入ioctl函数，在函数内部再对指针进行处理。</li></ul><h2 id="2-3-第三个问题"><a href="#2-3-第三个问题" class="headerlink" title="2.3 第三个问题"></a>2.3 第三个问题</h2><p>由于传入内核的数据结构里面含有指针类型，所以在拷贝的时候，用户态结构和内核态结构的大小就不一样，导致拷贝失败。解决方法如下：</p><ul><li>使用compat_ptr()宏转换64位的unsigned long数据类型到32位的地址。</li><li>对ioctl函数的参数也要使用compat_ptr()进行转换。</li><li>避免使用指针，可用 <code>char[0]</code> 或 <code>char[1]</code> 代替。关于<code>char[0]</code> 和 <code>char[1]</code>的用法，参照<a href="https://do-do-do.github.io/C%E8%AF%AD%E8%A8%80%E7%BB%93%E6%9E%84%E4%BD%93%E4%B8%ADchar-0-%E5%92%8Cchar-1-%E7%9A%84%E7%94%A8%E6%B3%95.html" target="_blank" rel="noopener">这篇文章</a>。</li></ul><hr>]]></content>
     
     <summary type="html">
     
@@ -290,21 +327,21 @@
     
     </summary>
     
-      <category term="Linux驱动" scheme="https://do-do-do.github.io/categories/Linux%E9%A9%B1%E5%8A%A8/"/>
+      <category term="Linux驱动" scheme="https:melville.club/categories/Linux%E9%A9%B1%E5%8A%A8/"/>
     
     
-      <category term="linux" scheme="https://do-do-do.github.io/tags/linux/"/>
+      <category term="linux" scheme="https:melville.club/tags/linux/"/>
     
-      <category term="驱动" scheme="https://do-do-do.github.io/tags/%E9%A9%B1%E5%8A%A8/"/>
+      <category term="驱动" scheme="https:melville.club/tags/%E9%A9%B1%E5%8A%A8/"/>
     
-      <category term="兼容" scheme="https://do-do-do.github.io/tags/%E5%85%BC%E5%AE%B9/"/>
+      <category term="兼容" scheme="https:melville.club/tags/%E5%85%BC%E5%AE%B9/"/>
     
   </entry>
   
   <entry>
     <title>三层架构：表示层——业务逻辑层——数据访问层</title>
-    <link href="https://do-do-do.github.io/%E4%B8%89%E5%B1%82%E6%9E%B6%E6%9E%84.html"/>
-    <id>https://do-do-do.github.io/三层架构.html</id>
+    <link href="https:melville.club/%E4%B8%89%E5%B1%82%E6%9E%B6%E6%9E%84.html"/>
+    <id>https:melville.club/三层架构.html</id>
     <published>2018-09-12T02:58:00.000Z</published>
     <updated>2019-01-04T06:56:29.482Z</updated>
     
@@ -319,21 +356,21 @@
     
     </summary>
     
-      <category term="架构" scheme="https://do-do-do.github.io/categories/%E6%9E%B6%E6%9E%84/"/>
+      <category term="架构" scheme="https:melville.club/categories/%E6%9E%B6%E6%9E%84/"/>
     
     
-      <category term="架构" scheme="https://do-do-do.github.io/tags/%E6%9E%B6%E6%9E%84/"/>
+      <category term="架构" scheme="https:melville.club/tags/%E6%9E%B6%E6%9E%84/"/>
     
-      <category term="系统" scheme="https://do-do-do.github.io/tags/%E7%B3%BB%E7%BB%9F/"/>
+      <category term="系统" scheme="https:melville.club/tags/%E7%B3%BB%E7%BB%9F/"/>
     
-      <category term="软件" scheme="https://do-do-do.github.io/tags/%E8%BD%AF%E4%BB%B6/"/>
+      <category term="软件" scheme="https:melville.club/tags/%E8%BD%AF%E4%BB%B6/"/>
     
   </entry>
   
   <entry>
     <title>学习使用Markdown</title>
-    <link href="https://do-do-do.github.io/Markdown.html"/>
-    <id>https://do-do-do.github.io/Markdown.html</id>
+    <link href="https:melville.club/Markdown.html"/>
+    <id>https:melville.club/Markdown.html</id>
     <published>2018-09-06T07:46:35.000Z</published>
     <updated>2019-01-07T08:17:22.541Z</updated>
     
@@ -348,10 +385,10 @@
     
     </summary>
     
-      <category term="语言" scheme="https://do-do-do.github.io/categories/%E8%AF%AD%E8%A8%80/"/>
+      <category term="语言" scheme="https:melville.club/categories/%E8%AF%AD%E8%A8%80/"/>
     
     
-      <category term="markdown" scheme="https://do-do-do.github.io/tags/markdown/"/>
+      <category term="markdown" scheme="https:melville.club/tags/markdown/"/>
     
   </entry>
   
