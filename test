@@ -100,7 +100,7 @@
 <meta name="keywords" content="tag1,tag2">
 <meta property="og:type" content="article">
 <meta property="og:title" content="test">
-<meta property="og:url" content="https:melville.club/posts/a-">
+<meta property="og:url" content="https:melville.club/test">
 <meta property="og:site_name" content="Melville&#39;s blog">
 <meta property="og:description" content="改革春风吹满地">
 <meta property="og:locale" content="zh-Hans">
@@ -137,7 +137,7 @@
 
 
 
-  <link rel="canonical" href="https:melville.club/posts/a-"/>
+  <link rel="canonical" href="https:melville.club/test"/>
 
 
 
@@ -356,7 +356,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https:melville.club/posts/a-">
+    <link itemprop="mainEntityOfPage" href="https:melville.club/test">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Melville">
@@ -438,8 +438,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/posts/a-#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/posts/a-" itemprop="commentCount"></span>
+                <a href="/test#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/test" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -447,7 +447,7 @@
 
           
           
-             <span id="/posts/a-" class="leancloud_visitors" data-flag-title="test">
+             <span id="/test" class="leancloud_visitors" data-flag-title="test">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -505,12 +505,12 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/posts/a-">test</a></p>
+  <p><span>本文标题:</span><a href="/test">test</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Melville 的个人博客">Melville</a></p>
   <p><span>发布时间:</span>2019年01月15日 - 16:41</p>
   <p><span>最后更新:</span>2019年01月15日 - 16:41</p>
-  <p><span>原始链接:</span><a href="/posts/a-" title="test">https:melville.club/posts/a-</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https:melville.club/posts/a-"  aria-label="复制成功！"></i></span>
+  <p><span>原始链接:</span><a href="/test" title="test">https:melville.club/test</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https:melville.club/test"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
@@ -585,7 +585,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/a-0000000" rel="next" title="hexo站点配置+next主题配置（二）">
+              <a href="/hexo站点配置-next主题配置-之二" rel="next" title="hexo站点配置+next主题配置（二）">
                 <i class="fa fa-chevron-left"></i> hexo站点配置+next主题配置（二）
               </a>
             

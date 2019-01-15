@@ -74,7 +74,7 @@
 
 
 
-  <meta name="keywords" content="linux,驱动,兼容," />
+  <meta name="keywords" content="bug,workbench,调试," />
 
 
 
@@ -96,18 +96,18 @@
   </script>
 
 
-<meta name="description" content="1. 问题现象在进行64位驱动兼容32位应用程序的修改中，发现了如下几个问题：   32位应用程序调用ioctl时，返回ENOTTY（inappropriate ioctl for device）错误。经过调试发现根本没调用到内核的ioctl函数。 解决完第一个问题后，应用程序进入了ioctl中，但是用户程序和驱动打印的ioctl命令号不一样，导致在switch的时候，找不到对应命令号。 从用户空">
-<meta name="keywords" content="linux,驱动,兼容">
+<meta name="description" content="今天在其他同事编写的demo的基础上做修改，使用workbench编译时报了 main.c 中变量重复定义的错误，查遍整个工程，只有一个 config.c 文件定义了该变量，并没有重复定义的情况。 刚开始怀疑过编译器是不是坏了，我把工程全部删掉重新做一遍，还是一样的错误。排查了很久，最后发现在 main.c 文件的中间，包含了定义该变量的 config.c 文件（#include &amp;quot;co">
+<meta name="keywords" content="bug,workbench,调试">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux64位系统兼容32位应用程序">
-<meta property="og:url" content="https:melville.club/posts/a-2018-09-18-17-21-40">
+<meta property="og:title" content="使用workbench编译报错“变量重复定义”">
+<meta property="og:url" content="https:melville.club/使用workbench编译报错“变量重复定义”">
 <meta property="og:site_name" content="Melville&#39;s blog">
-<meta property="og:description" content="1. 问题现象在进行64位驱动兼容32位应用程序的修改中，发现了如下几个问题：   32位应用程序调用ioctl时，返回ENOTTY（inappropriate ioctl for device）错误。经过调试发现根本没调用到内核的ioctl函数。 解决完第一个问题后，应用程序进入了ioctl中，但是用户程序和驱动打印的ioctl命令号不一样，导致在switch的时候，找不到对应命令号。 从用户空">
+<meta property="og:description" content="今天在其他同事编写的demo的基础上做修改，使用workbench编译时报了 main.c 中变量重复定义的错误，查遍整个工程，只有一个 config.c 文件定义了该变量，并没有重复定义的情况。 刚开始怀疑过编译器是不是坏了，我把工程全部删掉重新做一遍，还是一样的错误。排查了很久，最后发现在 main.c 文件的中间，包含了定义该变量的 config.c 文件（#include &amp;quot;co">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-15T08:44:39.668Z">
+<meta property="og:updated_time" content="2019-01-15T08:45:32.305Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux64位系统兼容32位应用程序">
-<meta name="twitter:description" content="1. 问题现象在进行64位驱动兼容32位应用程序的修改中，发现了如下几个问题：   32位应用程序调用ioctl时，返回ENOTTY（inappropriate ioctl for device）错误。经过调试发现根本没调用到内核的ioctl函数。 解决完第一个问题后，应用程序进入了ioctl中，但是用户程序和驱动打印的ioctl命令号不一样，导致在switch的时候，找不到对应命令号。 从用户空">
+<meta name="twitter:title" content="使用workbench编译报错“变量重复定义”">
+<meta name="twitter:description" content="今天在其他同事编写的demo的基础上做修改，使用workbench编译时报了 main.c 中变量重复定义的错误，查遍整个工程，只有一个 config.c 文件定义了该变量，并没有重复定义的情况。 刚开始怀疑过编译器是不是坏了，我把工程全部删掉重新做一遍，还是一样的错误。排查了很久，最后发现在 main.c 文件的中间，包含了定义该变量的 config.c 文件（#include &amp;quot;co">
 
 
 
@@ -137,13 +137,13 @@
 
 
 
-  <link rel="canonical" href="https:melville.club/posts/a-2018-09-18-17-21-40"/>
+  <link rel="canonical" href="https:melville.club/使用workbench编译报错“变量重复定义”"/>
 
 
 
 
 
-  <title>Linux64位系统兼容32位应用程序 | Melville's blog</title>
+  <title>使用workbench编译报错“变量重复定义” | Melville's blog</title>
   
 
 
@@ -356,7 +356,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https:melville.club/posts/a-2018-09-18-17-21-40">
+    <link itemprop="mainEntityOfPage" href="https:melville.club/使用workbench编译报错“变量重复定义”">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Melville">
@@ -373,7 +373,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Linux64位系统兼容32位应用程序</h2>
+          <h2 class="post-title" itemprop="name headline">使用workbench编译报错“变量重复定义”</h2>
         
 
         <div class="post-meta">
@@ -385,8 +385,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-18T17:21:40+08:00">
-                2018-09-18
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-11T17:34:53+08:00">
+                2019-01-11
               </time>
             
 
@@ -401,7 +401,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-01-15T16:44:39+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-01-15T16:45:32+08:00">
                 2019-01-15
               </time>
             
@@ -420,8 +420,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux驱动/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux驱动</span>
+                  <a href="/categories/bug/" itemprop="url" rel="index">
+                    <span itemprop="name">bug</span>
                   </a>
                 </span>
 
@@ -438,8 +438,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/posts/a-2018-09-18-17-21-40#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/posts/a-2018-09-18-17-21-40" itemprop="commentCount"></span>
+                <a href="/使用workbench编译报错“变量重复定义”#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/使用workbench编译报错“变量重复定义”" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -447,7 +447,7 @@
 
           
           
-             <span id="/posts/a-2018-09-18-17-21-40" class="leancloud_visitors" data-flag-title="Linux64位系统兼容32位应用程序">
+             <span id="/使用workbench编译报错“变量重复定义”" class="leancloud_visitors" data-flag-title="使用workbench编译报错“变量重复定义”">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -478,36 +478,9 @@
       
 
       
-        <h1 id="1-问题现象"><a href="#1-问题现象" class="headerlink" title="1. 问题现象"></a>1. 问题现象</h1><p>在进行64位驱动兼容32位应用程序的修改中，发现了如下几个问题：</p>
-<blockquote>
-<ol>
-<li>32位应用程序调用ioctl时，返回ENOTTY（inappropriate ioctl for device）错误。经过调试发现根本没调用到内核的ioctl函数。</li>
-<li>解决完第一个问题后，应用程序进入了ioctl中，但是用户程序和驱动打印的ioctl命令号不一样，导致在switch的时候，找不到对应命令号。</li>
-<li>从用户空间拷贝数据的时候（copy_from_user()）失败。拷贝的数据结构里面含有指针。</li>
-</ol>
-</blockquote>
-<h1 id="2-问题分析"><a href="#2-问题分析" class="headerlink" title="2. 问题分析"></a>2. 问题分析</h1><h2 id="2-1-第一个问题"><a href="#2-1-第一个问题" class="headerlink" title="2.1 第一个问题"></a>2.1 第一个问题</h2><p>在 <code>Linux kernel 2.6.36</code> 中已经完全删除了 <code>struct file_operations</code> 结构中的 <code>ioctl</code> 函数指针，取而代之的是 <code>unlocked_ioctl</code>。之后的内核版本中，<code>struct file_operations</code> 含有下面两个函数指针：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">file_operations</span> &#123;</span></span><br><span class="line">        ... ...</span><br><span class="line">    <span class="keyword">long</span> (*unlocked_ioctl) (struct file *, <span class="keyword">unsigned</span> <span class="keyword">int</span>, <span class="keyword">unsigned</span> <span class="keyword">long</span>);</span><br><span class="line">    <span class="keyword">long</span> (*compat_ioctl) (struct file *, <span class="keyword">unsigned</span> <span class="keyword">int</span>, <span class="keyword">unsigned</span> <span class="keyword">long</span>);</span><br><span class="line">        ... ...</span><br><span class="line">&#125;；</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>如果是64位用户程序运行在64位的内核上，调用的是unlocked_ioctl;</p>
-<p>如果是32位用户程序运行在32位的内核上，调用的也是unlocked_ioctl;</p>
-</li>
-<li><p>支持64位的驱动必须要实现compat_ioctl，如果没有实现，那么32位的用户程序在64位的内核上执行ioctl时会返回错误 ENOTTY。</p>
-</li>
-</ul>
-<p>要解决第一个问题，就需要在驱动层实现 <code>compat_ioctl</code>.</p>
-<h2 id="2-2-第二个问题"><a href="#2-2-第二个问题" class="headerlink" title="2.2 第二个问题"></a>2.2 第二个问题</h2><p>命令号中的参数部分含有指针，32位用户程序的指针是4字节，64位驱动的指针是8字节，导致最终计算出的命令号不一致。可采用如下方法解决：</p>
-<ul>
-<li>尽量避免使用指针类型</li>
-<li>提供64位和32位大小一致的结构</li>
-<li>先将传入的指针转成64位，使其能进入ioctl函数，在函数内部再对指针进行处理。</li>
-</ul>
-<h2 id="2-3-第三个问题"><a href="#2-3-第三个问题" class="headerlink" title="2.3 第三个问题"></a>2.3 第三个问题</h2><p>由于传入内核的数据结构里面含有指针类型，所以在拷贝的时候，用户态结构和内核态结构的大小就不一样，导致拷贝失败。解决方法如下：</p>
-<ul>
-<li>使用compat_ptr()宏转换64位的unsigned long数据类型到32位的地址。</li>
-<li>对ioctl函数的参数也要使用compat_ptr()进行转换。</li>
-<li>避免使用指针，可用 <code>char[0]</code> 或 <code>char[1]</code> 代替。关于<code>char[0]</code> 和 <code>char[1]</code>的用法，参照<a href="https://do-do-do.github.io/C%E8%AF%AD%E8%A8%80%E7%BB%93%E6%9E%84%E4%BD%93%E4%B8%ADchar-0-%E5%92%8Cchar-1-%E7%9A%84%E7%94%A8%E6%B3%95.html" target="_blank" rel="noopener">这篇文章</a>。</li>
-</ul>
+        <p>今天在其他同事编写的demo的基础上做修改，使用workbench编译时报了 <strong>main.c</strong> 中变量重复定义的错误，查遍整个工程，只有一个 <strong>config.c</strong> 文件定义了该变量，并没有重复定义的情况。</p>
+<p>刚开始怀疑过编译器是不是坏了，我把工程全部删掉重新做一遍，还是一样的错误。排查了很久，最后发现在 <strong>main.c</strong> 文件的中间，包含了定义该变量的 <strong>config.c</strong> 文件（<code>#include &quot;config.c&quot;</code>），所以变量被重复定义了。</p>
+<p>真让人苦恼，搞不懂为什么我的同事要这样做。</p>
 <hr>
 
       
@@ -572,11 +545,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/linux/" <i class="fa fa-tag"></i> linux</a>
+            <a href="/tags/bug/" <i class="fa fa-tag"></i> bug</a>
           
-            <a href="/tags/驱动/" <i class="fa fa-tag"></i> 驱动</a>
+            <a href="/tags/workbench/" <i class="fa fa-tag"></i> workbench</a>
           
-            <a href="/tags/兼容/" <i class="fa fa-tag"></i> 兼容</a>
+            <a href="/tags/调试/" <i class="fa fa-tag"></i> 调试</a>
           
         </div>
       
@@ -589,8 +562,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/a-2018-09-12-10-58-00" rel="next" title="三层架构：表示层——业务逻辑层——数据访问层">
-                <i class="fa fa-chevron-left"></i> 三层架构：表示层——业务逻辑层——数据访问层
+              <a href="/hexo-搭建博客添加自定义域名" rel="next" title="hexo 搭建博客添加自定义域名">
+                <i class="fa fa-chevron-left"></i> hexo 搭建博客添加自定义域名
               </a>
             
           </div>
@@ -599,8 +572,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/a-2018-09-18-17-45-22" rel="prev" title="C语言结构体中char[0]和char[1]的用法">
-                C语言结构体中char[0]和char[1]的用法 <i class="fa fa-chevron-right"></i>
+              <a href="/hexo站点配置-next主题配置-之二" rel="prev" title="hexo站点配置+next主题配置（二）">
+                hexo站点配置+next主题配置（二） <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -656,17 +629,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -783,22 +747,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-问题现象"><span class="nav-text">1. 问题现象</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-问题分析"><span class="nav-text">2. 问题分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-第一个问题"><span class="nav-text">2.1 第一个问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-第二个问题"><span class="nav-text">2.2 第二个问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-第三个问题"><span class="nav-text">2.3 第三个问题</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       

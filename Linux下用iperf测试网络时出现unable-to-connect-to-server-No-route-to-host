@@ -100,7 +100,7 @@
 <meta name="keywords" content="linux,网络,iperf">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux下用iperf测试网络时出现unable to connect to server: No route to host">
-<meta property="og:url" content="https:melville.club/posts/a-2018-10-23-09-27-01">
+<meta property="og:url" content="https:melville.club/Linux下用iperf测试网络时出现unable-to-connect-to-server-No-route-to-host">
 <meta property="og:site_name" content="Melville&#39;s blog">
 <meta property="og:description" content="Problem为了验证虚拟网卡驱动的性能，需要两台主机之间互相收发数据，我使用iperf工具进行测试，报错“unable to connect to server: No route to host”，但是可以ping通另一台主机。 SolventGoogle了一下，发现是防火墙的问题，需要将防火墙关掉，大部分搜索到的结果都是： 12service iptables stopiptables -F">
 <meta property="og:locale" content="zh-Hans">
@@ -137,7 +137,7 @@
 
 
 
-  <link rel="canonical" href="https:melville.club/posts/a-2018-10-23-09-27-01"/>
+  <link rel="canonical" href="https:melville.club/Linux下用iperf测试网络时出现unable-to-connect-to-server-No-route-to-host"/>
 
 
 
@@ -356,7 +356,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https:melville.club/posts/a-2018-10-23-09-27-01">
+    <link itemprop="mainEntityOfPage" href="https:melville.club/Linux下用iperf测试网络时出现unable-to-connect-to-server-No-route-to-host">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Melville">
@@ -438,8 +438,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/posts/a-2018-10-23-09-27-01#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/posts/a-2018-10-23-09-27-01" itemprop="commentCount"></span>
+                <a href="/Linux下用iperf测试网络时出现unable-to-connect-to-server-No-route-to-host#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/Linux下用iperf测试网络时出现unable-to-connect-to-server-No-route-to-host" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -447,7 +447,7 @@
 
           
           
-             <span id="/posts/a-2018-10-23-09-27-01" class="leancloud_visitors" data-flag-title="Linux下用iperf测试网络时出现unable to connect to server: No route to host">
+             <span id="/Linux下用iperf测试网络时出现unable-to-connect-to-server-No-route-to-host" class="leancloud_visitors" data-flag-title="Linux下用iperf测试网络时出现unable to connect to server: No route to host">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -564,7 +564,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/a-2018-09-18-17-45-22" rel="next" title="C语言结构体中char[0]和char[1]的用法">
+              <a href="/C语言结构体中char-0-和char-1-的用法" rel="next" title="C语言结构体中char[0]和char[1]的用法">
                 <i class="fa fa-chevron-left"></i> C语言结构体中char[0]和char[1]的用法
               </a>
             
@@ -574,7 +574,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/a-2018-10-23-10-15-57" rel="prev" title="iptables和firewalled的区别">
+              <a href="/iptables和firewalled的区别" rel="prev" title="iptables和firewalled的区别">
                 iptables和firewalled的区别 <i class="fa fa-chevron-right"></i>
               </a>
             
