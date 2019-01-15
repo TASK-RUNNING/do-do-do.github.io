@@ -100,11 +100,11 @@
 <meta name="keywords" content="架构,系统,软件">
 <meta property="og:type" content="article">
 <meta property="og:title" content="三层架构：表示层——业务逻辑层——数据访问层">
-<meta property="og:url" content="https:melville.club/三层架构.html">
+<meta property="og:url" content="https:melville.club/架构/a-2018-09-12-10-58-00">
 <meta property="og:site_name" content="Melville&#39;s blog">
 <meta property="og:description" content="1. 什么是三层架构所谓的三层开发就是将系统的整个业务应用划分为 表示层,业务逻辑层,数据访问层，这样有利于系统的开发、维护、部署和扩展。分层是为了实现 “高内聚，低耦合”，采用 “分而治之” 的思想，把问题划分开来各个解决，易于控制、易于延展、易于分配资源。进行软件开发设计，一定要懂得  分而治之 分而治之 分而治之   表示层：负责直接跟用户进行交互，一般也就是指系统的界面，用于数据录入，数据">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-04T06:56:29.482Z">
+<meta property="og:updated_time" content="2019-01-15T08:45:24.772Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="三层架构：表示层——业务逻辑层——数据访问层">
 <meta name="twitter:description" content="1. 什么是三层架构所谓的三层开发就是将系统的整个业务应用划分为 表示层,业务逻辑层,数据访问层，这样有利于系统的开发、维护、部署和扩展。分层是为了实现 “高内聚，低耦合”，采用 “分而治之” 的思想，把问题划分开来各个解决，易于控制、易于延展、易于分配资源。进行软件开发设计，一定要懂得  分而治之 分而治之 分而治之   表示层：负责直接跟用户进行交互，一般也就是指系统的界面，用于数据录入，数据">
@@ -137,7 +137,7 @@
 
 
 
-  <link rel="canonical" href="https:melville.club/三层架构.html"/>
+  <link rel="canonical" href="https:melville.club/架构/a-2018-09-12-10-58-00"/>
 
 
 
@@ -356,7 +356,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https:melville.club/三层架构.html">
+    <link itemprop="mainEntityOfPage" href="https:melville.club/架构/a-2018-09-12-10-58-00">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Melville">
@@ -401,8 +401,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-01-04T14:56:29+08:00">
-                2019-01-04
+              <time title="更新于" itemprop="dateModified" datetime="2019-01-15T16:45:24+08:00">
+                2019-01-15
               </time>
             
           </span>
@@ -438,8 +438,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/三层架构.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/三层架构.html" itemprop="commentCount"></span>
+                <a href="/架构/a-2018-09-12-10-58-00#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/架构/a-2018-09-12-10-58-00" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -447,7 +447,7 @@
 
           
           
-             <span id="/三层架构.html" class="leancloud_visitors" data-flag-title="三层架构：表示层——业务逻辑层——数据访问层">
+             <span id="/架构/a-2018-09-12-10-58-00" class="leancloud_visitors" data-flag-title="三层架构：表示层——业务逻辑层——数据访问层">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -641,7 +641,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Markdown.html" rel="next" title="学习使用Markdown">
+              <a href="/语言/a-2018-09-06-15-46-35" rel="next" title="学习使用Markdown">
                 <i class="fa fa-chevron-left"></i> 学习使用Markdown
               </a>
             
@@ -651,7 +651,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/Linux64位系统兼容32位应用程序.html" rel="prev" title="Linux64位系统兼容32位应用程序">
+              <a href="/Linux驱动/a-2018-09-18-17-21-40" rel="prev" title="Linux64位系统兼容32位应用程序">
                 Linux64位系统兼容32位应用程序 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -737,7 +737,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -748,7 +748,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -759,7 +759,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-count">29</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
