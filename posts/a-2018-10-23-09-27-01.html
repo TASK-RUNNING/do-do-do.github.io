@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Melville&#39;s blog">
 <meta property="og:description" content="Problem为了验证虚拟网卡驱动的性能，需要两台主机之间互相收发数据，我使用iperf工具进行测试，报错“unable to connect to server: No route to host”，但是可以ping通另一台主机。 SolventGoogle了一下，发现是防火墙的问题，需要将防火墙关掉，大部分搜索到的结果都是： 12service iptables stopiptables -F">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-15T08:44:46.022Z">
+<meta property="og:updated_time" content="2019-01-15T09:50:03.742Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux下用iperf测试网络时出现unable to connect to server: No route to host">
 <meta name="twitter:description" content="Problem为了验证虚拟网卡驱动的性能，需要两台主机之间互相收发数据，我使用iperf工具进行测试，报错“unable to connect to server: No route to host”，但是可以ping通另一台主机。 SolventGoogle了一下，发现是防火墙的问题，需要将防火墙关掉，大部分搜索到的结果都是： 12service iptables stopiptables -F">
@@ -401,7 +401,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-01-15T16:44:46+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-01-15T17:50:03+08:00">
                 2019-01-15
               </time>
             
@@ -482,7 +482,7 @@
 <h1 id="Solvent"><a href="#Solvent" class="headerlink" title="Solvent"></a>Solvent</h1><p>Google了一下，发现是防火墙的问题，需要将防火墙关掉，大部分搜索到的结果都是：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">service iptables stop</span><br><span class="line">iptables -F</span><br></pre></td></tr></table></figure>
 <p>执行此操作后并没有解决问题（我用的是中标麒麟V5.0系统），我就把系统防火墙firewalld全部关闭，问题解决。指令如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop firewalld</span><br><span class="line">systemctl <span class="built_in">disable</span> firewalld</span><br><span class="line">systemctl stop firewalld.service</span><br><span class="line">systemctl <span class="built_in">disable</span> firewalld.service</span><br></pre></td></tr></table></figure></p>
-<p>想知道iptables和firewalled有什么区别？请参照<a href="https://do-do-do.github.io/iptables%E5%92%8Cfirewalled%E7%9A%84%E5%8C%BA%E5%88%AB.html" target="_blank" rel="noopener">《iptables和firewalled的区别》</a></p>
+<p>想知道iptables和firewalled有什么区别？请参照<a href="https://melville.club/posts/a-2018-10-23-10-15-57.html" target="_blank" rel="noopener">《iptables和firewalled的区别》</a></p>
 <hr>
 
       
@@ -660,7 +660,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -671,7 +671,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -682,7 +682,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">29</span>
+                  <span class="site-state-item-count">27</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
