@@ -116,7 +116,7 @@
 <meta property="og:image" content="https://melville-images.oss-cn-shanghai.aliyuncs.com/blog/iperf%E5%92%8Cfirewalled%E7%9A%84%E5%8C%BA%E5%88%AB/reload%E7%AB%8B%E5%8D%B3%E7%94%9F%E6%95%88.png">
 <meta property="og:image" content="https://melville-images.oss-cn-shanghai.aliyuncs.com/blog/iperf%E5%92%8Cfirewalled%E7%9A%84%E5%8C%BA%E5%88%AB/%E4%BB%85%E5%85%81%E8%AE%B8192.168.10.20%E4%B8%BB%E6%9C%BA%E8%AE%BF%E9%97%AE%E6%9C%AC%E6%9C%BA%E7%9A%841234%E7%AB%AF%E5%8F%A3.png">
 <meta property="og:image" content="https://melville-images.oss-cn-shanghai.aliyuncs.com/blog/iperf%E5%92%8Cfirewalled%E7%9A%84%E5%8C%BA%E5%88%AB/%E6%9F%A5%E7%9C%8B%E7%BD%91%E5%8D%A1%E8%AE%BE%E5%A4%87%E4%BF%A1%E6%81%AF.png">
-<meta property="og:updated_time" content="2019-01-15T08:44:32.546Z">
+<meta property="og:updated_time" content="2019-01-15T10:12:13.047Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iptables和firewalled的区别">
 <meta name="twitter:description" content="简述保证数据的安全性是继可用性之后最为重要的一项工作，防火墙技术作为公网与内网之间的保护屏障，起着至关重要的作用。面对同学们普遍不了解在红帽RHEL7系统中新旧两款防火墙的差异，刘遄老师决定先带领读者正确的认识在红帽RHEL7系统中firewalld防火墙服务与iptables防火墙服务之间的关系，从理论和事实层面剖析真相。本章节内将会分别使用iptables、firewall-cmd、firew">
@@ -414,7 +414,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-01-15T16:44:32+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-01-15T18:12:13+08:00">
                 2019-01-15
               </time>
             
@@ -492,6 +492,7 @@
 
       
         <h1 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h1><p>保证数据的安全性是继可用性之后最为重要的一项工作，防火墙技术作为公网与内网之间的保护屏障，起着至关重要的作用。面对同学们普遍不了解在红帽RHEL7系统中新旧两款防火墙的差异，刘遄老师决定先带领读者正确的认识在红帽RHEL7系统中firewalld防火墙服务与iptables防火墙服务之间的关系，从理论和事实层面剖析真相。<br>本章节内将会分别使用iptables、firewall-cmd、firewall-config和Tcp_wrappers等防火墙策略配置服务来完成数十个根据真实工作需求而设计的防火墙策略配置实验，让同学们不仅能够熟练的对请求数据包流量进行过滤，还能够基于服务程序进行允许和关闭操作，做到保证Linux系统安全万无一失。</p>
+<a id="more"></a>
 <h1 id="1-防火墙管理工具"><a href="#1-防火墙管理工具" class="headerlink" title="1. 防火墙管理工具"></a>1. 防火墙管理工具</h1><p>保证数据的安全性是继可用性之后最为重要的一项工作，众所周知外部公网相比企业内网更加的“罪恶丛生”，因此防火墙技术作为公网与内网之间的保护屏障，虽然有软件或硬件之分，但主要功能都是依据策略对外部请求进行过滤。防火墙技术能够做到监控每一个数据包并判断是否有相应的匹配策略规则，直到匹配到其中一条策略规则或执行默认策略为止，防火墙策略可以基于来源地址、请求动作或协议等信息来定制，最终仅让合法的用户请求流入到内网中，其余的均被丢弃。</p>
 <p><img src="https://melville-images.oss-cn-shanghai.aliyuncs.com/blog/iperf%E5%92%8Cfirewalled%E7%9A%84%E5%8C%BA%E5%88%AB/%E9%98%B2%E7%81%AB%E5%A2%99%E6%8B%93%E6%89%91.png" width="50%" height="50%"></p>
 <p>在红帽RHEL7系统中Firewalld服务取代了Iptables服务，对于接触Linux系统比较早或学习过红帽RHEL6系统的读者来讲，突然改用Firewalld服务后确实不免会有些抵触心理，或许会觉得Firewalld服务是一次不小的改变。但其实Iptables服务与Firewalld服务都不是真正的防火墙，它们都只是用来定义防火墙策略功能的“防火墙管理工具”而已，iptables服务会把配置好的防火墙策略交由内核层面的netfilter网络过滤器来处理，而firewalld服务则是把配置好的防火墙策略交由内核层面的nftables包过滤框架来处理。换句话说，当前在Linux系统中其实同时有多个防火墙管理工具共同存在，它们的作用都是为了方便运维人员管理Linux系统的防火墙策略，而咱们只要配置妥当其中一个就足够了。虽然各个工具之间各有优劣特色，但对于防火墙策略的配置思路上是保持一致的，同学们甚至可以不用完全掌握本章节内的知识，而是在这诸多个防火墙管理工具中任选一款来学透即可，完全能够满足日常的工作所需。</p>

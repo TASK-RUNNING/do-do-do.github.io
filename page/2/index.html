@@ -402,7 +402,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-01-15T16:30:02+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-01-15T18:11:46+08:00">
                 2019-01-15
               </time>
             
@@ -480,9 +480,8 @@
 
       
         
-          
-          1.写在前面我在进行Linux 64位驱动程序兼容32位应用程序的适配过程中，深深的感觉指针操作带来的麻烦，特别是应用层的32位指针传到内核层后，指针大小变成64位，需要进行频繁的大小调整，及其难受。
-          ...
+          <h1 id="1-写在前面"><a href="#1-写在前面" class="headerlink" title="1.写在前面"></a>1.写在前面</h1><p>我在进行Linux 64位驱动程序兼容32位应用程序的适配过程中，深深的感觉指针操作带来的麻烦，特别是应用层的32位指针传到内核层后，指针大小变成64位，需要进行频繁的大小调整，及其难受。等我快完成所有工作的时候，听一位同事说可以使用char[0]用法来代替指针，我差点一口老血喷出来。“你咋不早说…”。接下来从网上各种google，发现了这种用法的巧妙，特写下此篇文章，以做记录。<br>（PS：还是要感谢我那位同事YYL，让我又get到一个技能^_^）</p>
+<p>在结构体最后加char[0]或char[1]的用法是GNU C的扩展，<font color="#FF0000">在ISO/IEC 9899-1999里面，这么写是非法的</font>。这种用法在C99中叫做 <strong>柔性数组</strong>。柔性数组成员前面必须至少有一个其它类型成员。包含柔性数组成员的结构要用<code>malloc</code>进行动态内存分配，并且分配的内存应该大于结构的大小，以适应柔性数组的预期大小。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/posts/a-2018-09-18-17-45-22.html#more" rel="contents">
@@ -592,7 +591,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-01-15T17:49:40+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-01-15T18:12:20+08:00">
                 2019-01-15
               </time>
             
@@ -670,12 +669,14 @@
 
       
         
-          
-          1. 问题现象在进行64位驱动兼容32位应用程序的修改中，发现了如下几个问题：
-
-
-32位应用程序调用ioctl时，返回ENOTTY（inappropriate ioctl for device）错误
-          ...
+          <h1 id="1-问题现象"><a href="#1-问题现象" class="headerlink" title="1. 问题现象"></a>1. 问题现象</h1><p>在进行64位驱动兼容32位应用程序的修改中，发现了如下几个问题：</p>
+<blockquote>
+<ol>
+<li>32位应用程序调用ioctl时，返回ENOTTY（inappropriate ioctl for device）错误。经过调试发现根本没调用到内核的ioctl函数。</li>
+<li>解决完第一个问题后，应用程序进入了ioctl中，但是用户程序和驱动打印的ioctl命令号不一样，导致在switch的时候，找不到对应命令号。</li>
+<li>从用户空间拷贝数据的时候（copy_from_user()）失败。拷贝的数据结构里面含有指针。</li>
+</ol>
+</blockquote>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/posts/a-2018-09-18-17-21-40.html#more" rel="contents">
@@ -785,7 +786,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-01-15T16:45:24+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-01-15T18:13:29+08:00">
                 2019-01-15
               </time>
             
@@ -863,9 +864,12 @@
 
       
         
-          
-          1. 什么是三层架构所谓的三层开发就是将系统的整个业务应用划分为 表示层,业务逻辑层,数据访问层，这样有利于系统的开发、维护、部署和扩展。分层是为了实现 “高内聚，低耦合”，采用 “分而治之” 的思想
-          ...
+          <h1 id="1-什么是三层架构"><a href="#1-什么是三层架构" class="headerlink" title="1. 什么是三层架构"></a>1. 什么是三层架构</h1><p>所谓的三层开发就是将系统的整个业务应用划分为 <code>表示层</code>,<code>业务逻辑层</code>,<code>数据访问层</code>，这样有利于系统的开发、维护、部署和扩展。分层是为了实现 <strong>“高内聚，低耦合”</strong>，采用 <strong>“分而治之”</strong> 的思想，把问题划分开来各个解决，易于控制、易于延展、易于分配资源。进行软件开发设计，一定要懂得</p>
+<blockquote>
+<p><strong>分而治之</strong></p>
+<p><strong>分而治之</strong></p>
+<p><strong>分而治之</strong></p>
+</blockquote>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/posts/a-2018-09-12-10-58-00.html#more" rel="contents">
@@ -975,7 +979,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-01-15T16:44:54+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-01-15T18:12:51+08:00">
                 2019-01-15
               </time>
             
@@ -1053,14 +1057,41 @@
 
       
         
-          
-          1 关于MarkdownMarkdown是一种轻量级标记语言，它的目的是希望大家使用“易于阅读、易于撰写的纯文字格式，并选择性的转换成有效的HTML(或XHTML)”。
-
-优点
-
-易读
-易读是指Mar
-          ...
+          <h1 id="1-关于Markdown"><a href="#1-关于Markdown" class="headerlink" title="1 关于Markdown"></a>1 关于Markdown</h1><p>Markdown是一种轻量级<a href="https://baike.baidu.com/item/%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80/5964436?fr=aladdin" target="_blank" rel="noopener">标记语言</a>，它的目的是希望大家使用“易于阅读、易于撰写的纯文字格式，并选择性的转换成有效的HTML(或XHTML)”。</p>
+<ol>
+<li><p>优点</p>
+<ul>
+<li>易读<blockquote>
+<p>易读是指Markdown文件（即 <em>.md</em> 文件）容易阅读，与HTML相比，它没有各种繁杂的尖括号&lt;&gt;和缩进。整体简洁美观。</p>
+</blockquote>
+</li>
+<li>易写<blockquote>
+<p>使用Markdown可以让你专注于文字，不用像office软件一样需要用鼠标疯狂点击那些排版按钮，可以做到手不离键盘且快速高效的将写作与排版一气呵成。而且Markdown语法简单，花半个小时就能学会基本语法。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>缺点</p>
+<ul>
+<li>标准不统一<blockquote>
+<p>目前Markdown语法众多、编辑器层出不穷，每个编辑器支持的语法也不同，这就导致在一个编辑器上写的md文件，放到其它编辑器上，出现排版混乱，甚至是不支持某些语法的现象。这就是人们所说的 “<strong>方言现象</strong>”，这也是目前Markdown最突出的问题。</p>
+</blockquote>
+</li>
+<li>图片支持不够<blockquote>
+<p>不能直接显示图片，不能调整大小。且不同编辑器对图片的处理也有所不同。</p>
+</blockquote>
+</li>
+<li>表格支持不够<blockquote>
+<p>原生的Markdown是不支持表格的，但现在大部分编辑器都支持简单的表格，也有支持复杂表格的语法，但是书写困难，且不被大多数编辑器支持。</p>
+</blockquote>
+</li>
+<li>占用特殊字符<blockquote>
+<p>Markdown的语法占用了一些特殊字符，导致想在文本中输入特殊字符的时候，需要进行转义操作。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ol>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/posts/a-2018-09-06-15-46-35.html#more" rel="contents">
