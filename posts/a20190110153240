@@ -74,7 +74,7 @@
 
 
 
-  <meta name="keywords" content="tag1,tag2," />
+  <meta name="keywords" content="博客,hexo,next,主题," />
 
 
 
@@ -96,18 +96,22 @@
   </script>
 
 
-<meta name="description" content="改革春风吹满地">
-<meta name="keywords" content="tag1,tag2">
+<meta name="description" content="hexo站点配置+next主题配置（一）  3.17 设置RSS先安装 hexo-generator-feed 插件。在站点根目录打开 Git Bash Here ，安装插件： 1npm install --save hexo-generator-feed 打开 站点配置文件 ，添加插件 123# ExtensionsPlugins: - hexo-generate-feed 打开 主题配置文件">
+<meta name="keywords" content="博客,hexo,next,主题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="test">
-<meta property="og:url" content="https:melville.club/posts/a-">
+<meta property="og:title" content="hexo站点配置+next主题配置（二）">
+<meta property="og:url" content="https:melville.club/posts/a20190110153240">
 <meta property="og:site_name" content="Melville&#39;s blog">
-<meta property="og:description" content="改革春风吹满地">
+<meta property="og:description" content="hexo站点配置+next主题配置（一）  3.17 设置RSS先安装 hexo-generator-feed 插件。在站点根目录打开 Git Bash Here ，安装插件： 1npm install --save hexo-generator-feed 打开 站点配置文件 ，添加插件 123# ExtensionsPlugins: - hexo-generate-feed 打开 主题配置文件">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-15T08:41:31.324Z">
+<meta property="og:image" content="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/hexo%E7%AB%99%E7%82%B9%E9%85%8D%E7%BD%AE_next%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/DaoVoice_app_id.png">
+<meta property="og:image" content="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/hexo%E7%AB%99%E7%82%B9%E9%85%8D%E7%BD%AE_next%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/DaoVoice_location.png">
+<meta property="og:image" content="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/hexo%E7%AB%99%E7%82%B9%E9%85%8D%E7%BD%AE_next%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/%E6%96%87%E7%AB%A0%E5%BA%95%E9%83%A8%E5%8A%A0%E7%BB%93%E6%9D%9F%E6%A0%87%E8%AE%B0.png">
+<meta property="og:updated_time" content="2019-01-15T09:01:42.811Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="test">
-<meta name="twitter:description" content="改革春风吹满地">
+<meta name="twitter:title" content="hexo站点配置+next主题配置（二）">
+<meta name="twitter:description" content="hexo站点配置+next主题配置（一）  3.17 设置RSS先安装 hexo-generator-feed 插件。在站点根目录打开 Git Bash Here ，安装插件： 1npm install --save hexo-generator-feed 打开 站点配置文件 ，添加插件 123# ExtensionsPlugins: - hexo-generate-feed 打开 主题配置文件">
+<meta name="twitter:image" content="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/hexo%E7%AB%99%E7%82%B9%E9%85%8D%E7%BD%AE_next%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/DaoVoice_app_id.png">
 
 
 
@@ -137,13 +141,13 @@
 
 
 
-  <link rel="canonical" href="https:melville.club/posts/a-"/>
+  <link rel="canonical" href="https:melville.club/posts/a20190110153240"/>
 
 
 
 
 
-  <title>test | Melville's blog</title>
+  <title>hexo站点配置+next主题配置（二） | Melville's blog</title>
   
 
 
@@ -356,7 +360,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https:melville.club/posts/a-">
+    <link itemprop="mainEntityOfPage" href="https:melville.club/posts/a20190110153240">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Melville">
@@ -373,7 +377,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">test</h2>
+          <h2 class="post-title" itemprop="name headline">hexo站点配置+next主题配置（二）</h2>
         
 
         <div class="post-meta">
@@ -385,7 +389,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-15T16:41:31+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-15T15:32:00+08:00">
                 2019-01-15
               </time>
             
@@ -401,7 +405,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-01-15T16:41:31+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-01-15T17:01:42+08:00">
                 2019-01-15
               </time>
             
@@ -420,8 +424,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/categories1/" itemprop="url" rel="index">
-                    <span itemprop="name">categories1</span>
+                  <a href="/categories/博客/" itemprop="url" rel="index">
+                    <span itemprop="name">博客</span>
                   </a>
                 </span>
 
@@ -438,8 +442,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/posts/a-#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/posts/a-" itemprop="commentCount"></span>
+                <a href="/posts/a20190110153240#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/posts/a20190110153240" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -447,7 +451,7 @@
 
           
           
-             <span id="/posts/a-" class="leancloud_visitors" data-flag-title="test">
+             <span id="/posts/a20190110153240" class="leancloud_visitors" data-flag-title="hexo站点配置+next主题配置（二）">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -478,7 +482,53 @@
       
 
       
-        
+        <p><a href="https://melville.club/hexo%E7%AB%99%E7%82%B9%E9%85%8D%E7%BD%AE+next%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE-%E4%B9%8B%E4%B8%80.html#more" target="_blank" rel="noopener"> <strong>hexo站点配置+next主题配置（一）</strong> </a></p>
+<h2 id="3-17-设置RSS"><a href="#3-17-设置RSS" class="headerlink" title="3.17 设置RSS"></a>3.17 设置RSS</h2><p>先安装 <code>hexo-generator-feed</code> 插件。在站点根目录打开 <code>Git Bash Here</code> ，安装插件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-generator-feed</span><br></pre></td></tr></table></figure>
+<p>打开 <strong>站点配置文件</strong> ，添加插件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">Plugins: </span><br><span class="line">- hexo-generate-feed</span><br></pre></td></tr></table></figure>
+<p>打开 <strong>主题配置文件</strong> ，修改 rss：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Set rss to false to disable feed link.</span><br><span class="line"># Leave rss as empty to use site&apos;s feed link.</span><br><span class="line"># Set rss to specific value if you have burned your feed already.</span><br><span class="line">rss: /atom.xml</span><br></pre></td></tr></table></figure>
+<h2 id="3-18-侧边栏友情链接"><a href="#3-18-侧边栏友情链接" class="headerlink" title="3.18 侧边栏友情链接"></a>3.18 侧边栏友情链接</h2><p>打开 <strong>主题配置文件</strong> ，搜索 <code>links_icon</code> ，根据自己的需要添加友情链接，也可以把标题换成 <strong>推荐阅读</strong>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># Blog rolls</span><br><span class="line">links_icon: link           # 图标</span><br><span class="line">links_title: 友情链接      # 标题</span><br><span class="line">links_layout: block</span><br><span class="line">#links_layout: inline</span><br><span class="line">links:</span><br><span class="line">    #Title1: http://example1.com</span><br><span class="line">    #Title2: http://example2.com</span><br></pre></td></tr></table></figure>
+<h2 id="3-19-增加背景动画"><a href="#3-19-增加背景动画" class="headerlink" title="3.19 增加背景动画"></a>3.19 增加背景动画</h2><p>next主题提供了四种背景动画，想使用哪一种就把它的值改称 <code>true</code> ，打开 <strong>主题配置文件</strong> ，修改如下配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># Canvas-nest</span><br><span class="line">canvas_nest: true</span><br><span class="line"></span><br><span class="line"># three_waves</span><br><span class="line">three_waves: false</span><br><span class="line"></span><br><span class="line"># canvas_lines</span><br><span class="line">canvas_lines: false</span><br><span class="line"></span><br><span class="line"># canvas_sphere</span><br><span class="line">canvas_sphere: false</span><br></pre></td></tr></table></figure>
+<h2 id="3-20-在文章底部增加版权信息"><a href="#3-20-在文章底部增加版权信息" class="headerlink" title="3.20 在文章底部增加版权信息"></a>3.20 在文章底部增加版权信息</h2><p>在目录 <code>next/layout/_macro/</code> 下添加 <code>my-copyright.swig</code> :</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if page.copyright %&#125;</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"my_post_copyright"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment">&lt;!-- JS库 sweetalert 可修改路径 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/sweetalert/dist/sweetalert.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>本文标题:<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&#123;&#123; url_for(page.path) &#125;&#125;"</span>&gt;</span>&#123;&#123; page.title &#125;&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>文章作者:<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/"</span> <span class="attr">title</span>=<span class="string">"访问 &#123;&#123; theme.author &#125;&#125; 的个人博客"</span>&gt;</span>&#123;&#123; theme.author &#125;&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>发布时间:<span class="tag">&lt;/<span class="name">span</span>&gt;</span>&#123;&#123; page.date.format("YYYY年MM月DD日 - HH:mm") &#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>最后更新:<span class="tag">&lt;/<span class="name">span</span>&gt;</span>&#123;&#123; page.updated.format("YYYY年MM月DD日 - HH:mm") &#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>原始链接:<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&#123;&#123; url_for(page.path) &#125;&#125;"</span> <span class="attr">title</span>=<span class="string">"&#123;&#123; page.title &#125;&#125;"</span>&gt;</span>&#123;&#123; page.permalink &#125;&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"copy-path"</span>  <span class="attr">title</span>=<span class="string">"点击复制文章链接"</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-clipboard"</span> <span class="attr">data-clipboard-text</span>=<span class="string">"&#123;&#123; page.permalink &#125;&#125;"</span>  <span class="attr">aria-label</span>=<span class="string">"复制成功！"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>许可协议:<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-creative-commons"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span> <span class="tag">&lt;<span class="name">a</span> <span class="attr">rel</span>=<span class="string">"license"</span> <span class="attr">href</span>=<span class="string">"https://creativecommons.org/licenses/by-nc-nd/4.0/"</span> <span class="attr">target</span>=<span class="string">"_blank"</span> <span class="attr">title</span>=<span class="string">"Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"</span>&gt;</span>署名-非商业性使用-禁止演绎 4.0 国际<span class="tag">&lt;/<span class="name">a</span>&gt;</span> 转载请保留原文链接及作者。<span class="tag">&lt;/<span class="name">p</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"> </span></span><br><span class="line"><span class="undefined">    var clipboard = new Clipboard('.fa-clipboard');</span></span><br><span class="line"><span class="undefined">      $(".fa-clipboard").click(function()&#123;</span></span><br><span class="line"><span class="undefined">      clipboard.on('success', function()&#123;</span></span><br><span class="line"><span class="undefined">        swal(&#123;   </span></span><br><span class="line"><span class="undefined">          title: "",   </span></span><br><span class="line"><span class="undefined">          text: '复制成功',</span></span><br><span class="line"><span class="undefined">          icon: "success", </span></span><br><span class="line"><span class="undefined">          showConfirmButton: true</span></span><br><span class="line"><span class="undefined">          &#125;);</span></span><br><span class="line"><span class="undefined">        &#125;);</span></span><br><span class="line"><span class="undefined">    &#125;);  </span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+<p>在目录 <code>next/source/css/_common/components/post/</code> 下添加 <code>my-post-copyright.styl</code> ：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">.my_post_copyright &#123;</span><br><span class="line">  width: 85%;</span><br><span class="line">  max-width: 45em;</span><br><span class="line">  margin: 2.8em auto 0;</span><br><span class="line">  padding: 0.5em 1.0em;</span><br><span class="line">  border: 1px solid #d3d3d3;</span><br><span class="line">  font-size: 0.93rem;</span><br><span class="line">  line-height: 1.6em;</span><br><span class="line">  word-break: break-all;</span><br><span class="line">  background: rgba(255,255,255,0.4);</span><br><span class="line">&#125;</span><br><span class="line">.my_post_copyright p&#123;margin:0;&#125;</span><br><span class="line">.my_post_copyright span &#123;</span><br><span class="line">  display: inline-block;</span><br><span class="line">  width: 5.2em;</span><br><span class="line">  color: #b5b5b5;</span><br><span class="line">  font-weight: bold;</span><br><span class="line">&#125;</span><br><span class="line">.my_post_copyright .raw &#123;</span><br><span class="line">  margin-left: 1em;</span><br><span class="line">  width: 5em;</span><br><span class="line">&#125;</span><br><span class="line">.my_post_copyright a &#123;</span><br><span class="line">  color: #808080;</span><br><span class="line">  border-bottom:0;</span><br><span class="line">&#125;</span><br><span class="line">.my_post_copyright a:hover &#123;</span><br><span class="line">  color: #a3d2a3;</span><br><span class="line">  text-decoration: underline;</span><br><span class="line">&#125;</span><br><span class="line">.my_post_copyright:hover .fa-clipboard &#123;</span><br><span class="line">  color: #000;</span><br><span class="line">&#125;</span><br><span class="line">.my_post_copyright .post-url:hover &#123;</span><br><span class="line">  font-weight: normal;</span><br><span class="line">&#125;</span><br><span class="line">.my_post_copyright .copy-path &#123;</span><br><span class="line">  margin-left: 1em;</span><br><span class="line">  width: 1em;</span><br><span class="line">  +mobile()&#123;display:none;&#125;</span><br><span class="line">&#125;</span><br><span class="line">.my_post_copyright .copy-path:hover &#123;</span><br><span class="line">  color: #808080;</span><br><span class="line">  cursor: pointer;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>修改 <code>next/layout/_macro/post.swig</code> :</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">      &#123;% if not is_index %&#125;</span><br><span class="line">        &#123;% include 'my-copyright.swig' %&#125;</span><br><span class="line">      &#123;% endif %&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"># ---------在下面的代码之前，添加上面部分的代码----------</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">      &#123;% if not is_index %&#125;</span><br><span class="line">        &#123;% include 'wechat-subscriber.swig' %&#125;</span><br><span class="line">      &#123;% endif %&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"># ------------------------------------------------------</span><br></pre></td></tr></table></figure>
+<p>修改 <code>next/source/css/_common/components/post/post.styl</code> 文件，在最后一行增加代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@import "my-post-copyright"</span><br></pre></td></tr></table></figure>
+<p>写博客的时候，需要添加 <code>copyright</code> 做限制。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: hexo站点配置+next主题配置</span><br><span class="line">tags:</span><br><span class="line">  - 博客</span><br><span class="line">  - hexo</span><br><span class="line">  - next</span><br><span class="line">  - 主题</span><br><span class="line">categories:</span><br><span class="line">  - 博客</span><br><span class="line">comments: true</span><br><span class="line">copyright: true</span><br><span class="line">date: 2019-01-10 15:31:50</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<h2 id="3-21-DaoVoice在线联系"><a href="#3-21-DaoVoice在线联系" class="headerlink" title="3.21 DaoVoice在线联系"></a>3.21 DaoVoice在线联系</h2><p>在 <a href="https://dashboard.daocloud.io" target="_blank" rel="noopener">Daovoice官网</a> 注册账户，注册需要邀请码 <code>b3c7d22e</code> ，注册完成之后会获得一个 <code>appid</code> ，位置在</p>
+<p><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/hexo%E7%AB%99%E7%82%B9%E9%85%8D%E7%BD%AE_next%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/DaoVoice_app_id.png" alt=""></p>
+<p>然后打开 <code>themes/next/layout/_partials/head.swig</code> 文件，在文件中加入以下代码，位置没有要求。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if theme.daovoice %&#125;</span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">  (function(i,s,o,g,r,a,m)&#123;i["DaoVoiceObject"]=r;i[r]=i[r]||function()&#123;(i[r].q=i[r].q||[]).push(arguments)&#125;,i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)&#125;)(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/faff8786.js","daovoice")</span></span><br><span class="line"><span class="undefined">  daovoice('init', &#123;</span></span><br><span class="line"><span class="undefined">      app_id: "&#123;&#123;theme.daovoice_app_id&#125;&#125;"</span></span><br><span class="line"><span class="undefined">    &#125;);</span></span><br><span class="line"><span class="undefined">  daovoice('update');</span></span><br><span class="line"><span class="undefined">  </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+<p>下面是我的配置</p>
+<p><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/hexo%E7%AB%99%E7%82%B9%E9%85%8D%E7%BD%AE_next%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/DaoVoice_location.png" alt=""></p>
+<p>打开 <strong>主题配置文件</strong> 添加以下代码（将 <code>daovoice_app_id</code> 替换成你自己的）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Online contact </span></span><br><span class="line">daovoice: true</span><br><span class="line">daovoice_app_id: ffffffff</span><br></pre></td></tr></table></figure>
+<p>保存后部署，就可以看到效果了，在  <a href="https://dashboard.daocloud.io" target="_blank" rel="noopener">Daovoice</a> 上可以修改聊天窗口的颜色和位置，可以关联微信小程序，使用微信来接收消息。大家自己摸索。</p>
+<h2 id="3-22-点击出现小爱心效果"><a href="#3-22-点击出现小爱心效果" class="headerlink" title="3.22 点击出现小爱心效果"></a>3.22 点击出现小爱心效果</h2><h2 id="3-23-添加站内搜索功能"><a href="#3-23-添加站内搜索功能" class="headerlink" title="3.23 添加站内搜索功能"></a>3.23 添加站内搜索功能</h2><p>修改 <strong>主题配置文件</strong> 中的 <code>local_search</code> 字段，将 <code>enable</code> 的值改为 <code>true</code> 。这个是添加本地搜索的功能，网上还有 <code>algolia_search</code> 搜索，大家感兴趣的话可以自己学习，不过我感觉本地搜索够用了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">local_search:</span><br><span class="line">  enable: true</span><br><span class="line">  # if auto, trigger search by changing input</span><br><span class="line">  # if manual, trigger search by pressing enter key or search button</span><br><span class="line">  trigger: auto</span><br><span class="line">  # show top n results per article, show all results by setting to -1</span><br><span class="line">  top_n_per_article: 1</span><br></pre></td></tr></table></figure>
+<h2 id="3-24-去掉文章目录标题的自动编号"><a href="#3-24-去掉文章目录标题的自动编号" class="headerlink" title="3.24 去掉文章目录标题的自动编号"></a>3.24 去掉文章目录标题的自动编号</h2><p>修改 <strong>主题配置文件</strong> 中的 <code>toc</code> 字段，将 <code>number</code> 的值改称 <code>false</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">toc:</span><br><span class="line">  enable: true</span><br><span class="line">  # Automatically add list number to toc.</span><br><span class="line">  number: false</span><br></pre></td></tr></table></figure>
+<h2 id="3-25-修改文章底部-号标签的图标"><a href="#3-25-修改文章底部-号标签的图标" class="headerlink" title="3.25 修改文章底部 # 号标签的图标"></a>3.25 修改文章底部 # 号标签的图标</h2><p>去掉文章后面的标签前面的#号。<br>修改模板/themes/next/layout/_macro/post.swig，搜索 rel=”tag”&gt;#，将#换成<i class="fa fa-tag"></i></p>
+<h2 id="3-26-文章末尾添加“本文结束”标记"><a href="#3-26-文章末尾添加“本文结束”标记" class="headerlink" title="3.26 文章末尾添加“本文结束”标记"></a>3.26 文章末尾添加“本文结束”标记</h2><p>在路径 <code>\themes\next\layout\_macro</code> 中新建 <code>passage-end-tag.swig</code> 文件,并添加以下内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">    &#123;% if not is_index %&#125;</span><br><span class="line">        &lt;div style=&quot;text-align:center;color: #636363;font-size:14px;letter-spacing: 10px&quot;&gt;本文结束&lt;i class=&quot;fa fa-bell&quot;&gt;&lt;/i&gt;感谢您的阅读&lt;/div&gt;</span><br><span class="line">    &#123;% endif %&#125;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p>接着打开 <code>\themes\next\layout\_macro\post.swig</code> 文件，搜索 <code>END POST BODY</code> ，在 这之后， 添加以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">&#123;% if not is_index %&#125;</span><br><span class="line">&#123;% include &apos;passage-end-tag.swig&apos; %&#125;</span><br><span class="line">&#123;% endif %&#125;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/hexo%E7%AB%99%E7%82%B9%E9%85%8D%E7%BD%AE_next%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/%E6%96%87%E7%AB%A0%E5%BA%95%E9%83%A8%E5%8A%A0%E7%BB%93%E6%9D%9F%E6%A0%87%E8%AE%B0.png" alt=""></p>
+<p>打开 <strong>主题配置文件</strong> ，在末尾添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">passage_end_tag:</span><br><span class="line">  enabled: true</span><br></pre></td></tr></table></figure>
+<h2 id="3-27-修改代码块自定义样式"><a href="#3-27-修改代码块自定义样式" class="headerlink" title="3.27 修改代码块自定义样式"></a>3.27 修改<code></code>代码块自定义样式</h2><p>打开 <code>\themes\next\source\css\_custom\custom.styl</code> 文件，加入</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">code &#123;</span><br><span class="line">    color: #ff7600;</span><br><span class="line">    background: #fbf7f8;</span><br><span class="line">    margin: 2px;</span><br><span class="line">&#125;</span><br><span class="line">// 大代码块的自定义样式</span><br><span class="line">.highlight, pre &#123;</span><br><span class="line">    margin: 5px 0;</span><br><span class="line">    padding: 5px;</span><br><span class="line">    border-radius: 3px;</span><br><span class="line">&#125;</span><br><span class="line">.highlight, code, pre &#123;</span><br><span class="line">    border: 1px solid #d6d6d6;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>color</code> 可以更改成自己喜欢的颜色。</p>
+<hr>
+
       
 
     </div>
@@ -505,12 +555,12 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/posts/a-">test</a></p>
+  <p><span>本文标题:</span><a href="/posts/a20190110153240">hexo站点配置+next主题配置（二）</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Melville 的个人博客">Melville</a></p>
-  <p><span>发布时间:</span>2019年01月15日 - 16:41</p>
-  <p><span>最后更新:</span>2019年01月15日 - 16:41</p>
-  <p><span>原始链接:</span><a href="/posts/a-" title="test">https:melville.club/posts/a-</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https:melville.club/posts/a-"  aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2019年01月15日 - 15:32</p>
+  <p><span>最后更新:</span>2019年01月15日 - 17:01</p>
+  <p><span>原始链接:</span><a href="/posts/a20190110153240" title="hexo站点配置+next主题配置（二）">https:melville.club/posts/a20190110153240</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https:melville.club/posts/a20190110153240"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
@@ -570,9 +620,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/tag1/" <i class="fa fa-tag"></i> tag1</a>
+            <a href="/tags/博客/" <i class="fa fa-tag"></i> 博客</a>
           
-            <a href="/tags/tag2/" <i class="fa fa-tag"></i> tag2</a>
+            <a href="/tags/hexo/" <i class="fa fa-tag"></i> hexo</a>
+          
+            <a href="/tags/next/" <i class="fa fa-tag"></i> next</a>
+          
+            <a href="/tags/主题/" <i class="fa fa-tag"></i> 主题</a>
           
         </div>
       
@@ -585,8 +639,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/a20190110153240" rel="next" title="hexo站点配置+next主题配置（二）">
-                <i class="fa fa-chevron-left"></i> hexo站点配置+next主题配置（二）
+              <a href="/posts/a-2019-01-11-17-34-53" rel="next" title="使用workbench编译报错“变量重复定义”">
+                <i class="fa fa-chevron-left"></i> 使用workbench编译报错“变量重复定义”
               </a>
             
           </div>
@@ -594,6 +648,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/posts/a-" rel="prev" title="test">
+                test <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -648,8 +706,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -766,6 +833,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-17-设置RSS"><span class="nav-text">3.17 设置RSS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-18-侧边栏友情链接"><span class="nav-text">3.18 侧边栏友情链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-19-增加背景动画"><span class="nav-text">3.19 增加背景动画</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-20-在文章底部增加版权信息"><span class="nav-text">3.20 在文章底部增加版权信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-21-DaoVoice在线联系"><span class="nav-text">3.21 DaoVoice在线联系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-22-点击出现小爱心效果"><span class="nav-text">3.22 点击出现小爱心效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-23-添加站内搜索功能"><span class="nav-text">3.23 添加站内搜索功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-24-去掉文章目录标题的自动编号"><span class="nav-text">3.24 去掉文章目录标题的自动编号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-25-修改文章底部-号标签的图标"><span class="nav-text">3.25 修改文章底部 # 号标签的图标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-26-文章末尾添加“本文结束”标记"><span class="nav-text">3.26 文章末尾添加“本文结束”标记</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-27-修改代码块自定义样式"><span class="nav-text">3.27 修改代码块自定义样式</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
