@@ -4,33 +4,6 @@
   
     
     <entry>
-      <title>test</title>
-      <link href="//posts/a-.html"/>
-      <url>//posts/a-.html</url>
-      
-        <content type="html"><![CDATA[<script type="text/javascript" src="/js/src/baidu.js"></script>]]></content>
-      
-      
-      <categories>
-          
-          <category> categories1 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> tag1 </tag>
-            
-            <tag> tag2 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>hexo站点配置+next主题配置（二）</title>
       <link href="//posts/a-2019-01-15-15-32-00.html"/>
       <url>//posts/a-2019-01-15-15-32-00.html</url>
