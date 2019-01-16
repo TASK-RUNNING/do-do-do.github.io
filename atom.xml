@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https:melville.club/"/>
-  <updated>2019-01-15T10:11:36.170Z</updated>
+  <updated>2019-01-16T05:49:47.216Z</updated>
   <id>https:melville.club/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>test</title>
+    <link href="https:melville.club//posts/a-.html"/>
+    <id>https:melville.club//posts/a-.html</id>
+    <published>2019-01-16T05:49:47.000Z</published>
+    <updated>2019-01-16T05:49:47.216Z</updated>
+    
+    <content type="html"><![CDATA[<script type="text/javascript" src="/js/src/baidu.js"></script>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;script type=&quot;text/javascript&quot; src=&quot;/js/src/baidu.js&quot;&gt;&lt;/script&gt;
+
+
+      
+    
+    </summary>
+    
+      <category term="categories1" scheme="https:melville.club/categories/categories1/"/>
+    
+    
+      <category term="tag1" scheme="https:melville.club/tags/tag1/"/>
+    
+      <category term="tag2" scheme="https:melville.club/tags/tag2/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo站点配置+next主题配置（二）</title>
