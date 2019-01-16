@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Melville&#39;s blog">
 <meta property="og:description" content="C语言结构体中char[0]和char[1]的用法">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-16T03:39:44.189Z">
+<meta property="og:updated_time" content="2019-01-16T06:31:19.782Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C语言结构体中char[0]和char[1]的用法">
 <meta name="twitter:description" content="C语言结构体中char[0]和char[1]的用法">
@@ -468,7 +468,9 @@
       
 
       
-        <h1 id="1-写在前面"><a href="#1-写在前面" class="headerlink" title="1.写在前面"></a>1.写在前面</h1><p>我在进行Linux 64位驱动程序兼容32位应用程序的适配过程中，深深的感觉指针操作带来的麻烦，特别是应用层的32位指针传到内核层后，指针大小变成64位，需要进行频繁的大小调整，及其难受。等我快完成所有工作的时候，听一位同事说可以使用char[0]用法来代替指针，我差点一口老血喷出来。“你咋不早说…”。接下来从网上各种google，发现了这种用法的巧妙，特写下此篇文章，以做记录。<br>（PS：还是要感谢我那位同事YYL，让我又get到一个技能^_^）</p>
+        <script type="text/javascript" src="/js/src/baidu.js"></script>
+
+<h1 id="1-写在前面"><a href="#1-写在前面" class="headerlink" title="1.写在前面"></a>1.写在前面</h1><p>我在进行Linux 64位驱动程序兼容32位应用程序的适配过程中，深深的感觉指针操作带来的麻烦，特别是应用层的32位指针传到内核层后，指针大小变成64位，需要进行频繁的大小调整，及其难受。等我快完成所有工作的时候，听一位同事说可以使用char[0]用法来代替指针，我差点一口老血喷出来。“你咋不早说…”。接下来从网上各种google，发现了这种用法的巧妙，特写下此篇文章，以做记录。<br>（PS：还是要感谢我那位同事YYL，让我又get到一个技能^_^）</p>
 <p>在结构体最后加char[0]或char[1]的用法是GNU C的扩展，<font color="#FF0000">在ISO/IEC 9899-1999里面，这么写是非法的</font>。这种用法在C99中叫做 <strong>柔性数组</strong>。柔性数组成员前面必须至少有一个其它类型成员。包含柔性数组成员的结构要用<code>malloc</code>进行动态内存分配，并且分配的内存应该大于结构的大小，以适应柔性数组的预期大小。</p>
 <a id="more"></a>
 <h1 id="2-引用这种用法的目的"><a href="#2-引用这种用法的目的" class="headerlink" title="2.引用这种用法的目的"></a>2.引用这种用法的目的</h1><blockquote>
