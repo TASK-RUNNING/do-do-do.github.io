@@ -1,8 +1,11 @@
 ---
 title: Windows10企业版激活方法
+id: a-2019-01-07-17-52-13
 date: 2019-01-07 17:52:13
 tags: [Windows10,激活]
 categories: [Windows]
+keywords: [Windows10,激活]
+description: Windows10企业版激活方法
 ---
 
 # 1. 效果图
@@ -11,6 +14,7 @@ categories: [Windows]
 # 2. 激活方法
 以管理员身份运行`命令提示符`，依次输入以下命令：
 
+<!-- more -->
 
 **a. 卸载产品秘钥** 
 ```text

@@ -35,7 +35,7 @@ favicon:
   ms_browserconfig: /images/browserconfig.xml
 
 # Set default keywords (Use a comma to separate)
-keywords: "Melville's blog"
+keywords: "Melville"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -48,13 +48,13 @@ footer:
   since: 2018
 
   # Icon between year and copyright info.
-  icon: user
+  icon: snowflake-o
 
   # If not defined, will be used `author` from Hexo main config.
-  copyright:
+  copyright: Melville
   # -------------------------------------------------------------
   # Hexo link (Powered by Hexo).
-  powered: true
+  powered: false
 
   theme:
     # Theme & scheme info link (Theme - NexT.scheme).
@@ -75,7 +75,7 @@ footer:
 canonical: true
 
 # Change headers hierarchy on site-subtitle (will be main site description) and on all post/pages titles for better SEO-optimization.
-seo: false
+seo: true
 
 # If true, will add site-subtitle to index page, added in main hexo config.
 # subtitle: Subtitle
@@ -105,17 +105,6 @@ menu:
 # Enable/Disable menu icons.
 menu_icons:
   enable: true
-
-
-  
-sitemap:
-  path: sitemap.xml
-baidusitemap:
-  path: baidusitemap.xml
-
-url: https://do-do-do.github.io/
-
-
 
 # ---------------------------------------------------------------
 # Scheme Settings
@@ -156,10 +145,10 @@ social_icons:
   transition: false
 
 # Blog rolls
-links_icon: link
+links_icon: umbrella
 links_title: 推荐阅读
-#links_layout: block
-links_layout: inline
+links_layout: block
+#links_layout: inline
 links:
   C语言结构体中char-0-和char-1-的用法: https://do-do-do.github.io/C%E8%AF%AD%E8%A8%80%E7%BB%93%E6%9E%84%E4%BD%93%E4%B8%ADchar-0-%E5%92%8Cchar-1-%E7%9A%84%E7%94%A8%E6%B3%95.html
   Linux64位系统兼容32位应用程序: https://do-do-do.github.io/Linux64%E4%BD%8D%E7%B3%BB%E7%BB%9F%E5%85%BC%E5%AE%B932%E4%BD%8D%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F.html
@@ -203,13 +192,13 @@ sidebar:
   offset: 12
 
   # Back to top in sidebar (only for Pisces | Gemini).
-  b2t: false
+  b2t: true
 
   # Scroll percent label in b2t button.
   scrollpercent: true
 
   # Enable sidebar on narrow view (only for Muse | Mist).
-  onmobile: false
+  onmobile: true
 
 
 # ---------------------------------------------------------------
@@ -223,20 +212,21 @@ scroll_to_more: true
 save_scroll: false
 
 # Automatically excerpt description in homepage as preamble text.
-excerpt_description: true
+excerpt_description: false
 
 # Automatically Excerpt. Not recommend.
 # Please use <!-- more --> in the post to control excerpt accurately.
 auto_excerpt:
-  enable: true
+  enable: false
   length: 100
 
 # Post meta display settings
 post_meta:
   item_text: true
   created_at: true
-  updated_at: true
+  updated_at: false
   categories: true
+  description: false
 
 # Post wordcount display settings
 # Dependencies: https://github.com/willin/hexo-wordcount
@@ -244,7 +234,7 @@ post_wordcount:
   item_text: true
   wordcount: false
   min2read: false
-  totalcount: false
+  totalcount: true
   separated_meta: true
 
 # Wechat Subscriber
@@ -261,7 +251,7 @@ alipay: /images/alipay.jpg
 
 # Declare license on posts
 post_copyright:
-  enable: true
+  enable: false
   license: CC BY-NC-SA 3.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
 
@@ -561,18 +551,18 @@ firestore:
 # Get more information on http://ibruce.info/2015/04/04/busuanzi/
 busuanzi_count:
   # count values only if the other configs are false
-  enable: false
+  enable: true
   # custom uv span for the whole site
   site_uv: true
-  site_uv_header: <i class="fa fa-user"></i>
-  site_uv_footer:
+  site_uv_header: 
+  site_uv_footer: <i class="fa fa-users"></i> 总访问量
   # custom pv span for the whole site
   site_pv: true
-  site_pv_header: <i class="fa fa-eye"></i>
-  site_pv_footer:
+  site_pv_header: 
+  site_pv_footer: <i class="fa fa-user"></i> 访客人数
   # custom pv span for one page only
-  page_pv: true
-  page_pv_header: <i class="fa fa-file-o"></i>
+  page_pv: false
+  page_pv_header: <i class="fa fa-file-o"></i> 总阅读数
   page_pv_footer:
 
 

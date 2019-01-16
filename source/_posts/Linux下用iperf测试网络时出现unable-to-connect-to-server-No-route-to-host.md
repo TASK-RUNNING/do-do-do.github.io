@@ -1,8 +1,11 @@
 ---
 title: 'Linux下用iperf测试网络时出现unable to connect to server: No route to host'
+id: a-2018-10-23-09-27-01
 date: 2018-10-23 09:27:01
 tags: [linux,网络,iperf]
 categories: [工具]
+keywords: [linux,网络,iperf]
+description: Linux下用iperf测试网络时出现unable to connect to server "No route to host"
 ---
 
 # Problem
@@ -18,6 +21,8 @@ service iptables stop
 iptables -F
 ```
 
+<!-- more -->
+
 执行此操作后并没有解决问题（我用的是中标麒麟V5.0系统），我就把系统防火墙firewalld全部关闭，问题解决。指令如下：
 ```bash
 systemctl stop firewalld
@@ -26,6 +31,6 @@ systemctl stop firewalld.service
 systemctl disable firewalld.service
 ```
 
-想知道iptables和firewalled有什么区别？请参照[《iptables和firewalled的区别》](https://do-do-do.github.io/iptables%E5%92%8Cfirewalled%E7%9A%84%E5%8C%BA%E5%88%AB.html)
+想知道iptables和firewalled有什么区别？请参照[《iptables和firewalled的区别》](https://melville.club/posts/a-2018-10-23-10-15-57.html)
 
 ---

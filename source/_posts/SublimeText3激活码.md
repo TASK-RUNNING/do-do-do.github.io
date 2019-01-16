@@ -1,8 +1,11 @@
 ---
 title: SublimeText3激活码
+id: a-2019-01-07-17-46-40
 date: 2019-01-07 17:46:40
 tags: [SublimeText3,激活]
 categories: [工具]
+keywords: [SublimeText3,激活]
+description: SublimeText3激活码
 ---
 
 # 1. SublimeText3激活码
@@ -24,5 +27,7 @@ EA7E-1153259
 F913BE58 42FEA319 F954EFDD AE881E0B
 ------ END LICENSE ------
 ```
+
+<!-- more -->
 
 ---

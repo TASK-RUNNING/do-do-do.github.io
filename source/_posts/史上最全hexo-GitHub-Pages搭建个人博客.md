@@ -1,11 +1,17 @@
 ---
 title: 史上最全hexo+GitHubPages搭建个人博客
+id: a-2019-01-09-14-12-57
 tags:
   - 博客
   - hexo
   - next
 categories:
   - 博客
+keywords:
+  - 博客
+  - hexo
+  - next
+description: 史上最全hexo+GitHubPages搭建个人博客
 comments: true
 date: 2019-01-09 14:12:57
 ---
@@ -15,6 +21,8 @@ date: 2019-01-09 14:12:57
 
 # 1. GitHub Pages和hexo简介
 > GitHub Pages旨在从GitHub存储库托管您的个人，组织或项目页面，是为您和您的项目快速发布漂亮网站的最佳方式。使用GitHub Pages搭建个人网站，可以省去购买服务器、域名等一系列费用，搭建起来非常简单。而且可以上传网页的源代码、更改网页的样式，全部在自己的掌控之中。
+
+<!-- more -->
 
 > Hexo 是一款基于Node.js的快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。依赖少易于安装使用，是搭建博客的首选框架。
 
@@ -220,9 +228,12 @@ hexo g -d
 部署完成后，打开你的博客网址：https://用户名.github.io，在主页上就能看到你刚才的文章啦。
 
 # 7. 添加个性主题及配置
-由于文章内容较多，主题配置放在了另一篇文章，**[点击链接，查看hexo站点配置+next主题配置](https://melville.club/hexo-next%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE.html#more)**
+由于文章内容较多，主题配置放在了另两篇文章，
+[ **hexo站点配置+next主题配置（一）** ](https://melville.club/posts/a-2019-01-10-15-31-50.html)
+[ **hexo站点配置+next主题配置（二）** ](https://melville.club/posts/a-2019-01-15-15-32-00.html)
 
 # 9. 自定义域名
-由于文章内容较多，自定义域名放在了另一篇文章，**[点击链接，查看hexo的自定义域名](https://melville.club/hexo-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D.html#more)**
+由于文章内容较多，自定义域名放在了另一篇文章，
+[ **hexo的自定义域名** ](https://melville.club/posts/a-2019-01-10-15-32-40.html)
 
 ---

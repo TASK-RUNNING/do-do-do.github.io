@@ -1,8 +1,11 @@
 ---
 title: 学习使用Markdown
+id: a-2018-09-06-15-46-35
 date: 2018-09-06 15:46:35
 tags: [markdown]
 categories: [语言]
+keywords: [markdown]
+description: 学习使用Markdown
 ---
 
 # 1 关于Markdown
@@ -24,6 +27,8 @@ Markdown是一种轻量级[标记语言](https://baike.baidu.com/item/%E6%A0%87%
         > 原生的Markdown是不支持表格的，但现在大部分编辑器都支持简单的表格，也有支持复杂表格的语法，但是书写困难，且不被大多数编辑器支持。
     * 占用特殊字符
         > Markdown的语法占用了一些特殊字符，导致想在文本中输入特殊字符的时候，需要进行转义操作。
+
+<!-- more -->
 
 3. 使用群体
     * 喜欢写博客的人

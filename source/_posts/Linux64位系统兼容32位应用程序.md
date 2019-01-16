@@ -1,8 +1,11 @@
 ---
 title: Linux64位系统兼容32位应用程序
+id: a-2018-09-18-17-21-40
 date: 2018-09-18 17:21:40
 tags: [linux,驱动,兼容]
 categories: [Linux驱动]
+keywords: [linux,驱动,兼容]
+description: Linux64位系统兼容32位应用程序
 ---
 
 # 1. 问题现象
@@ -12,6 +15,8 @@ categories: [Linux驱动]
 > 1. 32位应用程序调用ioctl时，返回ENOTTY（inappropriate ioctl for device）错误。经过调试发现根本没调用到内核的ioctl函数。
 > 2. 解决完第一个问题后，应用程序进入了ioctl中，但是用户程序和驱动打印的ioctl命令号不一样，导致在switch的时候，找不到对应命令号。
 > 3. 从用户空间拷贝数据的时候（copy_from_user()）失败。拷贝的数据结构里面含有指针。
+
+<!-- more -->
 
 # 2. 问题分析
 
@@ -49,7 +54,7 @@ struct file_operations {
 
 * 使用compat_ptr()宏转换64位的unsigned long数据类型到32位的地址。
 * 对ioctl函数的参数也要使用compat_ptr()进行转换。
-* 避免使用指针，可用 `char[0]` 或 `char[1]` 代替。关于`char[0]` 和 `char[1]`的用法，参照[这篇文章](https://do-do-do.github.io/C%E8%AF%AD%E8%A8%80%E7%BB%93%E6%9E%84%E4%BD%93%E4%B8%ADchar-0-%E5%92%8Cchar-1-%E7%9A%84%E7%94%A8%E6%B3%95.html)。
+* 避免使用指针，可用 `char[0]` 或 `char[1]` 代替。关于`char[0]` 和 `char[1]`的用法，参照[这篇文章](https://melville.club/posts/a-2018-09-18-17-45-22.html)。
 
 
 

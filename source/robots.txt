@@ -2,6 +2,8 @@
 User-agent: *
 Allow: /
 Allow: /archives/
+Allow: /categories/
+Allow: /tags/
 
 Disallow: /vendors/
 Disallow: /js/
@@ -9,5 +11,5 @@ Disallow: /css/
 Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
-Sitemap: https://do-do-do.github.io/sitemap.xml
-Sitemap: https://do-do-do.github.io/baidusitemap.xml
+Sitemap: https://melville.club/sitemap.xml
+Sitemap: https://melville.club/baidusitemap.xml
