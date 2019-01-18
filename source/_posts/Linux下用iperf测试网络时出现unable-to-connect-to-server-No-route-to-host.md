@@ -8,6 +8,8 @@ keywords: [linux,网络,iperf]
 description: Linux下用iperf测试网络时出现unable to connect to server "No route to host"
 ---
 
+<script type="text/javascript" src="/js/src/baidu.js"></script>
+
 # Problem
 
 为了验证虚拟网卡驱动的性能，需要两台主机之间互相收发数据，我使用iperf工具进行测试，报错“unable to connect to server: No route to host”，但是可以ping通另一台主机。

@@ -11,6 +11,8 @@ keywords:
 description: iptables和firewalled的区别
 ---
 
+<script type="text/javascript" src="/js/src/baidu.js"></script>
+
 # 简述
 
 保证数据的安全性是继可用性之后最为重要的一项工作，防火墙技术作为公网与内网之间的保护屏障，起着至关重要的作用。面对同学们普遍不了解在红帽RHEL7系统中新旧两款防火墙的差异，刘遄老师决定先带领读者正确的认识在红帽RHEL7系统中firewalld防火墙服务与iptables防火墙服务之间的关系，从理论和事实层面剖析真相。

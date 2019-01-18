@@ -19,7 +19,7 @@ copyright: true
 date: 2019-01-10 15:31:50
 ---
 
-
+<script type="text/javascript" src="/js/src/baidu.js"></script>
 
 
 # 写在前面

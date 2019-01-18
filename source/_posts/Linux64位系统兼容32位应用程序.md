@@ -8,6 +8,8 @@ keywords: [linux,驱动,兼容]
 description: Linux64位系统兼容32位应用程序
 ---
 
+<script type="text/javascript" src="/js/src/baidu.js"></script>
+
 # 1. 问题现象
 
 在进行64位驱动兼容32位应用程序的修改中，发现了如下几个问题：

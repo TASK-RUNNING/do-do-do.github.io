@@ -8,6 +8,8 @@ keywords: [VMwareWorkstation,秘钥,激活]
 description: VMwareWorkstation15Pro激活秘钥
 ---
 
+<script type="text/javascript" src="/js/src/baidu.js"></script>
+
 # 1. 激活秘钥
 
 ```text

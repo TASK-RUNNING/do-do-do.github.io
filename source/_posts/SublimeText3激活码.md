@@ -8,6 +8,8 @@ keywords: [SublimeText3,激活]
 description: SublimeText3激活码
 ---
 
+<script type="text/javascript" src="/js/src/baidu.js"></script>
+
 # 1. SublimeText3激活码
 
 **version 3.1.1，build 3176**

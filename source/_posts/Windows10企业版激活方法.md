@@ -8,6 +8,8 @@ keywords: [Windows10,激活]
 description: Windows10企业版激活方法
 ---
 
+<script type="text/javascript" src="/js/src/baidu.js"></script>
+
 # 1. 效果图
 ![](http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/Windows10%E4%BC%81%E4%B8%9A%E7%89%88%E6%BF%80%E6%B4%BB%E6%96%B9%E6%B3%95/Windows10%E6%BF%80%E6%B4%BB.png)
 

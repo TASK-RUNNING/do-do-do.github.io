@@ -16,6 +16,7 @@ comments: true
 date: 2019-01-10 15:32:40
 ---
 
+<script type="text/javascript" src="/js/src/baidu.js"></script>
 
 https://blog.github.com/2018-05-01-github-pages-custom-domains-https/
 https://help.github.com/articles/setting-up-an-apex-domain/#configuring-a-records-with-your-dns-provider

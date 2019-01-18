@@ -8,6 +8,8 @@ keywords: [markdown]
 description: 学习使用Markdown
 ---
 
+<script type="text/javascript" src="/js/src/baidu.js"></script>
+
 # 1 关于Markdown
 
 Markdown是一种轻量级[标记语言](https://baike.baidu.com/item/%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80/5964436?fr=aladdin)，它的目的是希望大家使用“易于阅读、易于撰写的纯文字格式，并选择性的转换成有效的HTML(或XHTML)”。

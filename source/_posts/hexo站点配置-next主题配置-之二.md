@@ -15,6 +15,7 @@ copyright: true
 date: 2019-01-15 15:32:00
 ---
 
+<script type="text/javascript" src="/js/src/baidu.js"></script>
 
 [ **hexo站点配置+next主题配置（一）** ](https://melville.club/posts/a-2019-01-10-15-31-50.html)
 
