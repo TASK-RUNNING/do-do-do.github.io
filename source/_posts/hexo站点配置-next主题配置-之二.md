@@ -274,7 +274,7 @@ toc:
 ## 3.25 修改文章底部 # 号标签的图标
 
 去掉文章后面的标签前面的#号。
-修改模板/themes/next/layout/_macro/post.swig，搜索 rel="tag">#，将#换成<i class="fa fa-tag"></i>
+修改模板/themes/next/layout/_macro/post.swig，搜索 rel="tag">#，将#换成 `<i class="fa fa-tag"></i>`
 
 ## 3.26 文章末尾添加“本文结束”标记
 

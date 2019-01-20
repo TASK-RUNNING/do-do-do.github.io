@@ -8,7 +8,7 @@ subtitle: 个人博客
 description: 改革春风吹满地
 keywords:
 author: Melville
-language: zh-Hans
+language: zh-CN
 timezone:
 
 # URL
@@ -85,7 +85,7 @@ nofollow:
 Plugins: 
 - hexo-generate-feed
 ## Themes: https://hexo.io/themes/
-theme: next
+theme: new
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
