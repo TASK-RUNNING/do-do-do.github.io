@@ -1,9 +1,11 @@
 ---
-title: <font face="华文行楷" size=6>留言板</font>
+title: 
 date: 2019-01-07 15:26:50
 type: "message"
 comments: true
 ---
+
+<center><font face="华文行楷" size=6>留言板</font></center>
 
 ---
 

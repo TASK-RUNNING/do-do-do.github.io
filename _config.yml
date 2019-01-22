@@ -91,5 +91,7 @@ theme: new
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:do-do-do/do-do-do.github.io.git
   branch: master
+  repo: 
+    github: git@github.com:do-do-do/do-do-do.github.io.git
+    #coding: git@git.coding.net:melville/melville.git
