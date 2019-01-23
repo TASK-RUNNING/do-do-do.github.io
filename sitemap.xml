@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://melville.club/milestone/index.html</loc>
+    
+    <lastmod>2019-01-23T02:43:32.090Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://melville.club/posts/a-20190123-102022.html</loc>
     
     <lastmod>2019-01-23T02:24:52.154Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://melville.club/posts/a-20190123-095755.html</loc>
     
     <lastmod>2019-01-23T02:23:59.413Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://melville.club/schedule/index.html</loc>
-    
-    <lastmod>2019-01-21T07:02:41.112Z</lastmod>
     
   </url>
   
