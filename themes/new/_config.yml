@@ -142,7 +142,7 @@ menu:
   categories: /categories/ || th
   archives: /archives/ || archive
   about: /about/ || user
-  schedule: /schedule/ || calendar
+  milestone: /milestone/ || flag-checkered
   message: /message/ || list-alt
   #sitemap: /sitemap.xml || sitemap
   commonweal: /404/ || heartbeat

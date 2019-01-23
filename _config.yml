@@ -95,3 +95,4 @@ deploy:
   repo: 
     github: git@github.com:do-do-do/do-do-do.github.io.git
     #coding: git@git.coding.net:melville/melville.git
+    #gitee: git@gitee.com:melville/melville.git
