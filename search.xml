@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Linux查看端口号</title>
+      <link href="//posts/a-20190123-102022.html"/>
+      <url>//posts/a-20190123-102022.html</url>
+      
+        <content type="html"><![CDATA[<script type="text/javascript" src="/js/src/baidu.js"></script><p>查看某一端口的占用情况<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsof -<span class="selector-tag">i</span>:端口号</span><br></pre></td></tr></table></figure></p><p>显示系统端口使用情况</p><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">netstat -anp</span></span><br></pre></td></tr></table></figure><hr>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 端口号 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>opendir、readdir、rewinddir、closedir、telldir、seekdir、stat函数和DIR、dirent、stat结构体详解</title>
       <link href="//posts/a-20190123-095755.html"/>
       <url>//posts/a-20190123-095755.html</url>

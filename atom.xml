@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://melville.club/"/>
-  <updated>2019-01-23T02:02:53.956Z</updated>
+  <updated>2019-01-23T02:21:46.957Z</updated>
   <id>https://melville.club/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux查看端口号</title>
+    <link href="https://melville.club//posts/a-20190123-102022.html"/>
+    <id>https://melville.club//posts/a-20190123-102022.html</id>
+    <published>2019-01-23T02:20:22.000Z</published>
+    <updated>2019-01-23T02:21:46.957Z</updated>
+    
+    <content type="html"><![CDATA[<script type="text/javascript" src="/js/src/baidu.js"></script><p>查看某一端口的占用情况<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsof -<span class="selector-tag">i</span>:端口号</span><br></pre></td></tr></table></figure></p><p>显示系统端口使用情况</p><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">netstat -anp</span></span><br></pre></td></tr></table></figure><hr>]]></content>
+    
+    <summary type="html">
+    
+      Linux查看端口号
+    
+    </summary>
+    
+      <category term="Linux" scheme="https://melville.club/categories/Linux/"/>
+    
+    
+      <category term="端口号" scheme="https://melville.club/tags/%E7%AB%AF%E5%8F%A3%E5%8F%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>opendir、readdir、rewinddir、closedir、telldir、seekdir、stat函数和DIR、dirent、stat结构体详解</title>
