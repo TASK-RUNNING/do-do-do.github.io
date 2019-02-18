@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://melville.club/"/>
-  <updated>2019-02-15T09:54:42.058Z</updated>
+  <updated>2019-02-18T08:29:51.047Z</updated>
   <id>https://melville.club/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用正则表达式删除代码中的 /**/ 注释</title>
+    <link href="https://melville.club//posts/a-20190218-162341.html"/>
+    <id>https://melville.club//posts/a-20190218-162341.html</id>
+    <published>2019-02-18T08:23:41.000Z</published>
+    <updated>2019-02-18T08:29:51.047Z</updated>
+    
+    <content type="html"><![CDATA[<script type="text/javascript" src="/js/src/baidu.js"></script><p>如果想将代码中的 <code>/**/</code> 注释全部删除，怎样才能一次性全部删掉呢？</p><p>可以使用正则表达式 <code>/\*(.|[\r\n])*?\*/</code> 搜索 <code>/**/</code> 注释，然后删除即可。</p>]]></content>
+    
+    <summary type="html">
+    
+      使用正则表达式替换代码中的 /**/ 注释
+    
+    </summary>
+    
+      <category term="语言" scheme="https://melville.club/categories/%E8%AF%AD%E8%A8%80/"/>
+    
+      <category term="正则表达式" scheme="https://melville.club/categories/%E8%AF%AD%E8%A8%80/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    
+    
+      <category term="正则表达式" scheme="https://melville.club/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    
+      <category term="注释" scheme="https://melville.club/tags/%E6%B3%A8%E9%87%8A/"/>
+    
+  </entry>
   
   <entry>
     <title>作为互联网爱好者，你常看的国外科技媒体有哪些？</title>

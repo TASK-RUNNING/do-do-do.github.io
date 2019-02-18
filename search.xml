@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>使用正则表达式删除代码中的 /**/ 注释</title>
+      <link href="//posts/a-20190218-162341.html"/>
+      <url>//posts/a-20190218-162341.html</url>
+      
+        <content type="html"><![CDATA[<script type="text/javascript" src="/js/src/baidu.js"></script><p>如果想将代码中的 <code>/**/</code> 注释全部删除，怎样才能一次性全部删掉呢？</p><p>可以使用正则表达式 <code>/\*(.|[\r\n])*?\*/</code> 搜索 <code>/**/</code> 注释，然后删除即可。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 语言 </category>
+          
+          <category> 正则表达式 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 正则表达式 </tag>
+            
+            <tag> 注释 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>作为互联网爱好者，你常看的国外科技媒体有哪些？</title>
       <link href="//posts/a-20190215-144042.html"/>
       <url>//posts/a-20190215-144042.html</url>
