@@ -8,7 +8,7 @@
       <link href="//posts/a-20190218-162341.html"/>
       <url>//posts/a-20190218-162341.html</url>
       
-        <content type="html"><![CDATA[<script type="text/javascript" src="/js/src/baidu.js"></script><p>如果想将代码中的 <code>/**/</code> 注释全部删除，怎样才能一次性全部删掉呢？</p><p>可以使用正则表达式 <code>/\*(.|[\r\n])*?\*/</code> 搜索 <code>/**/</code> 注释，然后删除即可。</p>]]></content>
+        <content type="html"><![CDATA[<script type="text/javascript" src="/js/src/baidu.js"></script><p>怎样才能一次性全部删掉代码中的 <code>/**/</code> 注释呢？</p><p>可以使用正则表达式 <code>/\*(.|[\r\n])*?\*/</code> 搜索 <code>/**/</code> 注释，然后删除即可。</p>]]></content>
       
       
       <categories>
