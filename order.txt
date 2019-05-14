@@ -1,0 +1,5 @@
+hexo new "article name"
+hexo clean && hexo g && gulp build && hexo d
+git add .
+git commit -m "лМ╪спбндуб"
+git push origin hexo

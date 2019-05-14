@@ -706,9 +706,9 @@ firestore:
 busuanzi_count:
   enable: true
   total_visitors: true
-  total_visitors_icon: users
+  total_visitors_icon: user
   total_views: true
-  total_views_icon: user
+  total_views_icon: users
   post_views: true
   post_views_icon: heart
 
