@@ -329,8 +329,8 @@ codeblock:
 reward:
   enable: true
   #comment: Donate comment here
-  wechatpay: /images/wechatpay.jpg
-  alipay: /images/alipay.jpg
+  wechatpay: /images/wechatpay.png
+  alipay: /images/alipay.png
   #bitcoin: /images/bitcoin.jpg
 
 # Related popular posts
@@ -447,7 +447,7 @@ font:
 
 # Math Equations Render Support
 math:
-  enable: false
+  enable: true
 
   # Default(true) will load mathjax/katex script on demand
   # That is it only render those page who has `mathjax: true` in Front Matter.

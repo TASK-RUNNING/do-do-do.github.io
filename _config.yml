@@ -85,7 +85,7 @@ nofollow:
 Plugins: 
 - hexo-generate-feed
 ## Themes: https://hexo.io/themes/
-theme: new
+theme: next-7.1.2
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

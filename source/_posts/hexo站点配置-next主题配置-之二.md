@@ -307,7 +307,7 @@ passage_end_tag:
   enabled: true
 ```
 
-## 3.27 修改``代码块自定义样式
+## 3.27 修改代码块自定义样式
 
 打开 `\themes\next\source\css\_custom\custom.styl` 文件，加入
 
