@@ -1094,14 +1094,14 @@
 
 <script>
   var GUEST = ['nick', 'mail', 'link'];
-  var guest = 'nick,mail,link';
+  var guest = 'nick,mail';
   guest = guest.split(',').filter(function(item) {
     return GUEST.indexOf(item) > -1;
   });
   new Valine({
     el: '#comments',
     verify: false,
-    notify: false,
+    notify: true,
     appId: 'pvhiBwpfHOUBspkJ5iEJ5LFw-gzGzoHsz',
     appKey: 'LrKlAVEWOYfv1JwbdQGXAl3K',
     placeholder: '欢迎留言',
