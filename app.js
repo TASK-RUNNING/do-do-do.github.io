@@ -206,12 +206,18 @@ $(document).ready(function() {
       templates  : {
         item: function(data) {
           var link = data.permalink ? data.permalink : CONFIG.root + data.path;
-          return `<a href="${link}" class="algolia-hit-item-link">${data._highlightResult.title.value}</a>`;
+          return (
+            '<a href="' + link + '" class="algolia-hit-item-link">'
+          + data._highlightResult.title.value
+          + '</a>'
+          );
         },
         empty: function(data) {
-          return `<div id="algolia-hits-empty">
-              ${algoliaSettings.labels.hits_empty.replace(/\$\{query}/, data.query)}
-            </div>`;
+          return (
+            '<div id="algolia-hits-empty">'
+          + algoliaSettings.labels.hits_empty.replace(/\$\{query}/, data.query)
+          + '</div>'
+          );
         }
       },
       cssClasses: {
@@ -226,11 +232,13 @@ $(document).ready(function() {
           var stats = algoliaSettings.labels.hits_stats
             .replace(/\$\{hits}/, data.nbHits)
             .replace(/\$\{time}/, data.processingTimeMS);
-          return `${stats}
-            <span class="algolia-powered">
-              <img src="${CONFIG.root}images/algolia_logo.svg" alt="Algolia"/>
-            </span>
-            <hr/>`;
+          return (
+            stats
+            + '<span class="algolia-powered">'
+            + '  <img src="' + CONFIG.root + 'images/algolia_logo.svg" alt="Algolia" />'
+            + '</span>'
+            + '<hr />'
+          );
         }
       }
     }),
@@ -274,60 +282,6 @@ $(document).ready(function() {
 
 });
 
-/* global NexT, CONFIG */
-
-$(document).ready(function() {
-
-  $(document).trigger('bootstrap:before');
-
-  /**
-   * Register JS handlers by condition option.
-   * Need to add config option in Front-End at 'layout/_partials/head.swig' file.
-   */
-  CONFIG.fastclick && NexT.utils.isMobile() && window.FastClick.attach(document.body);
-  CONFIG.lazyload && NexT.utils.lazyLoadPostsImages();
-
-  NexT.utils.registerESCKeyEvent();
-
-  NexT.utils.registerBackToTop();
-
-  // Mobile top menu bar.
-  $('.site-nav-toggle button').on('click', function() {
-    var $siteNav = $('.site-nav');
-    var ON_CLASS_NAME = 'site-nav-on';
-    var isSiteNavOn = $siteNav.hasClass(ON_CLASS_NAME);
-    var animateAction = isSiteNavOn ? 'slideUp' : 'slideDown';
-    var animateCallback = isSiteNavOn ? 'removeClass' : 'addClass';
-
-    $siteNav.stop()[animateAction]('fast', function() {
-      $siteNav[animateCallback](ON_CLASS_NAME);
-    });
-  });
-
-  /**
-   * Register JS handlers by condition option.
-   * Need to add config option in Front-End at 'layout/_partials/head.swig' file.
-   */
-  CONFIG.fancybox && NexT.utils.wrapImageWithFancyBox();
-  CONFIG.tabs && NexT.utils.registerTabsTag();
-
-  NexT.utils.embeddedVideoTransformer();
-
-  // Define Motion Sequence.
-  NexT.motion.integrator
-    .add(NexT.motion.middleWares.logo)
-    .add(NexT.motion.middleWares.menu)
-    .add(NexT.motion.middleWares.postList)
-    .add(NexT.motion.middleWares.sidebar);
-
-  $(document).trigger('motion:before');
-
-  // Bootstrap Motion.
-  CONFIG.motion.enable && NexT.motion.integrator.bootstrap();
-
-  $(document).trigger('bootstrap:after');
-});
-
 $(document).ready(function() {
 
   // Create Base64 Object
@@ -350,6 +304,7 @@ $(document).ready(function() {
  * Copyright 2006, 2015 Klaus Hartl & Fagner Brack
  * Released under the MIT license
  */
+
 ;(function (factory) {
 	var registeredInModuleLoader = false;
 	if (typeof define === 'function' && define.amd) {
@@ -654,14 +609,20 @@ $(document).ready(function() {
         display : 'block',
         duration: SIDEBAR_DISPLAY_DURATION,
         begin   : function() {
-          $('.sidebar .motion-element').velocity(
-            'transition.slideRightIn',
-            {
+          $('.sidebar .motion-element').not('.site-state').velocity(
+            'transition.slideRightIn', {
               stagger : 50,
               drag    : true,
               complete: function() {
                 self.sidebarEl.trigger('sidebar.motion.complete');
               }
+            }
+          );
+          $('.site-state').velocity(
+            'transition.slideRightIn', {
+              stagger : 50,
+              drag    : true,
+              display : 'flex'
             }
           );
         },
@@ -874,6 +835,60 @@ $(document).ready(function() {
     }
   };
 
+});
+
+/* global NexT, CONFIG */
+
+$(document).ready(function() {
+
+  $(document).trigger('bootstrap:before');
+
+  /**
+   * Register JS handlers by condition option.
+   * Need to add config option in Front-End at 'layout/_partials/head.swig' file.
+   */
+  CONFIG.fastclick && NexT.utils.isMobile() && window.FastClick.attach(document.body);
+  CONFIG.lazyload && NexT.utils.lazyLoadPostsImages();
+
+  NexT.utils.registerESCKeyEvent();
+
+  CONFIG.back2top && NexT.utils.registerBackToTop();
+
+  // Mobile top menu bar.
+  $('.site-nav-toggle button').on('click', function() {
+    var $siteNav = $('.site-nav');
+    var ON_CLASS_NAME = 'site-nav-on';
+    var isSiteNavOn = $siteNav.hasClass(ON_CLASS_NAME);
+    var animateAction = isSiteNavOn ? 'slideUp' : 'slideDown';
+    var animateCallback = isSiteNavOn ? 'removeClass' : 'addClass';
+
+    $siteNav.stop()[animateAction]('fast', function() {
+      $siteNav[animateCallback](ON_CLASS_NAME);
+    });
+  });
+
+  /**
+   * Register JS handlers by condition option.
+   * Need to add config option in Front-End at 'layout/_partials/head.swig' file.
+   */
+  CONFIG.fancybox && NexT.utils.wrapImageWithFancyBox();
+  CONFIG.tabs && NexT.utils.registerTabsTag();
+
+  NexT.utils.embeddedVideoTransformer();
+
+  // Define Motion Sequence.
+  NexT.motion.integrator
+    .add(NexT.motion.middleWares.logo)
+    .add(NexT.motion.middleWares.menu)
+    .add(NexT.motion.middleWares.postList)
+    .add(NexT.motion.middleWares.sidebar);
+
+  $(document).trigger('motion:before');
+
+  // Bootstrap Motion.
+  CONFIG.motion.enable && NexT.motion.integrator.bootstrap();
+
+  $(document).trigger('bootstrap:after');
 });
 
 /* global NexT, CONFIG */
@@ -1128,7 +1143,9 @@ $(document).ready(function() {
 
     this.clear();
 
-    var selector = `${this.selector}[data-target="${target}"],${this.selector}[href="${target}"]`;
+    var selector = this.selector
+      + '[data-target="' + target + '"],'
+      + this.selector + '[href="' + target + '"]';
 
     var active = $(selector)
       .parents('li')
@@ -1195,28 +1212,35 @@ NexT.utils = NexT.$u = {
   wrapImageWithFancyBox: function() {
     $('.content img')
       .not(':hidden')
-      .not('.group-picture img, .post-gallery img')
       .each(function() {
         var $image = $(this);
-        var imageTitle = $image.attr('title');
+        var imageTitle = $image.attr('title') || $image.attr('alt');
         var $imageWrapLink = $image.parent('a');
 
         if ($imageWrapLink.length < 1) {
-          var imageLink = $image.attr('data-original') ? this.getAttribute('data-original') : this.getAttribute('src');
-          $imageWrapLink = $image.wrap(`<a data-fancybox="group" href="${imageLink}"></a>`).parent('a');
-          $imageWrapLink.addClass('fancybox fancybox.image');
-          $imageWrapLink.attr('rel', 'group');
+          var imageLink = $image.attr('data-original') || $image.attr('src');
+          $imageWrapLink = $image.wrap('<a class="fancybox fancybox.image" href="' + imageLink + '" itemscope itemtype="http://schema.org/ImageObject" itemprop="url"></a>').parent('a');
+          if ($image.is('.post-gallery img')) {
+            $imageWrapLink.addClass('post-gallery-img');
+            $imageWrapLink.attr('data-fancybox', 'gallery').attr('rel', 'gallery');
+          }
+          else if ($image.is('.group-picture img')) {
+            $imageWrapLink.attr('data-fancybox', 'group').attr('rel', 'group');
+          }
+          else {
+            $imageWrapLink.attr('data-fancybox', 'default').attr('rel', 'default');
+          }
         }
 
         if (imageTitle) {
-          $imageWrapLink.append(`<p class="image-caption">${imageTitle}</p>`);
-
-          //make sure img title tag will show correctly in fancybox
-          $imageWrapLink.attr('title', imageTitle);
+          $imageWrapLink.append('<p class="image-caption">' + imageTitle + '</p>');
+          // Make sure img title tag will show correctly in fancybox
+          $imageWrapLink.attr('title', imageTitle).attr('data-caption', imageTitle);
         }
       });
 
     $('.fancybox').fancybox({
+      loop: true,
       helpers: {
         overlay: {
           locked: false
@@ -1244,7 +1268,7 @@ NexT.utils = NexT.$u = {
       $(window).bind('hashchange', function() {
         var tHash = location.hash;
         if (tHash !== '' && !tHash.match(/%\S{2}/)) {
-          $(`${tNav}li:has(a[href="${tHash}"])`).addClass('active').siblings().removeClass('active');
+          $(tNav + 'li:has(a[href="' + tHash + '"])').addClass('active').siblings().removeClass('active');
           $(tHash).addClass('active').siblings().removeClass('active');
         }
       }).trigger('hashchange');
@@ -1443,7 +1467,7 @@ NexT.utils = NexT.$u = {
   },
 
   getScrollbarWidth: function() {
-    var $div = $('<div/>').addClass('scrollbar-measure').prependTo('body');
+    var $div = $('<div />').addClass('scrollbar-measure').prependTo('body');
     var div = $div[0];
     var scrollbarWidth = div.offsetWidth - div.clientWidth;
     $div.remove();
@@ -1452,15 +1476,14 @@ NexT.utils = NexT.$u = {
   },
 
   getContentVisibilityHeight: function() {
-    var docHeight = $('#content').height();
+    var docHeight = $('.container').height();
     var winHeight = $(window).height();
     var contentVisibilityHeight = docHeight > winHeight ? docHeight - winHeight : $(document).height() - winHeight;
     return contentVisibilityHeight;
   },
 
   getSidebarb2tHeight: function() {
-    //var sidebarb2tHeight = (CONFIG.sidebar.b2t) ? document.getElementsByClassName('back-to-top')[0].clientHeight : 0;
-    var sidebarb2tHeight = CONFIG.sidebar.b2t ? $('.back-to-top').height() : 0;
+    var sidebarb2tHeight = (CONFIG.back2top && CONFIG.back2top_sidebar) ? $('.back-to-top').height() : 0;
     return sidebarb2tHeight;
   },
 
@@ -1478,11 +1501,14 @@ NexT.utils = NexT.$u = {
 
 $(document).ready(function() {
 
+  function wrapTable() {
+    $('table').not('.gist table').wrap('<div class="table-container"></div>');
+  }
+
   /**
    * Init Sidebar & TOC inner dimensions on all pages and for all schemes.
    * Need for Sidebar/TOC inner scrolling if content taller then viewport.
    */
-
   function updateSidebarHeight(height) {
     height = height || 'auto';
     $('.site-overview, .post-toc').css('max-height', height);
@@ -1504,16 +1530,85 @@ $(document).ready(function() {
     // Initialize Sidebar & TOC Width.
     var scrollbarWidth = NexT.utils.getScrollbarWidth();
     if ($('.site-overview-wrap').height() > (document.body.clientHeight - NexT.utils.getSidebarSchemePadding())) {
-      $('.site-overview').css('width', `calc(100% + ${scrollbarWidth}px)`);
+      $('.site-overview').css('width', 'calc(100% + ' + scrollbarWidth + 'px)');
     }
     if ($('.post-toc-wrap').height() > (document.body.clientHeight - NexT.utils.getSidebarSchemePadding())) {
-      $('.post-toc').css('width', `calc(100% + ${scrollbarWidth}px)`);
+      $('.post-toc').css('width', 'calc(100% + ' + scrollbarWidth + 'px)');
     }
 
     // Initialize Sidebar & TOC Height.
     updateSidebarHeight(document.body.clientHeight - NexT.utils.getSidebarSchemePadding());
   }
   initSidebarDimension();
+  wrapTable();
+});
+
+$(document).ready(function() {
+  function updateFooterPosition() {
+    var containerHeight = $('#footer').attr('position') ? $('.container').height() + $('#footer').outerHeight(true) : $('.container').height();
+    if (containerHeight < window.innerHeight) $('#footer').css({ 'position': 'fixed', 'bottom': 0, 'left': 0, 'right': 0 }).attr('position', 'fixed');
+    else $('#footer').removeAttr('style position');
+  }
+  updateFooterPosition();
+  $(window).on('resize scroll', updateFooterPosition);
+});
+
+/* global NexT, CONFIG */
+
+$(document).ready(function() {
+
+  var sidebarInner = $('.sidebar-inner');
+  var sidebarOffset = CONFIG.sidebar.offset || 12;
+
+  function getHeaderOffset() {
+    return $('.header-inner').height() + sidebarOffset;
+  }
+
+  function getFooterOffset() {
+    var footer = $('#footer');
+    var footerInner = $('.footer-inner');
+    var footerMargin = footer.outerHeight() - footerInner.outerHeight();
+    var footerOffset = footer.outerHeight() + footerMargin;
+    return footerOffset;
+  }
+
+  function initAffix() {
+    var headerOffset = getHeaderOffset();
+    var footerOffset = getFooterOffset();
+    var sidebarHeight = $('#sidebar').height() + NexT.utils.getSidebarb2tHeight();
+    var contentHeight = $('#content').height();
+
+    // Not affix if sidebar taller than content (to prevent bottom jumping).
+    if (headerOffset + sidebarHeight < contentHeight) {
+      sidebarInner.affix({
+        offset: {
+          top   : headerOffset - sidebarOffset,
+          bottom: footerOffset
+        }
+      });
+      sidebarInner.affix('checkPosition');
+    }
+
+    $('#sidebar').css({ 'margin-top': headerOffset, 'margin-left': 'auto' });
+  }
+
+  function recalculateAffixPosition() {
+    $(window).off('.affix');
+    sidebarInner.removeData('bs.affix').removeClass('affix affix-top affix-bottom');
+    initAffix();
+  }
+
+  function resizeListener() {
+    var mql = window.matchMedia('(min-width: 992px)');
+    mql.addListener(function(e) {
+      if (e.matches) {
+        recalculateAffixPosition();
+      }
+    });
+  }
+
+  initAffix();
+  resizeListener();
 });
 
 /*! jQuery v2.1.3 | (c) 2005, 2014 jQuery Foundation, Inc. | jquery.org/license */
@@ -6157,79 +6252,3 @@ return function (global, window, document, undefined) {
 }));
 /* VelocityJS.org UI Pack (5.0.4). (C) 2014 Julian Shapiro. MIT @license: en.wikipedia.org/wiki/MIT_License. Portions copyright Daniel Eden, Christian Pucci. */
 !function(t){"function"==typeof require&&"object"==typeof exports?module.exports=t():"function"==typeof define&&define.amd?define(["velocity"],t):t()}(function(){return function(t,a,e,r){function n(t,a){var e=[];return t&&a?($.each([t,a],function(t,a){var r=[];$.each(a,function(t,a){for(;a.toString().length<5;)a="0"+a;r.push(a)}),e.push(r.join(""))}),parseFloat(e[0])>parseFloat(e[1])):!1}if(!t.Velocity||!t.Velocity.Utilities)return void(a.console&&console.log("Velocity UI Pack: Velocity must be loaded first. Aborting."));var i=t.Velocity,$=i.Utilities,s=i.version,o={major:1,minor:1,patch:0};if(n(o,s)){var l="Velocity UI Pack: You need to update Velocity (jquery.velocity.js) to a newer version. Visit http://github.com/julianshapiro/velocity.";throw alert(l),new Error(l)}i.RegisterEffect=i.RegisterUI=function(t,a){function e(t,a,e,r){var n=0,s;$.each(t.nodeType?[t]:t,function(t,a){r&&(e+=t*r),s=a.parentNode,$.each(["height","paddingTop","paddingBottom","marginTop","marginBottom"],function(t,e){n+=parseFloat(i.CSS.getPropertyValue(a,e))})}),i.animate(s,{height:("In"===a?"+":"-")+"="+n},{queue:!1,easing:"ease-in-out",duration:e*("In"===a?.6:1)})}return i.Redirects[t]=function(n,s,o,l,c,u){function f(){s.display!==r&&"none"!==s.display||!/Out$/.test(t)||$.each(c.nodeType?[c]:c,function(t,a){i.CSS.setPropertyValue(a,"display","none")}),s.complete&&s.complete.call(c,c),u&&u.resolver(c||n)}var p=o===l-1;a.defaultDuration="function"==typeof a.defaultDuration?a.defaultDuration.call(c,c):parseFloat(a.defaultDuration);for(var d=0;d<a.calls.length;d++){var g=a.calls[d],y=g[0],m=s.duration||a.defaultDuration||1e3,X=g[1],Y=g[2]||{},O={};if(O.duration=m*(X||1),O.queue=s.queue||"",O.easing=Y.easing||"ease",O.delay=parseFloat(Y.delay)||0,O._cacheValues=Y._cacheValues||!0,0===d){if(O.delay+=parseFloat(s.delay)||0,0===o&&(O.begin=function(){s.begin&&s.begin.call(c,c);var a=t.match(/(In|Out)$/);a&&"In"===a[0]&&y.opacity!==r&&$.each(c.nodeType?[c]:c,function(t,a){i.CSS.setPropertyValue(a,"opacity",0)}),s.animateParentHeight&&a&&e(c,a[0],m+O.delay,s.stagger)}),null!==s.display)if(s.display!==r&&"none"!==s.display)O.display=s.display;else if(/In$/.test(t)){var v=i.CSS.Values.getDisplayType(n);O.display="inline"===v?"inline-block":v}s.visibility&&"hidden"!==s.visibility&&(O.visibility=s.visibility)}d===a.calls.length-1&&(O.complete=function(){if(a.reset){for(var t in a.reset){var e=a.reset[t];i.CSS.Hooks.registered[t]!==r||"string"!=typeof e&&"number"!=typeof e||(a.reset[t]=[a.reset[t],a.reset[t]])}var s={duration:0,queue:!1};p&&(s.complete=f),i.animate(n,a.reset,s)}else p&&f()},"hidden"===s.visibility&&(O.visibility=s.visibility)),i.animate(n,y,O)}},i},i.RegisterEffect.packagedEffects={"callout.bounce":{defaultDuration:550,calls:[[{translateY:-30},.25],[{translateY:0},.125],[{translateY:-15},.125],[{translateY:0},.25]]},"callout.shake":{defaultDuration:800,calls:[[{translateX:-11},.125],[{translateX:11},.125],[{translateX:-11},.125],[{translateX:11},.125],[{translateX:-11},.125],[{translateX:11},.125],[{translateX:-11},.125],[{translateX:0},.125]]},"callout.flash":{defaultDuration:1100,calls:[[{opacity:[0,"easeInOutQuad",1]},.25],[{opacity:[1,"easeInOutQuad"]},.25],[{opacity:[0,"easeInOutQuad"]},.25],[{opacity:[1,"easeInOutQuad"]},.25]]},"callout.pulse":{defaultDuration:825,calls:[[{scaleX:1.1,scaleY:1.1},.5,{easing:"easeInExpo"}],[{scaleX:1,scaleY:1},.5]]},"callout.swing":{defaultDuration:950,calls:[[{rotateZ:15},.2],[{rotateZ:-10},.2],[{rotateZ:5},.2],[{rotateZ:-5},.2],[{rotateZ:0},.2]]},"callout.tada":{defaultDuration:1e3,calls:[[{scaleX:.9,scaleY:.9,rotateZ:-3},.1],[{scaleX:1.1,scaleY:1.1,rotateZ:3},.1],[{scaleX:1.1,scaleY:1.1,rotateZ:-3},.1],["reverse",.125],["reverse",.125],["reverse",.125],["reverse",.125],["reverse",.125],[{scaleX:1,scaleY:1,rotateZ:0},.2]]},"transition.fadeIn":{defaultDuration:500,calls:[[{opacity:[1,0]}]]},"transition.fadeOut":{defaultDuration:500,calls:[[{opacity:[0,1]}]]},"transition.flipXIn":{defaultDuration:700,calls:[[{opacity:[1,0],transformPerspective:[800,800],rotateY:[0,-55]}]],reset:{transformPerspective:0}},"transition.flipXOut":{defaultDuration:700,calls:[[{opacity:[0,1],transformPerspective:[800,800],rotateY:55}]],reset:{transformPerspective:0,rotateY:0}},"transition.flipYIn":{defaultDuration:800,calls:[[{opacity:[1,0],transformPerspective:[800,800],rotateX:[0,-45]}]],reset:{transformPerspective:0}},"transition.flipYOut":{defaultDuration:800,calls:[[{opacity:[0,1],transformPerspective:[800,800],rotateX:25}]],reset:{transformPerspective:0,rotateX:0}},"transition.flipBounceXIn":{defaultDuration:900,calls:[[{opacity:[.725,0],transformPerspective:[400,400],rotateY:[-10,90]},.5],[{opacity:.8,rotateY:10},.25],[{opacity:1,rotateY:0},.25]],reset:{transformPerspective:0}},"transition.flipBounceXOut":{defaultDuration:800,calls:[[{opacity:[.9,1],transformPerspective:[400,400],rotateY:-10},.5],[{opacity:0,rotateY:90},.5]],reset:{transformPerspective:0,rotateY:0}},"transition.flipBounceYIn":{defaultDuration:850,calls:[[{opacity:[.725,0],transformPerspective:[400,400],rotateX:[-10,90]},.5],[{opacity:.8,rotateX:10},.25],[{opacity:1,rotateX:0},.25]],reset:{transformPerspective:0}},"transition.flipBounceYOut":{defaultDuration:800,calls:[[{opacity:[.9,1],transformPerspective:[400,400],rotateX:-15},.5],[{opacity:0,rotateX:90},.5]],reset:{transformPerspective:0,rotateX:0}},"transition.swoopIn":{defaultDuration:850,calls:[[{opacity:[1,0],transformOriginX:["100%","50%"],transformOriginY:["100%","100%"],scaleX:[1,0],scaleY:[1,0],translateX:[0,-700],translateZ:0}]],reset:{transformOriginX:"50%",transformOriginY:"50%"}},"transition.swoopOut":{defaultDuration:850,calls:[[{opacity:[0,1],transformOriginX:["50%","100%"],transformOriginY:["100%","100%"],scaleX:0,scaleY:0,translateX:-700,translateZ:0}]],reset:{transformOriginX:"50%",transformOriginY:"50%",scaleX:1,scaleY:1,translateX:0}},"transition.whirlIn":{defaultDuration:850,calls:[[{opacity:[1,0],transformOriginX:["50%","50%"],transformOriginY:["50%","50%"],scaleX:[1,0],scaleY:[1,0],rotateY:[0,160]},1,{easing:"easeInOutSine"}]]},"transition.whirlOut":{defaultDuration:750,calls:[[{opacity:[0,"easeInOutQuint",1],transformOriginX:["50%","50%"],transformOriginY:["50%","50%"],scaleX:0,scaleY:0,rotateY:160},1,{easing:"swing"}]],reset:{scaleX:1,scaleY:1,rotateY:0}},"transition.shrinkIn":{defaultDuration:750,calls:[[{opacity:[1,0],transformOriginX:["50%","50%"],transformOriginY:["50%","50%"],scaleX:[1,1.5],scaleY:[1,1.5],translateZ:0}]]},"transition.shrinkOut":{defaultDuration:600,calls:[[{opacity:[0,1],transformOriginX:["50%","50%"],transformOriginY:["50%","50%"],scaleX:1.3,scaleY:1.3,translateZ:0}]],reset:{scaleX:1,scaleY:1}},"transition.expandIn":{defaultDuration:700,calls:[[{opacity:[1,0],transformOriginX:["50%","50%"],transformOriginY:["50%","50%"],scaleX:[1,.625],scaleY:[1,.625],translateZ:0}]]},"transition.expandOut":{defaultDuration:700,calls:[[{opacity:[0,1],transformOriginX:["50%","50%"],transformOriginY:["50%","50%"],scaleX:.5,scaleY:.5,translateZ:0}]],reset:{scaleX:1,scaleY:1}},"transition.bounceIn":{defaultDuration:800,calls:[[{opacity:[1,0],scaleX:[1.05,.3],scaleY:[1.05,.3]},.4],[{scaleX:.9,scaleY:.9,translateZ:0},.2],[{scaleX:1,scaleY:1},.5]]},"transition.bounceOut":{defaultDuration:800,calls:[[{scaleX:.95,scaleY:.95},.35],[{scaleX:1.1,scaleY:1.1,translateZ:0},.35],[{opacity:[0,1],scaleX:.3,scaleY:.3},.3]],reset:{scaleX:1,scaleY:1}},"transition.bounceUpIn":{defaultDuration:800,calls:[[{opacity:[1,0],translateY:[-30,1e3]},.6,{easing:"easeOutCirc"}],[{translateY:10},.2],[{translateY:0},.2]]},"transition.bounceUpOut":{defaultDuration:1e3,calls:[[{translateY:20},.2],[{opacity:[0,"easeInCirc",1],translateY:-1e3},.8]],reset:{translateY:0}},"transition.bounceDownIn":{defaultDuration:800,calls:[[{opacity:[1,0],translateY:[30,-1e3]},.6,{easing:"easeOutCirc"}],[{translateY:-10},.2],[{translateY:0},.2]]},"transition.bounceDownOut":{defaultDuration:1e3,calls:[[{translateY:-20},.2],[{opacity:[0,"easeInCirc",1],translateY:1e3},.8]],reset:{translateY:0}},"transition.bounceLeftIn":{defaultDuration:750,calls:[[{opacity:[1,0],translateX:[30,-1250]},.6,{easing:"easeOutCirc"}],[{translateX:-10},.2],[{translateX:0},.2]]},"transition.bounceLeftOut":{defaultDuration:750,calls:[[{translateX:30},.2],[{opacity:[0,"easeInCirc",1],translateX:-1250},.8]],reset:{translateX:0}},"transition.bounceRightIn":{defaultDuration:750,calls:[[{opacity:[1,0],translateX:[-30,1250]},.6,{easing:"easeOutCirc"}],[{translateX:10},.2],[{translateX:0},.2]]},"transition.bounceRightOut":{defaultDuration:750,calls:[[{translateX:-30},.2],[{opacity:[0,"easeInCirc",1],translateX:1250},.8]],reset:{translateX:0}},"transition.slideUpIn":{defaultDuration:900,calls:[[{opacity:[1,0],translateY:[0,20],translateZ:0}]]},"transition.slideUpOut":{defaultDuration:900,calls:[[{opacity:[0,1],translateY:-20,translateZ:0}]],reset:{translateY:0}},"transition.slideDownIn":{defaultDuration:900,calls:[[{opacity:[1,0],translateY:[0,-20],translateZ:0}]]},"transition.slideDownOut":{defaultDuration:900,calls:[[{opacity:[0,1],translateY:20,translateZ:0}]],reset:{translateY:0}},"transition.slideLeftIn":{defaultDuration:1e3,calls:[[{opacity:[1,0],translateX:[0,-20],translateZ:0}]]},"transition.slideLeftOut":{defaultDuration:1050,calls:[[{opacity:[0,1],translateX:-20,translateZ:0}]],reset:{translateX:0}},"transition.slideRightIn":{defaultDuration:1e3,calls:[[{opacity:[1,0],translateX:[0,20],translateZ:0}]]},"transition.slideRightOut":{defaultDuration:1050,calls:[[{opacity:[0,1],translateX:20,translateZ:0}]],reset:{translateX:0}},"transition.slideUpBigIn":{defaultDuration:850,calls:[[{opacity:[1,0],translateY:[0,75],translateZ:0}]]},"transition.slideUpBigOut":{defaultDuration:800,calls:[[{opacity:[0,1],translateY:-75,translateZ:0}]],reset:{translateY:0}},"transition.slideDownBigIn":{defaultDuration:850,calls:[[{opacity:[1,0],translateY:[0,-75],translateZ:0}]]},"transition.slideDownBigOut":{defaultDuration:800,calls:[[{opacity:[0,1],translateY:75,translateZ:0}]],reset:{translateY:0}},"transition.slideLeftBigIn":{defaultDuration:800,calls:[[{opacity:[1,0],translateX:[0,-75],translateZ:0}]]},"transition.slideLeftBigOut":{defaultDuration:750,calls:[[{opacity:[0,1],translateX:-75,translateZ:0}]],reset:{translateX:0}},"transition.slideRightBigIn":{defaultDuration:800,calls:[[{opacity:[1,0],translateX:[0,75],translateZ:0}]]},"transition.slideRightBigOut":{defaultDuration:750,calls:[[{opacity:[0,1],translateX:75,translateZ:0}]],reset:{translateX:0}},"transition.perspectiveUpIn":{defaultDuration:800,calls:[[{opacity:[1,0],transformPerspective:[800,800],transformOriginX:[0,0],transformOriginY:["100%","100%"],rotateX:[0,-180]}]],reset:{transformPerspective:0,transformOriginX:"50%",transformOriginY:"50%"}},"transition.perspectiveUpOut":{defaultDuration:850,calls:[[{opacity:[0,1],transformPerspective:[800,800],transformOriginX:[0,0],transformOriginY:["100%","100%"],rotateX:-180}]],reset:{transformPerspective:0,transformOriginX:"50%",transformOriginY:"50%",rotateX:0}},"transition.perspectiveDownIn":{defaultDuration:800,calls:[[{opacity:[1,0],transformPerspective:[800,800],transformOriginX:[0,0],transformOriginY:[0,0],rotateX:[0,180]}]],reset:{transformPerspective:0,transformOriginX:"50%",transformOriginY:"50%"}},"transition.perspectiveDownOut":{defaultDuration:850,calls:[[{opacity:[0,1],transformPerspective:[800,800],transformOriginX:[0,0],transformOriginY:[0,0],rotateX:180}]],reset:{transformPerspective:0,transformOriginX:"50%",transformOriginY:"50%",rotateX:0}},"transition.perspectiveLeftIn":{defaultDuration:950,calls:[[{opacity:[1,0],transformPerspective:[2e3,2e3],transformOriginX:[0,0],transformOriginY:[0,0],rotateY:[0,-180]}]],reset:{transformPerspective:0,transformOriginX:"50%",transformOriginY:"50%"}},"transition.perspectiveLeftOut":{defaultDuration:950,calls:[[{opacity:[0,1],transformPerspective:[2e3,2e3],transformOriginX:[0,0],transformOriginY:[0,0],rotateY:-180}]],reset:{transformPerspective:0,transformOriginX:"50%",transformOriginY:"50%",rotateY:0}},"transition.perspectiveRightIn":{defaultDuration:950,calls:[[{opacity:[1,0],transformPerspective:[2e3,2e3],transformOriginX:["100%","100%"],transformOriginY:[0,0],rotateY:[0,180]}]],reset:{transformPerspective:0,transformOriginX:"50%",transformOriginY:"50%"}},"transition.perspectiveRightOut":{defaultDuration:950,calls:[[{opacity:[0,1],transformPerspective:[2e3,2e3],transformOriginX:["100%","100%"],transformOriginY:[0,0],rotateY:180}]],reset:{transformPerspective:0,transformOriginX:"50%",transformOriginY:"50%",rotateY:0}}};for(var c in i.RegisterEffect.packagedEffects)i.RegisterEffect(c,i.RegisterEffect.packagedEffects[c]);i.RunSequence=function(t){var a=$.extend(!0,[],t);a.length>1&&($.each(a.reverse(),function(t,e){var r=a[t+1];if(r){var n=e.o||e.options,s=r.o||r.options,o=n&&n.sequenceQueue===!1?"begin":"complete",l=s&&s[o],c={};c[o]=function(){var t=r.e||r.elements,a=t.nodeType?[t]:t;l&&l.call(a,a),i(e)},r.o?r.o=$.extend({},s,c):r.options=$.extend({},s,c)}}),a.reverse()),i(a[0])}}(window.jQuery||window.Zepto||window,window,document)});
-/* global NexT, CONFIG */
-
-$(document).ready(function() {
-
-  var sidebarInner = $('.sidebar-inner');
-  var sidebarOffset = CONFIG.sidebar.offset || 12;
-
-  function getHeaderOffset() {
-    return $('.header-inner').height() + sidebarOffset;
-  }
-
-  function getFooterOffset() {
-    var footer = $('#footer');
-    var footerInner = $('.footer-inner');
-    var footerMargin = footer.outerHeight() - footerInner.outerHeight();
-    var footerOffset = footer.outerHeight() + footerMargin;
-    return footerOffset;
-  }
-
-  function initAffix() {
-    var headerOffset = getHeaderOffset();
-    var footerOffset = getFooterOffset();
-    var sidebarHeight = $('#sidebar').height() + NexT.utils.getSidebarb2tHeight();
-    var contentHeight = $('#content').height();
-
-    // Not affix if sidebar taller than content (to prevent bottom jumping).
-    if (headerOffset + sidebarHeight < contentHeight) {
-      sidebarInner.affix({
-        offset: {
-          top   : headerOffset - sidebarOffset,
-          bottom: footerOffset
-        }
-      });
-      sidebarInner.affix('checkPosition');
-    }
-
-    $('#sidebar').css({ 'margin-top': headerOffset, 'margin-left': 'auto' });
-  }
-
-  function recalculateAffixPosition() {
-    $(window).off('.affix');
-    sidebarInner.removeData('bs.affix').removeClass('affix affix-top affix-bottom');
-    initAffix();
-  }
-
-  function resizeListener() {
-    var mql = window.matchMedia('(min-width: 992px)');
-    mql.addListener(function(e) {
-      if (e.matches) {
-        recalculateAffixPosition();
-      }
-    });
-  }
-
-  initAffix();
-  resizeListener();
-});
-
-/**
- * UAParser.js v0.7.9
- * Lightweight JavaScript-based User-Agent string parser
- * https://github.com/faisalman/ua-parser-js
- *
- * Copyright © 2012-2015 Faisal Salman <fyzlman@gmail.com>
- * Dual licensed under GPLv2 & MIT
- */
-(function(window,undefined){"use strict";var LIBVERSION="0.7.9",EMPTY="",UNKNOWN="?",FUNC_TYPE="function",UNDEF_TYPE="undefined",OBJ_TYPE="object",STR_TYPE="string",MAJOR="major",MODEL="model",NAME="name",TYPE="type",VENDOR="vendor",VERSION="version",ARCHITECTURE="architecture",CONSOLE="console",MOBILE="mobile",TABLET="tablet",SMARTTV="smarttv",WEARABLE="wearable",EMBEDDED="embedded";var util={extend:function(regexes,extensions){for(var i in extensions){if("browser cpu device engine os".indexOf(i)!==-1&&extensions[i].length%2===0){regexes[i]=extensions[i].concat(regexes[i])}}return regexes},has:function(str1,str2){if(typeof str1==="string"){return str2.toLowerCase().indexOf(str1.toLowerCase())!==-1}else{return false}},lowerize:function(str){return str.toLowerCase()},major:function(version){return typeof version===STR_TYPE?version.split(".")[0]:undefined}};var mapper={rgx:function(){var result,i=0,j,k,p,q,matches,match,args=arguments;while(i<args.length&&!matches){var regex=args[i],props=args[i+1];if(typeof result===UNDEF_TYPE){result={};for(p in props){q=props[p];if(typeof q===OBJ_TYPE){result[q[0]]=undefined}else{result[q]=undefined}}}j=k=0;while(j<regex.length&&!matches){matches=regex[j++].exec(this.getUA());if(!!matches){for(p=0;p<props.length;p++){match=matches[++k];q=props[p];if(typeof q===OBJ_TYPE&&q.length>0){if(q.length==2){if(typeof q[1]==FUNC_TYPE){result[q[0]]=q[1].call(this,match)}else{result[q[0]]=q[1]}}else if(q.length==3){if(typeof q[1]===FUNC_TYPE&&!(q[1].exec&&q[1].test)){result[q[0]]=match?q[1].call(this,match,q[2]):undefined}else{result[q[0]]=match?match.replace(q[1],q[2]):undefined}}else if(q.length==4){result[q[0]]=match?q[3].call(this,match.replace(q[1],q[2])):undefined}}else{result[q]=match?match:undefined}}}}i+=2}return result},str:function(str,map){for(var i in map){if(typeof map[i]===OBJ_TYPE&&map[i].length>0){for(var j=0;j<map[i].length;j++){if(util.has(map[i][j],str)){return i===UNKNOWN?undefined:i}}}else if(util.has(map[i],str)){return i===UNKNOWN?undefined:i}}return str}};var maps={browser:{oldsafari:{version:{"1.0":"/8",1.2:"/1",1.3:"/3","2.0":"/412","2.0.2":"/416","2.0.3":"/417","2.0.4":"/419","?":"/"}}},device:{amazon:{model:{"Fire Phone":["SD","KF"]}},sprint:{model:{"Evo Shift 4G":"7373KT"},vendor:{HTC:"APA",Sprint:"Sprint"}}},os:{windows:{version:{ME:"4.90","NT 3.11":"NT3.51","NT 4.0":"NT4.0",2000:"NT 5.0",XP:["NT 5.1","NT 5.2"],Vista:"NT 6.0",7:"NT 6.1",8:"NT 6.2",8.1:"NT 6.3",10:["NT 6.4","NT 10.0"],RT:"ARM"}}}};var regexes={browser:[[/(opera\smini)\/([\w\.-]+)/i,/(opera\s[mobiletab]+).+version\/([\w\.-]+)/i,/(opera).+version\/([\w\.]+)/i,/(opera)[\/\s]+([\w\.]+)/i],[NAME,VERSION],[/\s(opr)\/([\w\.]+)/i],[[NAME,"Opera"],VERSION],[/(kindle)\/([\w\.]+)/i,/(lunascape|maxthon|netfront|jasmine|blazer)[\/\s]?([\w\.]+)*/i,/(avant\s|iemobile|slim|baidu)(?:browser)?[\/\s]?([\w\.]*)/i,/(?:ms|\()(ie)\s([\w\.]+)/i,/(rekonq)\/([\w\.]+)*/i,/(chromium|flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi|iridium)\/([\w\.-]+)/i],[NAME,VERSION],[/(trident).+rv[:\s]([\w\.]+).+like\sgecko/i],[[NAME,"IE"],VERSION],[/(edge)\/((\d+)?[\w\.]+)/i],[NAME,VERSION],[/(yabrowser)\/([\w\.]+)/i],[[NAME,"Yandex"],VERSION],[/(comodo_dragon)\/([\w\.]+)/i],[[NAME,/_/g," "],VERSION],[/(chrome|omniweb|arora|[tizenoka]{5}\s?browser)\/v?([\w\.]+)/i,/(uc\s?browser|qqbrowser)[\/\s]?([\w\.]+)/i],[NAME,VERSION],[/(dolfin)\/([\w\.]+)/i],[[NAME,"Dolphin"],VERSION],[/((?:android.+)crmo|crios)\/([\w\.]+)/i],[[NAME,"Chrome"],VERSION],[/XiaoMi\/MiuiBrowser\/([\w\.]+)/i],[VERSION,[NAME,"MIUI Browser"]],[/android.+version\/([\w\.]+)\s+(?:mobile\s?safari|safari)/i],[VERSION,[NAME,"Android Browser"]],[/FBAV\/([\w\.]+);/i],[VERSION,[NAME,"Facebook"]],[/version\/([\w\.]+).+?mobile\/\w+\s(safari)/i],[VERSION,[NAME,"Mobile Safari"]],[/version\/([\w\.]+).+?(mobile\s?safari|safari)/i],[VERSION,NAME],[/webkit.+?(mobile\s?safari|safari)(\/[\w\.]+)/i],[NAME,[VERSION,mapper.str,maps.browser.oldsafari.version]],[/(konqueror)\/([\w\.]+)/i,/(webkit|khtml)\/([\w\.]+)/i],[NAME,VERSION],[/(navigator|netscape)\/([\w\.-]+)/i],[[NAME,"Netscape"],VERSION],[/fxios\/([\w\.-]+)/i],[VERSION,[NAME,"Firefox"]],[/(swiftfox)/i,/(icedragon|iceweasel|camino|chimera|fennec|maemo\sbrowser|minimo|conkeror)[\/\s]?([\w\.\+]+)/i,/(firefox|seamonkey|k-meleon|icecat|iceape|firebird|phoenix)\/([\w\.-]+)/i,/(mozilla)\/([\w\.]+).+rv\:.+gecko\/\d+/i,/(polaris|lynx|dillo|icab|doris|amaya|w3m|netsurf)[\/\s]?([\w\.]+)/i,/(links)\s\(([\w\.]+)/i,/(gobrowser)\/?([\w\.]+)*/i,/(ice\s?browser)\/v?([\w\._]+)/i,/(mosaic)[\/\s]([\w\.]+)/i],[NAME,VERSION]],cpu:[[/(?:(amd|x(?:(?:86|64)[_-])?|wow|win)64)[;\)]/i],[[ARCHITECTURE,"amd64"]],[/(ia32(?=;))/i],[[ARCHITECTURE,util.lowerize]],[/((?:i[346]|x)86)[;\)]/i],[[ARCHITECTURE,"ia32"]],[/windows\s(ce|mobile);\sppc;/i],[[ARCHITECTURE,"arm"]],[/((?:ppc|powerpc)(?:64)?)(?:\smac|;|\))/i],[[ARCHITECTURE,/ower/,"",util.lowerize]],[/(sun4\w)[;\)]/i],[[ARCHITECTURE,"sparc"]],[/((?:avr32|ia64(?=;))|68k(?=\))|arm(?:64|(?=v\d+;))|(?=atmel\s)avr|(?:irix|mips|sparc)(?:64)?(?=;)|pa-risc)/i],[[ARCHITECTURE,util.lowerize]]],device:[[/\((ipad|playbook);[\w\s\);-]+(rim|apple)/i],[MODEL,VENDOR,[TYPE,TABLET]],[/applecoremedia\/[\w\.]+ \((ipad)/],[MODEL,[VENDOR,"Apple"],[TYPE,TABLET]],[/(apple\s{0,1}tv)/i],[[MODEL,"Apple TV"],[VENDOR,"Apple"]],[/(archos)\s(gamepad2?)/i,/(hp).+(touchpad)/i,/(kindle)\/([\w\.]+)/i,/\s(nook)[\w\s]+build\/(\w+)/i,/(dell)\s(strea[kpr\s\d]*[\dko])/i],[VENDOR,MODEL,[TYPE,TABLET]],[/(kf[A-z]+)\sbuild\/[\w\.]+.*silk\//i],[MODEL,[VENDOR,"Amazon"],[TYPE,TABLET]],[/(sd|kf)[0349hijorstuw]+\sbuild\/[\w\.]+.*silk\//i],[[MODEL,mapper.str,maps.device.amazon.model],[VENDOR,"Amazon"],[TYPE,MOBILE]],[/\((ip[honed|\s\w*]+);.+(apple)/i],[MODEL,VENDOR,[TYPE,MOBILE]],[/\((ip[honed|\s\w*]+);/i],[MODEL,[VENDOR,"Apple"],[TYPE,MOBILE]],[/(blackberry)[\s-]?(\w+)/i,/(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus|dell|huawei|meizu|motorola|polytron)[\s_-]?([\w-]+)*/i,/(hp)\s([\w\s]+\w)/i,/(asus)-?(\w+)/i],[VENDOR,MODEL,[TYPE,MOBILE]],[/\(bb10;\s(\w+)/i],[MODEL,[VENDOR,"BlackBerry"],[TYPE,MOBILE]],[/android.+(transfo[prime\s]{4,10}\s\w+|eeepc|slider\s\w+|nexus 7)/i],[MODEL,[VENDOR,"Asus"],[TYPE,TABLET]],[/(sony)\s(tablet\s[ps])\sbuild\//i,/(sony)?(?:sgp.+)\sbuild\//i],[[VENDOR,"Sony"],[MODEL,"Xperia Tablet"],[TYPE,TABLET]],[/(?:sony)?(?:(?:(?:c|d)\d{4})|(?:so[-l].+))\sbuild\//i],[[VENDOR,"Sony"],[MODEL,"Xperia Phone"],[TYPE,MOBILE]],[/\s(ouya)\s/i,/(nintendo)\s([wids3u]+)/i],[VENDOR,MODEL,[TYPE,CONSOLE]],[/android.+;\s(shield)\sbuild/i],[MODEL,[VENDOR,"Nvidia"],[TYPE,CONSOLE]],[/(playstation\s[3portablevi]+)/i],[MODEL,[VENDOR,"Sony"],[TYPE,CONSOLE]],[/(sprint\s(\w+))/i],[[VENDOR,mapper.str,maps.device.sprint.vendor],[MODEL,mapper.str,maps.device.sprint.model],[TYPE,MOBILE]],[/(lenovo)\s?(S(?:5000|6000)+(?:[-][\w+]))/i],[VENDOR,MODEL,[TYPE,TABLET]],[/(htc)[;_\s-]+([\w\s]+(?=\))|\w+)*/i,/(zte)-(\w+)*/i,/(alcatel|geeksphone|huawei|lenovo|nexian|panasonic|(?=;\s)sony)[_\s-]?([\w-]+)*/i],[VENDOR,[MODEL,/_/g," "],[TYPE,MOBILE]],[/(nexus\s9)/i],[MODEL,[VENDOR,"HTC"],[TYPE,TABLET]],[/[\s\(;](xbox(?:\sone)?)[\s\);]/i],[MODEL,[VENDOR,"Microsoft"],[TYPE,CONSOLE]],[/(kin\.[onetw]{3})/i],[[MODEL,/\./g," "],[VENDOR,"Microsoft"],[TYPE,MOBILE]],[/\s(milestone|droid(?:[2-4x]|\s(?:bionic|x2|pro|razr))?(:?\s4g)?)[\w\s]+build\//i,/mot[\s-]?(\w+)*/i,/(XT\d{3,4}) build\//i],[MODEL,[VENDOR,"Motorola"],[TYPE,MOBILE]],[/android.+\s(mz60\d|xoom[\s2]{0,2})\sbuild\//i],[MODEL,[VENDOR,"Motorola"],[TYPE,TABLET]],[/android.+((sch-i[89]0\d|shw-m380s|gt-p\d{4}|gt-n8000|sgh-t8[56]9|nexus 10))/i,/((SM-T\w+))/i],[[VENDOR,"Samsung"],MODEL,[TYPE,TABLET]],[/((s[cgp]h-\w+|gt-\w+|galaxy\snexus|sm-n900))/i,/(sam[sung]*)[\s-]*(\w+-?[\w-]*)*/i,/sec-((sgh\w+))/i],[[VENDOR,"Samsung"],MODEL,[TYPE,MOBILE]],[/(samsung);smarttv/i],[VENDOR,MODEL,[TYPE,SMARTTV]],[/\(dtv[\);].+(aquos)/i],[MODEL,[VENDOR,"Sharp"],[TYPE,SMARTTV]],[/sie-(\w+)*/i],[MODEL,[VENDOR,"Siemens"],[TYPE,MOBILE]],[/(maemo|nokia).*(n900|lumia\s\d+)/i,/(nokia)[\s_-]?([\w-]+)*/i],[[VENDOR,"Nokia"],MODEL,[TYPE,MOBILE]],[/android\s3\.[\s\w;-]{10}(a\d{3})/i],[MODEL,[VENDOR,"Acer"],[TYPE,TABLET]],[/android\s3\.[\s\w;-]{10}(lg?)-([06cv9]{3,4})/i],[[VENDOR,"LG"],MODEL,[TYPE,TABLET]],[/(lg) netcast\.tv/i],[VENDOR,MODEL,[TYPE,SMARTTV]],[/(nexus\s[45])/i,/lg[e;\s\/-]+(\w+)*/i],[MODEL,[VENDOR,"LG"],[TYPE,MOBILE]],[/android.+(ideatab[a-z0-9\-\s]+)/i],[MODEL,[VENDOR,"Lenovo"],[TYPE,TABLET]],[/linux;.+((jolla));/i],[VENDOR,MODEL,[TYPE,MOBILE]],[/((pebble))app\/[\d\.]+\s/i],[VENDOR,MODEL,[TYPE,WEARABLE]],[/android.+;\s(glass)\s\d/i],[MODEL,[VENDOR,"Google"],[TYPE,WEARABLE]],[/android.+(\w+)\s+build\/hm\1/i,/android.+(hm[\s\-_]*note?[\s_]*(?:\d\w)?)\s+build/i,/android.+(mi[\s\-_]*(?:one|one[\s_]plus)?[\s_]*(?:\d\w)?)\s+build/i],[[MODEL,/_/g," "],[VENDOR,"Xiaomi"],[TYPE,MOBILE]],[/(mobile|tablet);.+rv\:.+gecko\//i],[[TYPE,util.lowerize],VENDOR,MODEL]],engine:[[/windows.+\sedge\/([\w\.]+)/i],[VERSION,[NAME,"EdgeHTML"]],[/(presto)\/([\w\.]+)/i,/(webkit|trident|netfront|netsurf|amaya|lynx|w3m)\/([\w\.]+)/i,/(khtml|tasman|links)[\/\s]\(?([\w\.]+)/i,/(icab)[\/\s]([23]\.[\d\.]+)/i],[NAME,VERSION],[/rv\:([\w\.]+).*(gecko)/i],[VERSION,NAME]],os:[[/microsoft\s(windows)\s(vista|xp)/i],[NAME,VERSION],[/(windows)\snt\s6\.2;\s(arm)/i,/(windows\sphone(?:\sos)*|windows\smobile|windows)[\s\/]?([ntce\d\.\s]+\w)/i],[NAME,[VERSION,mapper.str,maps.os.windows.version]],[/(win(?=3|9|n)|win\s9x\s)([nt\d\.]+)/i],[[NAME,"Windows"],[VERSION,mapper.str,maps.os.windows.version]],[/\((bb)(10);/i],[[NAME,"BlackBerry"],VERSION],[/(blackberry)\w*\/?([\w\.]+)*/i,/(tizen)[\/\s]([\w\.]+)/i,/(android|webos|palm\sos|qnx|bada|rim\stablet\sos|meego|contiki)[\/\s-]?([\w\.]+)*/i,/linux;.+(sailfish);/i],[NAME,VERSION],[/(symbian\s?os|symbos|s60(?=;))[\/\s-]?([\w\.]+)*/i],[[NAME,"Symbian"],VERSION],[/\((series40);/i],[NAME],[/mozilla.+\(mobile;.+gecko.+firefox/i],[[NAME,"Firefox OS"],VERSION],[/(nintendo|playstation)\s([wids3portablevu]+)/i,/(mint)[\/\s\(]?(\w+)*/i,/(mageia|vectorlinux)[;\s]/i,/(joli|[kxln]?ubuntu|debian|[open]*suse|gentoo|arch|slackware|fedora|mandriva|centos|pclinuxos|redhat|zenwalk|linpus)[\/\s-]?([\w\.-]+)*/i,/(hurd|linux)\s?([\w\.]+)*/i,/(gnu)\s?([\w\.]+)*/i],[NAME,VERSION],[/(cros)\s[\w]+\s([\w\.]+\w)/i],[[NAME,"Chromium OS"],VERSION],[/(sunos)\s?([\w\.]+\d)*/i],[[NAME,"Solaris"],VERSION],[/\s([frentopc-]{0,4}bsd|dragonfly)\s?([\w\.]+)*/i],[NAME,VERSION],[/(ip[honead]+)(?:.*os\s*([\w]+)*\slike\smac|;\sopera)/i],[[NAME,"iOS"],[VERSION,/_/g,"."]],[/(mac\sos\sx)\s?([\w\s\.]+\w)*/i,/(macintosh|mac(?=_powerpc)\s)/i],[[NAME,"Mac OS"],[VERSION,/_/g,"."]],[/((?:open)?solaris)[\/\s-]?([\w\.]+)*/i,/(haiku)\s(\w+)/i,/(aix)\s((\d)(?=\.|\)|\s)[\w\.]*)*/i,/(plan\s9|minix|beos|os\/2|amigaos|morphos|risc\sos|openvms)/i,/(unix)\s?([\w\.]+)*/i],[NAME,VERSION]]};var UAParser=function(uastring,extensions){if(!(this instanceof UAParser)){return new UAParser(uastring,extensions).getResult()}var ua=uastring||(window&&window.navigator&&window.navigator.userAgent?window.navigator.userAgent:EMPTY);var rgxmap=extensions?util.extend(regexes,extensions):regexes;this.getBrowser=function(){var browser=mapper.rgx.apply(this,rgxmap.browser);browser.major=util.major(browser.version);return browser};this.getCPU=function(){return mapper.rgx.apply(this,rgxmap.cpu)};this.getDevice=function(){return mapper.rgx.apply(this,rgxmap.device)};this.getEngine=function(){return mapper.rgx.apply(this,rgxmap.engine)};this.getOS=function(){return mapper.rgx.apply(this,rgxmap.os)};this.getResult=function(){return{ua:this.getUA(),browser:this.getBrowser(),engine:this.getEngine(),os:this.getOS(),device:this.getDevice(),cpu:this.getCPU()}};this.getUA=function(){return ua};this.setUA=function(uastring){ua=uastring;return this};this.setUA(ua);return this};UAParser.VERSION=LIBVERSION;UAParser.BROWSER={NAME:NAME,MAJOR:MAJOR,VERSION:VERSION};UAParser.CPU={ARCHITECTURE:ARCHITECTURE};UAParser.DEVICE={MODEL:MODEL,VENDOR:VENDOR,TYPE:TYPE,CONSOLE:CONSOLE,MOBILE:MOBILE,SMARTTV:SMARTTV,TABLET:TABLET,WEARABLE:WEARABLE,EMBEDDED:EMBEDDED};UAParser.ENGINE={NAME:NAME,VERSION:VERSION};UAParser.OS={NAME:NAME,VERSION:VERSION};if(typeof exports!==UNDEF_TYPE){if(typeof module!==UNDEF_TYPE&&module.exports){exports=module.exports=UAParser}exports.UAParser=UAParser}else{if(typeof define===FUNC_TYPE&&define.amd){define(function(){return UAParser})}else{window.UAParser=UAParser}}var $=window.jQuery||window.Zepto;if(typeof $!==UNDEF_TYPE){var parser=new UAParser;$.ua=parser.getResult();$.ua.get=function(){return parser.getUA()};$.ua.set=function(uastring){parser.setUA(uastring);var result=parser.getResult();for(var prop in result){$.ua[prop]=result[prop]}}}})(typeof window==="object"?window:this);
-/**
- * UAParser.js v0.7.9
- * Lightweight JavaScript-based User-Agent string parser
- * https://github.com/faisalman/ua-parser-js
- *
- * Copyright © 2012-2015 Faisal Salman <fyzlman@gmail.com>
- * Dual licensed under GPLv2 & MIT
- */
-!function(i,e){"use strict";var s="0.7.9",o="",r="?",n="function",a="undefined",t="object",w="string",l="major",d="model",p="name",c="type",u="vendor",m="version",f="architecture",g="console",b="mobile",h="tablet",v="smarttv",x="wearable",k="embedded",y={extend:function(i,e){for(var s in e)-1!=="browser cpu device engine os".indexOf(s)&&e[s].length%2===0&&(i[s]=e[s].concat(i[s]));return i},has:function(i,e){return"string"==typeof i?-1!==e.toLowerCase().indexOf(i.toLowerCase()):!1},lowerize:function(i){return i.toLowerCase()},major:function(i){return typeof i===w?i.split(".")[0]:e}},A={rgx:function(){for(var i,s,o,r,w,l,d,p=0,c=arguments;p<c.length&&!l;){var u=c[p],m=c[p+1];if(typeof i===a){i={};for(r in m)w=m[r],typeof w===t?i[w[0]]=e:i[w]=e}for(s=o=0;s<u.length&&!l;)if(l=u[s++].exec(this.getUA()))for(r=0;r<m.length;r++)d=l[++o],w=m[r],typeof w===t&&w.length>0?2==w.length?i[w[0]]=typeof w[1]==n?w[1].call(this,d):w[1]:3==w.length?i[w[0]]=typeof w[1]!==n||w[1].exec&&w[1].test?d?d.replace(w[1],w[2]):e:d?w[1].call(this,d,w[2]):e:4==w.length&&(i[w[0]]=d?w[3].call(this,d.replace(w[1],w[2])):e):i[w]=d?d:e;p+=2}return i},str:function(i,s){for(var o in s)if(typeof s[o]===t&&s[o].length>0){for(var n=0;n<s[o].length;n++)if(y.has(s[o][n],i))return o===r?e:o}else if(y.has(s[o],i))return o===r?e:o;return i}},E={browser:{oldsafari:{version:{"1.0":"/8",1.2:"/1",1.3:"/3","2.0":"/412","2.0.2":"/416","2.0.3":"/417","2.0.4":"/419","?":"/"}}},device:{amazon:{model:{"Fire Phone":["SD","KF"]}},sprint:{model:{"Evo Shift 4G":"7373KT"},vendor:{HTC:"APA",Sprint:"Sprint"}}},os:{windows:{version:{ME:"4.90","NT 3.11":"NT3.51","NT 4.0":"NT4.0",2000:"NT 5.0",XP:["NT 5.1","NT 5.2"],Vista:"NT 6.0",7:"NT 6.1",8:"NT 6.2",8.1:"NT 6.3",10:["NT 6.4","NT 10.0"],RT:"ARM"}}}},S={browser:[[/(opera\smini)\/([\w\.-]+)/i,/(opera\s[mobiletab]+).+version\/([\w\.-]+)/i,/(opera).+version\/([\w\.]+)/i,/(opera)[\/\s]+([\w\.]+)/i],[p,m],[/\s(opr)\/([\w\.]+)/i],[[p,"Opera"],m],[/(kindle)\/([\w\.]+)/i,/(lunascape|maxthon|netfront|jasmine|blazer)[\/\s]?([\w\.]+)*/i,/(avant\s|iemobile|slim|baidu)(?:browser)?[\/\s]?([\w\.]*)/i,/(?:ms|\()(ie)\s([\w\.]+)/i,/(rekonq)\/([\w\.]+)*/i,/(chromium|flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi|iridium)\/([\w\.-]+)/i],[p,m],[/(trident).+rv[:\s]([\w\.]+).+like\sgecko/i],[[p,"IE"],m],[/(edge)\/((\d+)?[\w\.]+)/i],[p,m],[/(yabrowser)\/([\w\.]+)/i],[[p,"Yandex"],m],[/(comodo_dragon)\/([\w\.]+)/i],[[p,/_/g," "],m],[/(chrome|omniweb|arora|[tizenoka]{5}\s?browser)\/v?([\w\.]+)/i,/(uc\s?browser|qqbrowser)[\/\s]?([\w\.]+)/i],[p,m],[/(dolfin)\/([\w\.]+)/i],[[p,"Dolphin"],m],[/((?:android.+)crmo|crios)\/([\w\.]+)/i],[[p,"Chrome"],m],[/XiaoMi\/MiuiBrowser\/([\w\.]+)/i],[m,[p,"MIUI Browser"]],[/android.+version\/([\w\.]+)\s+(?:mobile\s?safari|safari)/i],[m,[p,"Android Browser"]],[/FBAV\/([\w\.]+);/i],[m,[p,"Facebook"]],[/version\/([\w\.]+).+?mobile\/\w+\s(safari)/i],[m,[p,"Mobile Safari"]],[/version\/([\w\.]+).+?(mobile\s?safari|safari)/i],[m,p],[/webkit.+?(mobile\s?safari|safari)(\/[\w\.]+)/i],[p,[m,A.str,E.browser.oldsafari.version]],[/(konqueror)\/([\w\.]+)/i,/(webkit|khtml)\/([\w\.]+)/i],[p,m],[/(navigator|netscape)\/([\w\.-]+)/i],[[p,"Netscape"],m],[/fxios\/([\w\.-]+)/i],[m,[p,"Firefox"]],[/(swiftfox)/i,/(icedragon|iceweasel|camino|chimera|fennec|maemo\sbrowser|minimo|conkeror)[\/\s]?([\w\.\+]+)/i,/(firefox|seamonkey|k-meleon|icecat|iceape|firebird|phoenix)\/([\w\.-]+)/i,/(mozilla)\/([\w\.]+).+rv\:.+gecko\/\d+/i,/(polaris|lynx|dillo|icab|doris|amaya|w3m|netsurf)[\/\s]?([\w\.]+)/i,/(links)\s\(([\w\.]+)/i,/(gobrowser)\/?([\w\.]+)*/i,/(ice\s?browser)\/v?([\w\._]+)/i,/(mosaic)[\/\s]([\w\.]+)/i],[p,m]],cpu:[[/(?:(amd|x(?:(?:86|64)[_-])?|wow|win)64)[;\)]/i],[[f,"amd64"]],[/(ia32(?=;))/i],[[f,y.lowerize]],[/((?:i[346]|x)86)[;\)]/i],[[f,"ia32"]],[/windows\s(ce|mobile);\sppc;/i],[[f,"arm"]],[/((?:ppc|powerpc)(?:64)?)(?:\smac|;|\))/i],[[f,/ower/,"",y.lowerize]],[/(sun4\w)[;\)]/i],[[f,"sparc"]],[/((?:avr32|ia64(?=;))|68k(?=\))|arm(?:64|(?=v\d+;))|(?=atmel\s)avr|(?:irix|mips|sparc)(?:64)?(?=;)|pa-risc)/i],[[f,y.lowerize]]],device:[[/\((ipad|playbook);[\w\s\);-]+(rim|apple)/i],[d,u,[c,h]],[/applecoremedia\/[\w\.]+ \((ipad)/],[d,[u,"Apple"],[c,h]],[/(apple\s{0,1}tv)/i],[[d,"Apple TV"],[u,"Apple"]],[/(archos)\s(gamepad2?)/i,/(hp).+(touchpad)/i,/(kindle)\/([\w\.]+)/i,/\s(nook)[\w\s]+build\/(\w+)/i,/(dell)\s(strea[kpr\s\d]*[\dko])/i],[u,d,[c,h]],[/(kf[A-z]+)\sbuild\/[\w\.]+.*silk\//i],[d,[u,"Amazon"],[c,h]],[/(sd|kf)[0349hijorstuw]+\sbuild\/[\w\.]+.*silk\//i],[[d,A.str,E.device.amazon.model],[u,"Amazon"],[c,b]],[/\((ip[honed|\s\w*]+);.+(apple)/i],[d,u,[c,b]],[/\((ip[honed|\s\w*]+);/i],[d,[u,"Apple"],[c,b]],[/(blackberry)[\s-]?(\w+)/i,/(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus|dell|huawei|meizu|motorola|polytron)[\s_-]?([\w-]+)*/i,/(hp)\s([\w\s]+\w)/i,/(asus)-?(\w+)/i],[u,d,[c,b]],[/\(bb10;\s(\w+)/i],[d,[u,"BlackBerry"],[c,b]],[/android.+(transfo[prime\s]{4,10}\s\w+|eeepc|slider\s\w+|nexus 7)/i],[d,[u,"Asus"],[c,h]],[/(sony)\s(tablet\s[ps])\sbuild\//i,/(sony)?(?:sgp.+)\sbuild\//i],[[u,"Sony"],[d,"Xperia Tablet"],[c,h]],[/(?:sony)?(?:(?:(?:c|d)\d{4})|(?:so[-l].+))\sbuild\//i],[[u,"Sony"],[d,"Xperia Phone"],[c,b]],[/\s(ouya)\s/i,/(nintendo)\s([wids3u]+)/i],[u,d,[c,g]],[/android.+;\s(shield)\sbuild/i],[d,[u,"Nvidia"],[c,g]],[/(playstation\s[3portablevi]+)/i],[d,[u,"Sony"],[c,g]],[/(sprint\s(\w+))/i],[[u,A.str,E.device.sprint.vendor],[d,A.str,E.device.sprint.model],[c,b]],[/(lenovo)\s?(S(?:5000|6000)+(?:[-][\w+]))/i],[u,d,[c,h]],[/(htc)[;_\s-]+([\w\s]+(?=\))|\w+)*/i,/(zte)-(\w+)*/i,/(alcatel|geeksphone|huawei|lenovo|nexian|panasonic|(?=;\s)sony)[_\s-]?([\w-]+)*/i],[u,[d,/_/g," "],[c,b]],[/(nexus\s9)/i],[d,[u,"HTC"],[c,h]],[/[\s\(;](xbox(?:\sone)?)[\s\);]/i],[d,[u,"Microsoft"],[c,g]],[/(kin\.[onetw]{3})/i],[[d,/\./g," "],[u,"Microsoft"],[c,b]],[/\s(milestone|droid(?:[2-4x]|\s(?:bionic|x2|pro|razr))?(:?\s4g)?)[\w\s]+build\//i,/mot[\s-]?(\w+)*/i,/(XT\d{3,4}) build\//i],[d,[u,"Motorola"],[c,b]],[/android.+\s(mz60\d|xoom[\s2]{0,2})\sbuild\//i],[d,[u,"Motorola"],[c,h]],[/android.+((sch-i[89]0\d|shw-m380s|gt-p\d{4}|gt-n8000|sgh-t8[56]9|nexus 10))/i,/((SM-T\w+))/i],[[u,"Samsung"],d,[c,h]],[/((s[cgp]h-\w+|gt-\w+|galaxy\snexus|sm-n900))/i,/(sam[sung]*)[\s-]*(\w+-?[\w-]*)*/i,/sec-((sgh\w+))/i],[[u,"Samsung"],d,[c,b]],[/(samsung);smarttv/i],[u,d,[c,v]],[/\(dtv[\);].+(aquos)/i],[d,[u,"Sharp"],[c,v]],[/sie-(\w+)*/i],[d,[u,"Siemens"],[c,b]],[/(maemo|nokia).*(n900|lumia\s\d+)/i,/(nokia)[\s_-]?([\w-]+)*/i],[[u,"Nokia"],d,[c,b]],[/android\s3\.[\s\w;-]{10}(a\d{3})/i],[d,[u,"Acer"],[c,h]],[/android\s3\.[\s\w;-]{10}(lg?)-([06cv9]{3,4})/i],[[u,"LG"],d,[c,h]],[/(lg) netcast\.tv/i],[u,d,[c,v]],[/(nexus\s[45])/i,/lg[e;\s\/-]+(\w+)*/i],[d,[u,"LG"],[c,b]],[/android.+(ideatab[a-z0-9\-\s]+)/i],[d,[u,"Lenovo"],[c,h]],[/linux;.+((jolla));/i],[u,d,[c,b]],[/((pebble))app\/[\d\.]+\s/i],[u,d,[c,x]],[/android.+;\s(glass)\s\d/i],[d,[u,"Google"],[c,x]],[/android.+(\w+)\s+build\/hm\1/i,/android.+(hm[\s\-_]*note?[\s_]*(?:\d\w)?)\s+build/i,/android.+(mi[\s\-_]*(?:one|one[\s_]plus)?[\s_]*(?:\d\w)?)\s+build/i],[[d,/_/g," "],[u,"Xiaomi"],[c,b]],[/(mobile|tablet);.+rv\:.+gecko\//i],[[c,y.lowerize],u,d]],engine:[[/windows.+\sedge\/([\w\.]+)/i],[m,[p,"EdgeHTML"]],[/(presto)\/([\w\.]+)/i,/(webkit|trident|netfront|netsurf|amaya|lynx|w3m)\/([\w\.]+)/i,/(khtml|tasman|links)[\/\s]\(?([\w\.]+)/i,/(icab)[\/\s]([23]\.[\d\.]+)/i],[p,m],[/rv\:([\w\.]+).*(gecko)/i],[m,p]],os:[[/microsoft\s(windows)\s(vista|xp)/i],[p,m],[/(windows)\snt\s6\.2;\s(arm)/i,/(windows\sphone(?:\sos)*|windows\smobile|windows)[\s\/]?([ntce\d\.\s]+\w)/i],[p,[m,A.str,E.os.windows.version]],[/(win(?=3|9|n)|win\s9x\s)([nt\d\.]+)/i],[[p,"Windows"],[m,A.str,E.os.windows.version]],[/\((bb)(10);/i],[[p,"BlackBerry"],m],[/(blackberry)\w*\/?([\w\.]+)*/i,/(tizen)[\/\s]([\w\.]+)/i,/(android|webos|palm\sos|qnx|bada|rim\stablet\sos|meego|contiki)[\/\s-]?([\w\.]+)*/i,/linux;.+(sailfish);/i],[p,m],[/(symbian\s?os|symbos|s60(?=;))[\/\s-]?([\w\.]+)*/i],[[p,"Symbian"],m],[/\((series40);/i],[p],[/mozilla.+\(mobile;.+gecko.+firefox/i],[[p,"Firefox OS"],m],[/(nintendo|playstation)\s([wids3portablevu]+)/i,/(mint)[\/\s\(]?(\w+)*/i,/(mageia|vectorlinux)[;\s]/i,/(joli|[kxln]?ubuntu|debian|[open]*suse|gentoo|arch|slackware|fedora|mandriva|centos|pclinuxos|redhat|zenwalk|linpus)[\/\s-]?([\w\.-]+)*/i,/(hurd|linux)\s?([\w\.]+)*/i,/(gnu)\s?([\w\.]+)*/i],[p,m],[/(cros)\s[\w]+\s([\w\.]+\w)/i],[[p,"Chromium OS"],m],[/(sunos)\s?([\w\.]+\d)*/i],[[p,"Solaris"],m],[/\s([frentopc-]{0,4}bsd|dragonfly)\s?([\w\.]+)*/i],[p,m],[/(ip[honead]+)(?:.*os\s*([\w]+)*\slike\smac|;\sopera)/i],[[p,"iOS"],[m,/_/g,"."]],[/(mac\sos\sx)\s?([\w\s\.]+\w)*/i,/(macintosh|mac(?=_powerpc)\s)/i],[[p,"Mac OS"],[m,/_/g,"."]],[/((?:open)?solaris)[\/\s-]?([\w\.]+)*/i,/(haiku)\s(\w+)/i,/(aix)\s((\d)(?=\.|\)|\s)[\w\.]*)*/i,/(plan\s9|minix|beos|os\/2|amigaos|morphos|risc\sos|openvms)/i,/(unix)\s?([\w\.]+)*/i],[p,m]]},T=function(e,s){if(!(this instanceof T))return new T(e,s).getResult();var r=e||(i&&i.navigator&&i.navigator.userAgent?i.navigator.userAgent:o),n=s?y.extend(S,s):S;return this.getBrowser=function(){var i=A.rgx.apply(this,n.browser);return i.major=y.major(i.version),i},this.getCPU=function(){return A.rgx.apply(this,n.cpu)},this.getDevice=function(){return A.rgx.apply(this,n.device)},this.getEngine=function(){return A.rgx.apply(this,n.engine)},this.getOS=function(){return A.rgx.apply(this,n.os)},this.getResult=function(){return{ua:this.getUA(),browser:this.getBrowser(),engine:this.getEngine(),os:this.getOS(),device:this.getDevice(),cpu:this.getCPU()}},this.getUA=function(){return r},this.setUA=function(i){return r=i,this},this.setUA(r),this};T.VERSION=s,T.BROWSER={NAME:p,MAJOR:l,VERSION:m},T.CPU={ARCHITECTURE:f},T.DEVICE={MODEL:d,VENDOR:u,TYPE:c,CONSOLE:g,MOBILE:b,SMARTTV:v,TABLET:h,WEARABLE:x,EMBEDDED:k},T.ENGINE={NAME:p,VERSION:m},T.OS={NAME:p,VERSION:m},typeof exports!==a?(typeof module!==a&&module.exports&&(exports=module.exports=T),exports.UAParser=T):typeof define===n&&define.amd?define(function(){return T}):i.UAParser=T;var N=i.jQuery||i.Zepto;if(typeof N!==a){var z=new T;N.ua=z.getResult(),N.ua.get=function(){return z.getUA()},N.ua.set=function(i){z.setUA(i);var e=z.getResult();for(var s in e)N.ua[s]=e[s]}}}("object"==typeof window?window:this);

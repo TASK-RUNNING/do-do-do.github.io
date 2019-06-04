@@ -42,49 +42,29 @@
 
 
 
-  
-  
-  <link rel="stylesheet" href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5">
-
-
-
 
 
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
 
-<link rel="stylesheet" href="/css/main.css?v=6.7.0">
+<link rel="stylesheet" href="/css/main.css?v=7.1.2">
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.7.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.2">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.ico?v=6.7.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.2">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.ico?v=6.7.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.2">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=6.7.0" color="#222">
-
-
-  <link rel="manifest" href="/images/manifest.json">
-
-
-  <meta name="msapplication-config" content="/images/browserconfig.xml">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.2" color="#222">
 
 
 
 
-
-  <script>
-  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/faff8786.js","daovoice")
-  daovoice('init', {
-      app_id: "faff8786"
-    });
-  daovoice('update');
-  </script>
 
 
 
@@ -93,9 +73,11 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    version: '6.7.0',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
-    fancybox: true,
+    version: '7.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: true,
+    fancybox: false,
     fastclick: false,
     lazyload: false,
     tabs: true,
@@ -133,7 +115,8 @@
 
 
 
-
+  
+  
   <link rel="canonical" href="https://melville.club/page/2/">
 
 
@@ -151,16 +134,6 @@
 
 
 
-
-  <script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?787e46f45505018733a8af49bce8c4a5";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
 
 
 
@@ -264,6 +237,25 @@
         
         
           
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
           <li class="menu-item menu-item-tags">
 
     
@@ -321,25 +313,6 @@
         
         
           
-          <li class="menu-item menu-item-about">
-
-    
-    
-    
-      
-    
-
-    
-      
-    
-
-    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
-
-  </li>
-        
-        
-        
-          
           <li class="menu-item menu-item-milestone">
 
     
@@ -352,7 +325,7 @@
       
     
 
-    <a href="/milestone/" rel="section"><i class="menu-item-icon fa fa-fw fa-flag-checkered"></i> <br>里程碑</a>
+    <a href="/milestone/" rel="section"><i class="menu-item-icon fa fa-fw fa-flag-checkered"></i> <br>milestone</a>
 
   </li>
         
@@ -371,7 +344,7 @@
       
     
 
-    <a href="/message/" rel="section"><i class="menu-item-icon fa fa-fw fa-list-alt"></i> <br>留言板</a>
+    <a href="/message/" rel="section"><i class="menu-item-icon fa fa-fw fa-list-alt"></i> <br>message</a>
 
   </li>
         
@@ -560,6 +533,20 @@
 
           
             
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/posts/a-2019-01-09-14-12-57.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/posts/a-2019-01-09-14-12-57.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -569,8 +556,6 @@
 
           
 
-          
-            <div class="post-description">史上最全hexo+GitHubPages搭建个人博客</div>
           
 
         </div>
@@ -587,16 +572,11 @@
 
       
         
-          <script type="text/javascript" src="/js/src/baidu.js"></script>
-
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>反反复复搞了很多天，终于搭建好自己的博客了，因为要配置的个性化东西很多，而且网上查找的结果都是比较零散的，所以我搭建博客时浪费了很多时间，也走了很多的坑。为了节约大家的时间，方便大家搭建自己的博客，特地记录下搭建的过程。如果大家在搭建过程中有什么疑问，<strong>欢迎留言</strong>，同时也请大家收藏网站，防止自己忘记!!!</p>
-<h1 id="1-GitHub-Pages和hexo简介"><a href="#1-GitHub-Pages和hexo简介" class="headerlink" title="1. GitHub Pages和hexo简介"></a>1. GitHub Pages和hexo简介</h1><blockquote>
-<p>GitHub Pages旨在从GitHub存储库托管您的个人，组织或项目页面，是为您和您的项目快速发布漂亮网站的最佳方式。使用GitHub Pages搭建个人网站，可以省去购买服务器、域名等一系列费用，搭建起来非常简单。而且可以上传网页的源代码、更改网页的样式，全部在自己的掌控之中。</p>
-</blockquote>
+          史上最全hexo+GitHubPages搭建个人博客
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/posts/a-2019-01-09-14-12-57.html#more" rel="contents">
+              <a class="btn" href="/posts/a-2019-01-09-14-12-57.html">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -607,22 +587,10 @@
     </div>
 
     
-      
-
-
-    
 
     
     
     
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
 
     
 
@@ -757,6 +725,20 @@
 
           
             
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/posts/a-2019-01-07-17-52-13.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/posts/a-2019-01-07-17-52-13.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -766,8 +748,6 @@
 
           
 
-          
-            <div class="post-description">Windows10企业版激活方法</div>
           
 
         </div>
@@ -784,14 +764,11 @@
 
       
         
-          <script type="text/javascript" src="/js/src/baidu.js"></script>
-
-<h1 id="1-效果图"><a href="#1-效果图" class="headerlink" title="1. 效果图"></a>1. 效果图</h1><p><img src="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/Windows10%E4%BC%81%E4%B8%9A%E7%89%88%E6%BF%80%E6%B4%BB%E6%96%B9%E6%B3%95/Windows10%E6%BF%80%E6%B4%BB.png" alt=""></p>
-<h1 id="2-激活方法"><a href="#2-激活方法" class="headerlink" title="2. 激活方法"></a>2. 激活方法</h1><p>以管理员身份运行<code>命令提示符</code>，依次输入以下命令：</p>
+          Windows10企业版激活方法
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/posts/a-2019-01-07-17-52-13.html#more" rel="contents">
+              <a class="btn" href="/posts/a-2019-01-07-17-52-13.html">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -802,22 +779,10 @@
     </div>
 
     
-      
-
-
-    
 
     
     
     
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
 
     
 
@@ -952,6 +917,20 @@
 
           
             
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/posts/a-2019-01-07-17-46-40.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/posts/a-2019-01-07-17-46-40.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -961,8 +940,6 @@
 
           
 
-          
-            <div class="post-description">SublimeText3激活码</div>
           
 
         </div>
@@ -979,14 +956,11 @@
 
       
         
-          <script type="text/javascript" src="/js/src/baidu.js"></script>
-
-<h1 id="1-SublimeText3激活码"><a href="#1-SublimeText3激活码" class="headerlink" title="1. SublimeText3激活码"></a>1. SublimeText3激活码</h1><p><strong>version 3.1.1，build 3176</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">----- BEGIN LICENSE -----</span><br><span class="line">sgbteam</span><br><span class="line">Single User License</span><br><span class="line">EA7E-1153259</span><br><span class="line">8891CBB9 F1513E4F 1A3405C1 A865D53F</span><br><span class="line">115F202E 7B91AB2D 0D2A40ED 352B269B</span><br><span class="line">76E84F0B CD69BFC7 59F2DFEF E267328F</span><br><span class="line">215652A3 E88F9D8F 4C38E3BA 5B2DAAE4</span><br><span class="line">969624E7 DC9CD4D5 717FB40C 1B9738CF</span><br><span class="line">20B3C4F1 E917B5B3 87C38D9C ACCE7DD8</span><br><span class="line">5F7EF854 86B9743C FADC04AA FB0DA5C0</span><br><span class="line">F913BE58 42FEA319 F954EFDD AE881E0B</span><br><span class="line">------ END LICENSE ------</span><br></pre></td></tr></table></figure>
+          SublimeText3激活码
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/posts/a-2019-01-07-17-46-40.html#more" rel="contents">
+              <a class="btn" href="/posts/a-2019-01-07-17-46-40.html">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -997,22 +971,10 @@
     </div>
 
     
-      
-
-
-    
 
     
     
     
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
 
     
 
@@ -1147,6 +1109,20 @@
 
           
             
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/posts/a-2019-01-07-17-20-09.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/posts/a-2019-01-07-17-20-09.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -1156,8 +1132,6 @@
 
           
 
-          
-            <div class="post-description">VMwareWorkstation15Pro激活秘钥</div>
           
 
         </div>
@@ -1174,13 +1148,11 @@
 
       
         
-          <script type="text/javascript" src="/js/src/baidu.js"></script>
-
-<h1 id="1-激活秘钥"><a href="#1-激活秘钥" class="headerlink" title="1. 激活秘钥"></a>1. 激活秘钥</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">YG5H2-ANZ0H-M8ERY-TXZZZ-YKRV8</span><br><span class="line">UG5J2-0ME12-M89WY-NPWXX-WQH88</span><br><span class="line">UA5DR-2ZD4H-089FY-6YQ5T-YPRX6</span><br><span class="line">GA590-86Y05-4806Y-X4PEE-ZV8E0</span><br><span class="line">ZF582-0NW5N-H8D2P-0XZEE-Z22VA</span><br><span class="line">YA18K-0WY8P-H85DY-L4NZG-X7RAD</span><br></pre></td></tr></table></figure>
+          VMwareWorkstation15Pro激活秘钥
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/posts/a-2019-01-07-17-20-09.html#more" rel="contents">
+              <a class="btn" href="/posts/a-2019-01-07-17-20-09.html">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1191,22 +1163,10 @@
     </div>
 
     
-      
-
-
-    
 
     
     
     
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
 
     
 
@@ -1341,6 +1301,20 @@
 
           
             
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/posts/a-2018-10-23-10-15-57.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/posts/a-2018-10-23-10-15-57.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -1350,8 +1324,6 @@
 
           
 
-          
-            <div class="post-description">iptables和firewalled的区别</div>
           
 
         </div>
@@ -1368,13 +1340,11 @@
 
       
         
-          <script type="text/javascript" src="/js/src/baidu.js"></script>
-
-<h1 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h1><p>保证数据的安全性是继可用性之后最为重要的一项工作，防火墙技术作为公网与内网之间的保护屏障，起着至关重要的作用。面对同学们普遍不了解在红帽RHEL7系统中新旧两款防火墙的差异，刘遄老师决定先带领读者正确的认识在红帽RHEL7系统中firewalld防火墙服务与iptables防火墙服务之间的关系，从理论和事实层面剖析真相。<br>本章节内将会分别使用iptables、firewall-cmd、firewall-config和Tcp_wrappers等防火墙策略配置服务来完成数十个根据真实工作需求而设计的防火墙策略配置实验，让同学们不仅能够熟练的对请求数据包流量进行过滤，还能够基于服务程序进行允许和关闭操作，做到保证Linux系统安全万无一失。</p>
+          iptables和firewalled的区别
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/posts/a-2018-10-23-10-15-57.html#more" rel="contents">
+              <a class="btn" href="/posts/a-2018-10-23-10-15-57.html">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1385,22 +1355,10 @@
     </div>
 
     
-      
-
-
-    
 
     
     
     
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
 
     
 
@@ -1535,6 +1493,20 @@
 
           
             
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/posts/a-2018-10-23-09-27-01.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/posts/a-2018-10-23-09-27-01.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -1544,8 +1516,6 @@
 
           
 
-          
-            <div class="post-description">Linux下用iperf测试网络时出现unable to connect to server "No route to host"</div>
           
 
         </div>
@@ -1562,15 +1532,11 @@
 
       
         
-          <script type="text/javascript" src="/js/src/baidu.js"></script>
-
-<h1 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h1><p>为了验证虚拟网卡驱动的性能，需要两台主机之间互相收发数据，我使用iperf工具进行测试，报错“unable to connect to server: No route to host”，但是可以ping通另一台主机。</p>
-<h1 id="Solvent"><a href="#Solvent" class="headerlink" title="Solvent"></a>Solvent</h1><p>Google了一下，发现是防火墙的问题，需要将防火墙关掉，大部分搜索到的结果都是：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">service iptables stop</span><br><span class="line">iptables -F</span><br></pre></td></tr></table></figure>
+          Linux下用iperf测试网络时出现unable to connect to server "No route to host"
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/posts/a-2018-10-23-09-27-01.html#more" rel="contents">
+              <a class="btn" href="/posts/a-2018-10-23-09-27-01.html">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1581,22 +1547,10 @@
     </div>
 
     
-      
-
-
-    
 
     
     
     
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
 
     
 
@@ -1738,6 +1692,20 @@
 
           
             
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/posts/a-2018-09-18-17-45-22.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/posts/a-2018-09-18-17-45-22.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -1747,8 +1715,6 @@
 
           
 
-          
-            <div class="post-description">C语言结构体中char[0]和char[1]的用法</div>
           
 
         </div>
@@ -1765,14 +1731,11 @@
 
       
         
-          <script type="text/javascript" src="/js/src/baidu.js"></script>
-
-<h1 id="1-写在前面"><a href="#1-写在前面" class="headerlink" title="1.写在前面"></a>1.写在前面</h1><p>我在进行Linux 64位驱动程序兼容32位应用程序的适配过程中，深深的感觉指针操作带来的麻烦，特别是应用层的32位指针传到内核层后，指针大小变成64位，需要进行频繁的大小调整，及其难受。等我快完成所有工作的时候，听一位同事说可以使用char[0]用法来代替指针，我差点一口老血喷出来。“你咋不早说…”。接下来从网上各种google，发现了这种用法的巧妙，特写下此篇文章，以做记录。<br>（PS：还是要感谢我那位同事YYL，让我又get到一个技能^_^）</p>
-<p>在结构体最后加char[0]或char[1]的用法是GNU C的扩展，<font color="#FF0000">在ISO/IEC 9899-1999里面，这么写是非法的</font>。这种用法在C99中叫做 <strong>柔性数组</strong>。柔性数组成员前面必须至少有一个其它类型成员。包含柔性数组成员的结构要用<code>malloc</code>进行动态内存分配，并且分配的内存应该大于结构的大小，以适应柔性数组的预期大小。</p>
+          C语言结构体中char[0]和char[1]的用法
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/posts/a-2018-09-18-17-45-22.html#more" rel="contents">
+              <a class="btn" href="/posts/a-2018-09-18-17-45-22.html">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1783,22 +1746,10 @@
     </div>
 
     
-      
-
-
-    
 
     
     
     
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
 
     
 
@@ -1933,6 +1884,20 @@
 
           
             
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/posts/a-2018-09-18-17-21-40.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/posts/a-2018-09-18-17-21-40.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -1942,8 +1907,6 @@
 
           
 
-          
-            <div class="post-description">Linux64位系统兼容32位应用程序</div>
           
 
         </div>
@@ -1960,20 +1923,11 @@
 
       
         
-          <script type="text/javascript" src="/js/src/baidu.js"></script>
-
-<h1 id="1-问题现象"><a href="#1-问题现象" class="headerlink" title="1. 问题现象"></a>1. 问题现象</h1><p>在进行64位驱动兼容32位应用程序的修改中，发现了如下几个问题：</p>
-<blockquote>
-<ol>
-<li>32位应用程序调用ioctl时，返回ENOTTY（inappropriate ioctl for device）错误。经过调试发现根本没调用到内核的ioctl函数。</li>
-<li>解决完第一个问题后，应用程序进入了ioctl中，但是用户程序和驱动打印的ioctl命令号不一样，导致在switch的时候，找不到对应命令号。</li>
-<li>从用户空间拷贝数据的时候（copy_from_user()）失败。拷贝的数据结构里面含有指针。</li>
-</ol>
-</blockquote>
+          Linux64位系统兼容32位应用程序
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/posts/a-2018-09-18-17-21-40.html#more" rel="contents">
+              <a class="btn" href="/posts/a-2018-09-18-17-21-40.html">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1984,22 +1938,10 @@
     </div>
 
     
-      
-
-
-    
 
     
     
     
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
 
     
 
@@ -2134,6 +2076,20 @@
 
           
             
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/posts/a-2018-09-12-10-58-00.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/posts/a-2018-09-12-10-58-00.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -2143,8 +2099,6 @@
 
           
 
-          
-            <div class="post-description">三层架构：表示层——业务逻辑层——数据访问层</div>
           
 
         </div>
@@ -2161,18 +2115,11 @@
 
       
         
-          <script type="text/javascript" src="/js/src/baidu.js"></script>
-
-<h1 id="1-什么是三层架构"><a href="#1-什么是三层架构" class="headerlink" title="1. 什么是三层架构"></a>1. 什么是三层架构</h1><p>所谓的三层开发就是将系统的整个业务应用划分为 <code>表示层</code>,<code>业务逻辑层</code>,<code>数据访问层</code>，这样有利于系统的开发、维护、部署和扩展。分层是为了实现 <strong>“高内聚，低耦合”</strong>，采用 <strong>“分而治之”</strong> 的思想，把问题划分开来各个解决，易于控制、易于延展、易于分配资源。进行软件开发设计，一定要懂得</p>
-<blockquote>
-<p><strong>分而治之</strong></p>
-<p><strong>分而治之</strong></p>
-<p><strong>分而治之</strong></p>
-</blockquote>
+          三层架构：表示层——业务逻辑层——数据访问层
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/posts/a-2018-09-12-10-58-00.html#more" rel="contents">
+              <a class="btn" href="/posts/a-2018-09-12-10-58-00.html">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -2183,22 +2130,10 @@
     </div>
 
     
-      
-
-
-    
 
     
     
     
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
 
     
 
@@ -2333,6 +2268,20 @@
 
           
             
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/posts/a-2018-09-06-15-46-35.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/posts/a-2018-09-06-15-46-35.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -2342,8 +2291,6 @@
 
           
 
-          
-            <div class="post-description">学习使用Markdown</div>
           
 
         </div>
@@ -2360,47 +2307,11 @@
 
       
         
-          <script type="text/javascript" src="/js/src/baidu.js"></script>
-
-<h1 id="1-关于Markdown"><a href="#1-关于Markdown" class="headerlink" title="1 关于Markdown"></a>1 关于Markdown</h1><p>Markdown是一种轻量级<a href="https://baike.baidu.com/item/%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80/5964436?fr=aladdin" rel="external nofollow noopener noreferrer" target="_blank">标记语言</a>，它的目的是希望大家使用“易于阅读、易于撰写的纯文字格式，并选择性的转换成有效的HTML(或XHTML)”。</p>
-<ol>
-<li><p>优点</p>
-<ul>
-<li>易读<blockquote>
-<p>易读是指Markdown文件（即 <em>.md</em> 文件）容易阅读，与HTML相比，它没有各种繁杂的尖括号&lt;&gt;和缩进。整体简洁美观。</p>
-</blockquote>
-</li>
-<li>易写<blockquote>
-<p>使用Markdown可以让你专注于文字，不用像office软件一样需要用鼠标疯狂点击那些排版按钮，可以做到手不离键盘且快速高效的将写作与排版一气呵成。而且Markdown语法简单，花半个小时就能学会基本语法。</p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p>缺点</p>
-<ul>
-<li>标准不统一<blockquote>
-<p>目前Markdown语法众多、编辑器层出不穷，每个编辑器支持的语法也不同，这就导致在一个编辑器上写的md文件，放到其它编辑器上，出现排版混乱，甚至是不支持某些语法的现象。这就是人们所说的 “<strong>方言现象</strong>”，这也是目前Markdown最突出的问题。</p>
-</blockquote>
-</li>
-<li>图片支持不够<blockquote>
-<p>不能直接显示图片，不能调整大小。且不同编辑器对图片的处理也有所不同。</p>
-</blockquote>
-</li>
-<li>表格支持不够<blockquote>
-<p>原生的Markdown是不支持表格的，但现在大部分编辑器都支持简单的表格，也有支持复杂表格的语法，但是书写困难，且不被大多数编辑器支持。</p>
-</blockquote>
-</li>
-<li>占用特殊字符<blockquote>
-<p>Markdown的语法占用了一些特殊字符，导致想在文本中输入特殊字符的时候，需要进行转义操作。</p>
-</blockquote>
-</li>
-</ul>
-</li>
-</ol>
+          学习使用Markdown
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/posts/a-2018-09-06-15-46-35.html#more" rel="contents">
+              <a class="btn" href="/posts/a-2018-09-06-15-46-35.html">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -2411,22 +2322,10 @@
     </div>
 
     
-      
-
-
-    
 
     
     
     
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
 
     
 
@@ -2482,7 +2381,6 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
-    
     <div class="sidebar-inner">
 
       
@@ -2496,7 +2394,7 @@
               <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="Melville">
             
               <p class="site-author-name" itemprop="name">Melville</p>
-              <p class="site-description motion-element" itemprop="description">改革春风吹满地</p>
+              <div class="site-description motion-element" itemprop="description">改革春风吹满地</div>
           </div>
 
           
@@ -2516,7 +2414,11 @@
                 
                 
                 <div class="site-state-item site-state-categories">
-                  <a href="/categories/index.html">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
                     
                     
                       
@@ -2555,7 +2457,11 @@
                 
                 
                 <div class="site-state-item site-state-tags">
-                  <a href="/tags/index.html">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
                     
                     
                       
@@ -2652,6 +2558,8 @@
           
 
           
+
+          
             <div class="links-of-author motion-element">
               
                 <span class="links-of-author-item">
@@ -2745,6 +2653,7 @@
 
     </div>
   </aside>
+  
 
 
         
@@ -2839,8 +2748,6 @@
 
 
 
-  
-
 
 
   
@@ -2870,16 +2777,13 @@
   
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
-  
-  <script src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
 
   
 
 
-  <script src="/js/src/utils.js?v=6.7.0"></script>
+  <script src="/js/utils.js?v=7.1.2"></script>
 
-  <script src="/js/src/motion.js?v=6.7.0"></script>
+  <script src="/js/motion.js?v=7.1.2"></script>
 
 
 
@@ -2887,9 +2791,9 @@
   
 
 
-  <script src="/js/src/affix.js?v=6.7.0"></script>
+  <script src="/js/affix.js?v=7.1.2"></script>
 
-  <script src="/js/src/schemes/pisces.js?v=6.7.0"></script>
+  <script src="/js/schemes/pisces.js?v=7.1.2"></script>
 
 
 
@@ -2898,17 +2802,50 @@
   
 
 
-  <script src="/js/src/bootstrap.js?v=6.7.0"></script>
-
-
-
-  
-
-
+  <script src="/js/next-boot.js?v=7.1.2"></script>
 
 
   
 
+  
+
+  
+
+  
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'pvhiBwpfHOUBspkJ5iEJ5LFw-gzGzoHsz',
+    appKey: 'LrKlAVEWOYfv1JwbdQGXAl3K',
+    placeholder: '欢迎留言',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: 'zh-cn' || 'zh-cn'
+  });
+</script>
+
+
+
+
+
+  
   <script>
     // Popup Window;
     var isfetched = false;
@@ -3238,16 +3175,17 @@
   
 
   
+
+  
+
+  
+
+  
   <script>
     (function(){
       var bp = document.createElement('script');
       var curProtocol = window.location.protocol.split(':')[0];
-      if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-      }
-      else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-      }
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(bp, s);
     })();
@@ -3265,89 +3203,43 @@
   
 
   
+<script>
+  $('.highlight').not('.gist .highlight').each(function(i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap');
+    $(e).after($wrap);
+    $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+        return $(e).text();
+      }).toArray().join('\n');
+      var ta = document.createElement('textarea');
+      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+      ta.style.top = yPosition + 'px'; // Prevent page scroll
+      ta.style.position = 'absolute';
+      ta.style.opacity = '0';
+      ta.readOnly = true;
+      ta.value = code;
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, code.length);
+      ta.readOnly = false;
+      var result = document.execCommand('copy');
+      
+        if (result) $(this).text('复制成功');
+        else $(this).text('复制失败');
+      
+      ta.blur(); // For iOS
+      $(this).blur();
+    })).on('mouseleave', function(e) {
+      var $b = $(this).find('.copy-btn');
+      setTimeout(function() {
+        $b.text('复制');
+      }, 300);
+    }).append(e);
+  })
+</script>
+
 
   
-
-  
-
-  
-  <style>
-    .copy-btn {
-      display: inline-block;
-      padding: 6px 12px;
-      font-size: 13px;
-      font-weight: 700;
-      line-height: 20px;
-      color: #333;
-      white-space: nowrap;
-      vertical-align: middle;
-      cursor: pointer;
-      background-color: #eee;
-      background-image: linear-gradient(#fcfcfc, #eee);
-      border: 1px solid #d5d5d5;
-      border-radius: 3px;
-      user-select: none;
-      outline: 0;
-    }
-
-    .highlight-wrap .copy-btn {
-      transition: opacity .3s ease-in-out;
-      opacity: 0;
-      padding: 2px 6px;
-      position: absolute;
-      right: 4px;
-      top: 8px;
-    }
-
-    .highlight-wrap:hover .copy-btn,
-    .highlight-wrap .copy-btn:focus {
-      opacity: 1
-    }
-
-    .highlight-wrap {
-      position: relative;
-    }
-  </style>
-  <script>
-    $('.highlight').each(function (i, e) {
-      var $wrap = $('<div>').addClass('highlight-wrap');
-      $(e).after($wrap);
-      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function (e) {
-        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
-          return $(e).text();
-        }).toArray().join('\n');
-        var ta = document.createElement('textarea');
-        var range = document.createRange(); //For Chrome
-        var sel = window.getSelection(); //For Chrome
-        var yPosition = window.pageYOffset || document.documentElement.scrollTop;
-        ta.style.top = yPosition + 'px'; //Prevent page scroll
-        ta.style.position = 'absolute';
-        ta.style.opacity = '0';
-        ta.value = code;
-        ta.textContent = code; //For FireFox
-        ta.contentEditable = true;
-        ta.readOnly = false;
-        document.body.appendChild(ta);
-        range.selectNode(ta);
-        sel.removeAllRanges();
-        sel.addRange(range);
-        ta.setSelectionRange(0, code.length);
-        var result = document.execCommand('copy');
-        
-          if (result) $(this).text('复制成功');
-          else $(this).text('复制失败');
-        
-        ta.blur(); //For iOS
-        $(this).blur();
-      })).on('mouseleave', function (e) {
-        var $b = $(this).find('.copy-btn');
-        setTimeout(function () {
-          $b.text('复制');
-        }, 300);
-      }).append(e);
-    })
-  </script>
-
 
   
 
