@@ -20,6 +20,10 @@
 <meta name="theme-color" content="#222">
 
 
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
 
 
 
@@ -39,6 +43,10 @@
   <meta name="baidu-site-verification" content="true">
 
 
+
+  
+  
+  <link rel="stylesheet" href="/lib/fancybox/source/jquery.fancybox.css">
 
 
 
@@ -77,9 +85,9 @@
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
     back2top: true,
     back2top_sidebar: true,
-    fancybox: false,
+    fancybox: true,
     fastclick: false,
-    lazyload: false,
+    lazyload: true,
     tabs: true,
     motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
@@ -98,18 +106,18 @@
 
 
 
-  <meta name="description" content="使用正则表达式替换代码中的 /**/ 注释">
+  <meta name="description" content="怎样才能一次性全部删掉代码中的 /**/ 注释呢？ 可以使用正则表达式 /\*(.|[\r\n])*?\*/ 搜索 /**/ 注释，然后删除即可。">
 <meta name="keywords" content="正则表达式,注释">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用正则表达式删除代码中的 &#x2F;**&#x2F; 注释">
 <meta property="og:url" content="https://melville.club/posts/a-20190218-162341.html">
 <meta property="og:site_name" content="Melville&#39;s blog">
-<meta property="og:description" content="使用正则表达式替换代码中的 /**/ 注释">
+<meta property="og:description" content="怎样才能一次性全部删掉代码中的 /**/ 注释呢？ 可以使用正则表达式 /\*(.|[\r\n])*?\*/ 搜索 /**/ 注释，然后删除即可。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-18T08:32:31.280Z">
+<meta property="og:updated_time" content="2019-06-13T07:42:55.300Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用正则表达式删除代码中的 &#x2F;**&#x2F; 注释">
-<meta name="twitter:description" content="使用正则表达式替换代码中的 /**/ 注释">
+<meta name="twitter:description" content="怎样才能一次性全部删掉代码中的 /**/ 注释呢？ 可以使用正则表达式 /\*(.|[\r\n])*?\*/ 搜索 /**/ 注释，然后删除即可。">
 
 
 
@@ -194,7 +202,7 @@
     </div>
     
       
-        <h1 class="site-subtitle" itemprop="description">个人博客</h1>
+        <h1 class="site-subtitle" itemprop="description">业精于勤，荒于嬉</h1>
       
     
     
@@ -495,12 +503,24 @@
                 
               
 
-              <time title="创建时间：2019-02-18 16:23:41 / 修改时间：16:32:31" itemprop="dateCreated datePublished" datetime="2019-02-18T16:23:41+08:00">2019-02-18</time>
+              <time title="创建时间：2019-02-18 16:23:41" itemprop="dateCreated datePublished" datetime="2019-02-18T16:23:41+08:00">2019-02-18</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-06-13 15:42:55" itemprop="dateModified" datetime="2019-06-13T15:42:55+08:00">2019-06-13</time>
               
             
           </span>
@@ -565,8 +585,6 @@
           
 
           
-            <div class="post-description">使用正则表达式替换代码中的 /**/ 注释</div>
-          
 
         </div>
       </header>
@@ -607,7 +625,7 @@
   <p><span>本文标题:</span><a href="/posts/a-20190218-162341.html">使用正则表达式删除代码中的 /**/ 注释</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Melville 的个人博客">Melville</a></p>
   <p><span>发布时间:</span>2019年02月18日 - 16:23</p>
-  <p><span>最后更新:</span>2019年02月18日 - 16:32</p>
+  <p><span>最后更新:</span>2019年06月13日 - 15:42</p>
   <p><span>原始链接:</span><a href="/posts/a-20190218-162341.html" title="使用正则表达式删除代码中的 /**/ 注释">https://melville.club/posts/a-20190218-162341.html</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://melville.club/posts/a-20190218-162341.html" aria-label="复制成功！"></i></span>
   </p>
@@ -693,43 +711,12 @@
           
           <div class="social_share">
             
-              <div>
-                
-
-<script src="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.js"></script>
-
-
-
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.css">
-
-
-  
-
-
-<div class="likely">
-	
- 	 	<div class="twitter">Tweet</div>
-	
- 	 	<div class="facebook">Share</div>
-	
- 	 	<div class="linkedin">Link</div>
-	
- 	 	<div class="gplus">Plus</div>
-	
- 	 	<div class="vkontakte">Share</div>
-	
- 	 	<div class="odnoklassniki">Class</div>
-	
- 	 	<div class="telegram">Send</div>
-	
- 	 	<div class="whatsapp">Send</div>
-	
- 	 	<div class="pinterest">Pin</div>
-	
-</div>
-
-              </div>
             
+              <div id="needsharebutton-postbottom">
+                <span class="btn">
+                  <i class="fa fa-share-alt" aria-hidden="true"></i>
+                </span>
+              </div>
             
             
           </div>
@@ -1029,19 +1016,15 @@
 
           
           
-            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
               <div class="links-of-blogroll-title">
                 <i class="fa  fa-fw fa-umbrella"></i>
-                推荐阅读
+                友情链接
               </div>
               <ul class="links-of-blogroll-list">
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://melville.club/posts/a-2018-09-18-17-45-22.html" title="https://melville.club/posts/a-2018-09-18-17-45-22.html">char-0-和char-1-的用法</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="https://melville.club/posts/a-2018-09-18-17-21-40.html" title="https://melville.club/posts/a-2018-09-18-17-21-40.html">Linux64位系统兼容32位应用程序</a>
+                    <a href="https://www.aqh.space" title="https://www.aqh.space" rel="external nofollow noopener noreferrer" target="_blank">qinghua</a>
                   </li>
                 
               </ul>
@@ -1159,10 +1142,14 @@
 
 
 
+  
 
 
 
 
+
+
+  
 
 
 
@@ -1188,10 +1175,16 @@
   <script src="/lib/jquery/index.js?v=2.1.3"></script>
 
   
+  <script src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
   <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
 
   
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/fancybox/source/jquery.fancybox.pack.js"></script>
 
 
   
@@ -1618,6 +1611,26 @@
   
 
   
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+  <script>
+    
+      pbOptions = {};
+      
+        pbOptions.iconStyle = "default";
+      
+        pbOptions.boxForm = "vertical";
+      
+        pbOptions.position = "bottomLeft";
+      
+        pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
 
   
 

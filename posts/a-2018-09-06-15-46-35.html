@@ -20,6 +20,10 @@
 <meta name="theme-color" content="#222">
 
 
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
 
 
 
@@ -39,6 +43,10 @@
   <meta name="baidu-site-verification" content="true">
 
 
+
+  
+  
+  <link rel="stylesheet" href="/lib/fancybox/source/jquery.fancybox.css">
 
 
 
@@ -77,9 +85,9 @@
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
     back2top: true,
     back2top_sidebar: true,
-    fancybox: false,
+    fancybox: true,
     fastclick: false,
-    lazyload: false,
+    lazyload: true,
     tabs: true,
     motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
@@ -98,21 +106,21 @@
 
 
 
-  <meta name="description" content="学习使用Markdown">
+  <meta name="description" content="1 关于MarkdownMarkdown是一种轻量级标记语言，它的目的是希望大家使用“易于阅读、易于撰写的纯文字格式，并选择性的转换成有效的HTML(或XHTML)”。  优点  易读 易读是指Markdown文件（即 .md 文件）容易阅读，与HTML相比，它没有各种繁杂的尖括号&amp;lt;&amp;gt;和缩进。整体简洁美观。   易写 使用Markdown可以让你专注于文字，不用像office软件一">
 <meta name="keywords" content="markdown">
 <meta property="og:type" content="article">
 <meta property="og:title" content="学习使用Markdown">
 <meta property="og:url" content="https://melville.club/posts/a-2018-09-06-15-46-35.html">
 <meta property="og:site_name" content="Melville&#39;s blog">
-<meta property="og:description" content="学习使用Markdown">
+<meta property="og:description" content="1 关于MarkdownMarkdown是一种轻量级标记语言，它的目的是希望大家使用“易于阅读、易于撰写的纯文字格式，并选择性的转换成有效的HTML(或XHTML)”。  优点  易读 易读是指Markdown文件（即 .md 文件）容易阅读，与HTML相比，它没有各种繁杂的尖括号&amp;lt;&amp;gt;和缩进。整体简洁美观。   易写 使用Markdown可以让你专注于文字，不用像office软件一">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://petq8khru.bkt.clouddn.com/blog/180910/3GJDfkIC37.png?imageslim">
 <meta property="og:image" content="https://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8Markdown/tree.jpg">
 <meta property="og:image" content="https://melville-images.oss-cn-shanghai.aliyuncs.com/blog/%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8Markdown/tree.jpg">
-<meta property="og:updated_time" content="2019-06-13T07:21:23.497Z">
+<meta property="og:updated_time" content="2019-06-13T08:03:56.365Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习使用Markdown">
-<meta name="twitter:description" content="学习使用Markdown">
+<meta name="twitter:description" content="1 关于MarkdownMarkdown是一种轻量级标记语言，它的目的是希望大家使用“易于阅读、易于撰写的纯文字格式，并选择性的转换成有效的HTML(或XHTML)”。  优点  易读 易读是指Markdown文件（即 .md 文件）容易阅读，与HTML相比，它没有各种繁杂的尖括号&amp;lt;&amp;gt;和缩进。整体简洁美观。   易写 使用Markdown可以让你专注于文字，不用像office软件一">
 <meta name="twitter:image" content="http://petq8khru.bkt.clouddn.com/blog/180910/3GJDfkIC37.png?imageslim">
 
 
@@ -198,7 +206,7 @@
     </div>
     
       
-        <h1 class="site-subtitle" itemprop="description">个人博客</h1>
+        <h1 class="site-subtitle" itemprop="description">业精于勤，荒于嬉</h1>
       
     
     
@@ -516,7 +524,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-06-13 15:21:23" itemprop="dateModified" datetime="2019-06-13T15:21:23+08:00">2019-06-13</time>
+                <time title="修改时间：2019-06-13 16:03:56" itemprop="dateModified" datetime="2019-06-13T16:03:56+08:00">2019-06-13</time>
               
             
           </span>
@@ -574,8 +582,6 @@
           
 
           
-            <div class="post-description">学习使用Markdown</div>
-          
 
         </div>
       </header>
@@ -592,8 +598,6 @@
       
         <script type="text/javascript" src="/js/src/baidu.js"></script>
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">摘要：描述了markdown的基本语法，以及用html语言实现markdown语法无法做到的事情</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
 <h1 id="1-关于Markdown"><a href="#1-关于Markdown" class="headerlink" title="1 关于Markdown"></a>1 关于Markdown</h1><p>Markdown是一种轻量级<a href="https://baike.baidu.com/item/%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80/5964436?fr=aladdin" rel="external nofollow noopener noreferrer" target="_blank">标记语言</a>，它的目的是希望大家使用“易于阅读、易于撰写的纯文字格式，并选择性的转换成有效的HTML(或XHTML)”。</p>
 <ol>
 <li><p>优点</p>
@@ -628,8 +632,10 @@
 </li>
 </ul>
 </li>
-<li><p>使用群体</p>
-<ul>
+</ol>
+<a id="more"></a>
+<ol start="3">
+<li>使用群体<ul>
 <li>喜欢写博客的人</li>
 <li>经常阅读书写各种技术文档的技术人员</li>
 <li>混迹于各种技术论坛和社区的程序员</li>
@@ -873,43 +879,12 @@
           
           <div class="social_share">
             
-              <div>
-                
-
-<script src="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.js"></script>
-
-
-
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.css">
-
-
-  
-
-
-<div class="likely">
-	
- 	 	<div class="twitter">Tweet</div>
-	
- 	 	<div class="facebook">Share</div>
-	
- 	 	<div class="linkedin">Link</div>
-	
- 	 	<div class="gplus">Plus</div>
-	
- 	 	<div class="vkontakte">Share</div>
-	
- 	 	<div class="odnoklassniki">Class</div>
-	
- 	 	<div class="telegram">Send</div>
-	
- 	 	<div class="whatsapp">Send</div>
-	
- 	 	<div class="pinterest">Pin</div>
-	
-</div>
-
-              </div>
             
+              <div id="needsharebutton-postbottom">
+                <span class="btn">
+                  <i class="fa fa-share-alt" aria-hidden="true"></i>
+                </span>
+              </div>
             
             
           </div>
@@ -1214,19 +1189,15 @@
 
           
           
-            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
               <div class="links-of-blogroll-title">
                 <i class="fa  fa-fw fa-umbrella"></i>
-                推荐阅读
+                友情链接
               </div>
               <ul class="links-of-blogroll-list">
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://melville.club/posts/a-2018-09-18-17-45-22.html" title="https://melville.club/posts/a-2018-09-18-17-45-22.html">char-0-和char-1-的用法</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="https://melville.club/posts/a-2018-09-18-17-21-40.html" title="https://melville.club/posts/a-2018-09-18-17-21-40.html">Linux64位系统兼容32位应用程序</a>
+                    <a href="https://www.aqh.space" title="https://www.aqh.space" rel="external nofollow noopener noreferrer" target="_blank">qinghua</a>
                   </li>
                 
               </ul>
@@ -1361,10 +1332,14 @@
 
 
 
+  
 
 
 
 
+
+
+  
 
 
 
@@ -1390,10 +1365,16 @@
   <script src="/lib/jquery/index.js?v=2.1.3"></script>
 
   
+  <script src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
   <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
 
   
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/fancybox/source/jquery.fancybox.pack.js"></script>
 
 
   
@@ -1820,6 +1801,26 @@
   
 
   
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+  <script>
+    
+      pbOptions = {};
+      
+        pbOptions.iconStyle = "default";
+      
+        pbOptions.boxForm = "vertical";
+      
+        pbOptions.position = "bottomLeft";
+      
+        pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
 
   
 

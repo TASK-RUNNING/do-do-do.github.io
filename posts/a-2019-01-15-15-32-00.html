@@ -20,6 +20,10 @@
 <meta name="theme-color" content="#222">
 
 
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
 
 
 
@@ -39,6 +43,10 @@
   <meta name="baidu-site-verification" content="true">
 
 
+
+  
+  
+  <link rel="stylesheet" href="/lib/fancybox/source/jquery.fancybox.css">
 
 
 
@@ -77,9 +85,9 @@
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
     back2top: true,
     back2top_sidebar: true,
-    fancybox: false,
+    fancybox: true,
     fastclick: false,
-    lazyload: false,
+    lazyload: true,
     tabs: true,
     motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
@@ -98,21 +106,21 @@
 
 
 
-  <meta name="description" content="hexo站点配置和next主题的配置">
+  <meta name="description" content="点击查看第一篇文章，hexo站点配置+next主题配置（一）">
 <meta name="keywords" content="博客,hexo,next,主题">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo站点配置+next主题配置（二）">
 <meta property="og:url" content="https://melville.club/posts/a-2019-01-15-15-32-00.html">
 <meta property="og:site_name" content="Melville&#39;s blog">
-<meta property="og:description" content="hexo站点配置和next主题的配置">
+<meta property="og:description" content="点击查看第一篇文章，hexo站点配置+next主题配置（一）">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/hexo%E7%AB%99%E7%82%B9%E9%85%8D%E7%BD%AE_next%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/DaoVoice_app_id.png">
 <meta property="og:image" content="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/hexo%E7%AB%99%E7%82%B9%E9%85%8D%E7%BD%AE_next%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/DaoVoice_location.png">
 <meta property="og:image" content="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/hexo%E7%AB%99%E7%82%B9%E9%85%8D%E7%BD%AE_next%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/%E6%96%87%E7%AB%A0%E5%BA%95%E9%83%A8%E5%8A%A0%E7%BB%93%E6%9D%9F%E6%A0%87%E8%AE%B0.png">
-<meta property="og:updated_time" content="2019-06-13T07:15:51.622Z">
+<meta property="og:updated_time" content="2019-06-13T08:02:30.753Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo站点配置+next主题配置（二）">
-<meta name="twitter:description" content="hexo站点配置和next主题的配置">
+<meta name="twitter:description" content="点击查看第一篇文章，hexo站点配置+next主题配置（一）">
 <meta name="twitter:image" content="http://melville-images.oss-cn-shanghai.aliyuncs.com/blog/hexo%E7%AB%99%E7%82%B9%E9%85%8D%E7%BD%AE_next%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/DaoVoice_app_id.png">
 
 
@@ -198,7 +206,7 @@
     </div>
     
       
-        <h1 class="site-subtitle" itemprop="description">个人博客</h1>
+        <h1 class="site-subtitle" itemprop="description">业精于勤，荒于嬉</h1>
       
     
     
@@ -516,7 +524,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-06-13 15:15:51" itemprop="dateModified" datetime="2019-06-13T15:15:51+08:00">2019-06-13</time>
+                <time title="修改时间：2019-06-13 16:02:30" itemprop="dateModified" datetime="2019-06-13T16:02:30+08:00">2019-06-13</time>
               
             
           </span>
@@ -574,8 +582,6 @@
           
 
           
-            <div class="post-description">hexo站点配置和next主题的配置</div>
-          
 
         </div>
       </header>
@@ -592,9 +598,8 @@
       
         <script type="text/javascript" src="/js/src/baidu.js"></script>
 
-<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">摘要：<span class="keyword">next</span>主题配置，由于篇幅较长，分为两篇，本篇为第二篇</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
 <p><a href="https://melville.club/posts/a-2019-01-10-15-31-50.html"> <strong>点击查看第一篇文章，hexo站点配置+next主题配置（一）</strong> </a></p>
+<a id="more"></a>
 <h2 id="3-17-设置RSS"><a href="#3-17-设置RSS" class="headerlink" title="3.17 设置RSS"></a>3.17 设置RSS</h2><p>先安装 <code>hexo-generator-feed</code> 插件。在站点根目录打开 <code>Git Bash Here</code> ，安装插件：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-generator-feed</span><br></pre></td></tr></table></figure>
 <p>打开 <strong>站点配置文件</strong> ，添加插件</p>
@@ -661,7 +666,7 @@
   <p><span>本文标题:</span><a href="/posts/a-2019-01-15-15-32-00.html">hexo站点配置+next主题配置（二）</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Melville 的个人博客">Melville</a></p>
   <p><span>发布时间:</span>2019年01月15日 - 15:32</p>
-  <p><span>最后更新:</span>2019年06月13日 - 15:15</p>
+  <p><span>最后更新:</span>2019年06月13日 - 16:02</p>
   <p><span>原始链接:</span><a href="/posts/a-2019-01-15-15-32-00.html" title="hexo站点配置+next主题配置（二）">https://melville.club/posts/a-2019-01-15-15-32-00.html</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://melville.club/posts/a-2019-01-15-15-32-00.html" aria-label="复制成功！"></i></span>
   </p>
@@ -751,43 +756,12 @@
           
           <div class="social_share">
             
-              <div>
-                
-
-<script src="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.js"></script>
-
-
-
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.css">
-
-
-  
-
-
-<div class="likely">
-	
- 	 	<div class="twitter">Tweet</div>
-	
- 	 	<div class="facebook">Share</div>
-	
- 	 	<div class="linkedin">Link</div>
-	
- 	 	<div class="gplus">Plus</div>
-	
- 	 	<div class="vkontakte">Share</div>
-	
- 	 	<div class="odnoklassniki">Class</div>
-	
- 	 	<div class="telegram">Send</div>
-	
- 	 	<div class="whatsapp">Send</div>
-	
- 	 	<div class="pinterest">Pin</div>
-	
-</div>
-
-              </div>
             
+              <div id="needsharebutton-postbottom">
+                <span class="btn">
+                  <i class="fa fa-share-alt" aria-hidden="true"></i>
+                </span>
+              </div>
             
             
           </div>
@@ -1096,19 +1070,15 @@
 
           
           
-            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
               <div class="links-of-blogroll-title">
                 <i class="fa  fa-fw fa-umbrella"></i>
-                推荐阅读
+                友情链接
               </div>
               <ul class="links-of-blogroll-list">
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://melville.club/posts/a-2018-09-18-17-45-22.html" title="https://melville.club/posts/a-2018-09-18-17-45-22.html">char-0-和char-1-的用法</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="https://melville.club/posts/a-2018-09-18-17-21-40.html" title="https://melville.club/posts/a-2018-09-18-17-21-40.html">Linux64位系统兼容32位应用程序</a>
+                    <a href="https://www.aqh.space" title="https://www.aqh.space" rel="external nofollow noopener noreferrer" target="_blank">qinghua</a>
                   </li>
                 
               </ul>
@@ -1243,10 +1213,14 @@
 
 
 
+  
 
 
 
 
+
+
+  
 
 
 
@@ -1272,10 +1246,16 @@
   <script src="/lib/jquery/index.js?v=2.1.3"></script>
 
   
+  <script src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
   <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
 
   
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/fancybox/source/jquery.fancybox.pack.js"></script>
 
 
   
@@ -1702,6 +1682,26 @@
   
 
   
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+  <script>
+    
+      pbOptions = {};
+      
+        pbOptions.iconStyle = "default";
+      
+        pbOptions.boxForm = "vertical";
+      
+        pbOptions.position = "bottomLeft";
+      
+        pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
 
   
 
