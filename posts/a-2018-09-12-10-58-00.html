@@ -106,7 +106,7 @@
 <meta property="og:site_name" content="Melville&#39;s blog">
 <meta property="og:description" content="三层架构：表示层——业务逻辑层——数据访问层">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-16T06:32:04.129Z">
+<meta property="og:updated_time" content="2019-06-13T07:28:26.221Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="三层架构：表示层——业务逻辑层——数据访问层">
 <meta name="twitter:description" content="三层架构：表示层——业务逻辑层——数据访问层">
@@ -512,7 +512,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-01-16 14:32:04" itemprop="dateModified" datetime="2019-01-16T14:32:04+08:00">2019-01-16</time>
+                <time title="修改时间：2019-06-13 15:28:26" itemprop="dateModified" datetime="2019-06-13T15:28:26+08:00">2019-06-13</time>
               
             
           </span>
@@ -588,13 +588,14 @@
       
         <script type="text/javascript" src="/js/src/baidu.js"></script>
 
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">摘要：本文介绍了开发应用程序经常使用的三层架构，以及三层架构的优点。</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <h1 id="1-什么是三层架构"><a href="#1-什么是三层架构" class="headerlink" title="1. 什么是三层架构"></a>1. 什么是三层架构</h1><p>所谓的三层开发就是将系统的整个业务应用划分为 <code>表示层</code>,<code>业务逻辑层</code>,<code>数据访问层</code>，这样有利于系统的开发、维护、部署和扩展。分层是为了实现 <strong>“高内聚，低耦合”</strong>，采用 <strong>“分而治之”</strong> 的思想，把问题划分开来各个解决，易于控制、易于延展、易于分配资源。进行软件开发设计，一定要懂得</p>
 <blockquote>
 <p><strong>分而治之</strong></p>
 <p><strong>分而治之</strong></p>
 <p><strong>分而治之</strong></p>
 </blockquote>
-<a id="more"></a>
 <ul>
 <li>表示层：负责直接跟用户进行交互，一般也就是指系统的界面，用于数据录入，数据显示等。意味着只做与外观显示相关的工作，不属于他的工作不用做。</li>
 <li>业务逻辑层：用于做一些有效的验证工作，以更好地保证程序运行的健壮性。如完成数据添加、修改和查询等；不允许指定的文本框中输入空字符串，数据格式是否正确及数据类型验证；用户的权限合法性判断等。通过以上诸多判断以决定是否将操作继续向后传递，尽量保证程序的正常运行。</li>
